@@ -96,6 +96,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		352603742BF640C00009927E /* Subscription.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Subscription.storekit; sourceTree = "<group>"; };
 		9456976C2BF5F8BB00EB5FA3 /* Wasilaah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wasilaah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9456976F2BF5F8BB00EB5FA3 /* WasilaahApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasilaahApp.swift; sourceTree = "<group>"; };
 		945697732BF5F8BD00EB5FA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -200,6 +201,7 @@
 		945697632BF5F8BB00EB5FA3 = {
 			isa = PBXGroup;
 			children = (
+				352603742BF640C00009927E /* Subscription.storekit */,
 				9456976E2BF5F8BB00EB5FA3 /* Wasilaah */,
 				9456976D2BF5F8BB00EB5FA3 /* Products */,
 				945697852BF6325500EB5FA3 /* Frameworks */,
@@ -907,7 +909,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Wasilaah/Preview Content\"";
-				DEVELOPMENT_TEAM = Y64UFA9C5L;
+				DEVELOPMENT_TEAM = DFQ2G36PPT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -920,7 +922,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Wasilaah.Wasilaah;
+				PRODUCT_BUNDLE_IDENTIFIER = Wasilaah1.Wasilaah;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -937,7 +939,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Wasilaah/Preview Content\"";
-				DEVELOPMENT_TEAM = Y64UFA9C5L;
+				DEVELOPMENT_TEAM = DFQ2G36PPT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -950,7 +952,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Wasilaah.Wasilaah;
+				PRODUCT_BUNDLE_IDENTIFIER = Wasilaah1.Wasilaah;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

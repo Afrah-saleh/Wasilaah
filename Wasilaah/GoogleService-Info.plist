@@ -13,21 +13,21 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>Wasilaah.Wasilaah</string>
+	<string>Wasilaah1.Wasilaah</string>
 	<key>PROJECT_ID</key>
 	<string>wasilaah-2c493</string>
 	<key>STORAGE_BUCKET</key>
 	<string>wasilaah-2c493.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:437822981100:ios:34ea828791bee8742836c9</string>
 </dict>

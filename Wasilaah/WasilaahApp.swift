@@ -53,6 +53,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct WasilaahApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @StateObject var authService = sessionStore()
+    @StateObject var transactionViewModel = TransactionViewModel()
+    @StateObject var expensesViewModel = ExpensesViewModel(cardID: "")
 
     init() {
         // Customizing back button appearance
@@ -66,7 +68,9 @@ struct WasilaahApp: App {
           //  SplashScreen()
            RootView(authViewModel: authService, expenses: ExpensesViewModel(cardID: ""))
             .environmentObject(authService) // Pass the authService to your views
-                .environmentObject(ExpensesViewModel(cardID: "")) // Pass ExpensesViewModel here if it's needed globally
+                //.environmentObject(ExpensesViewModel(cardID: "")) // Pass ExpensesViewModel here if it's needed globally
+                .environmentObject(transactionViewModel)
+                .environmentObject(expensesViewModel)
             .onAppear {
                 authService.checkCurrentUser()
             }

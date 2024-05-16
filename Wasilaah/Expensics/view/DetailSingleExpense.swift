@@ -15,13 +15,14 @@ struct DetailSingleExpenses: View {
     @ObservedObject var transactionViewModel: TransactionViewModel
     @ObservedObject var expensesViewModel: ExpensesViewModel
     // Computed property to find all matching transactions
-    private var matchingTransactions: [TransactionEntry] {
+     var matchingTransactions: [TransactionEntry] {
            transactionViewModel.transactions.filter {
                $0.transactionName.lowercased() == expenses.name.lowercased() &&
                $0.cardID == expenses.cardID // Ensure that transaction has a cardID attribute and matches the expense's cardID
            }
        }
     
+
     var body: some View {
         NavigationView{
             VStack{
@@ -90,25 +91,21 @@ struct DetailSingleExpenses: View {
                         .padding(.leading,20)
                     
                     Spacer()
-                    ScrollView{
-                        
-                        //Display the matching transaction name
+                    ScrollView {
                         ForEach(matchingTransactions, id: \.id) { transaction in
-                            
-                            HStack(spacing:5){
+                            HStack(spacing: 5) {
                                 Circle()
                                     .fill(circleColor)
                                     .frame(width: 25, height: 25)
                                     .padding()
                                 VStack(alignment: .leading) {
-                                    
-                                    HStack(){
+                                    HStack {
                                         Text("\(transaction.transactionName)")
-                                            .fixedSize() // This will prevent the text from being compressed or stretched
+                                            .fixedSize()
                                         Spacer()
-                                        HStack{
-                                            Text("\(transaction.amount, specifier: "%.2f")") // Ensure TransactionEntry has an amount field
-                                                .fixedSize() // This will prevent the text from being compressed or stretched
+                                        HStack {
+                                            Text("\(transaction.amount, specifier: "%.2f")")
+                                                .fixedSize()
                                             Text("SAR")
                                                 .font(.caption2)
                                                 .foregroundColor(.gray)
@@ -118,29 +115,26 @@ struct DetailSingleExpenses: View {
                                     Text("\(transaction.date)")
                                         .font(.caption)
                                         .foregroundColor(.gray)
-                                    // Add more details as needed
                                 }
-                                
-                                
                                 NavigationLink(destination: TransactionDetailView(viewModel: transactionViewModel, transaction: transaction, expensesViewModel: expensesViewModel)) {
                                     Image(systemName: "chevron.forward")
                                         .padding(.trailing, 12)
                                 }
-                                
-                                
-                                
                             }
-                            .frame(maxWidth: .infinity ,maxHeight: .infinity)
-                            //                                .frame(width: 320)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
                             .padding()
                             .background(
                                 RoundedRectangle(cornerRadius: 16)
                                     .stroke(Color.gray, lineWidth: 1)
                             )
-                            
                         }
                     }
                     .padding(.all)
+                    .onAppear {
+                        
+                        transactionViewModel.loadMatchingTransactions(for: expenses)
+                        transactionViewModel.fetchTransactions()
+                    }
                 }
                 
             }

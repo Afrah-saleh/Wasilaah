@@ -27,11 +27,19 @@ class TransactionViewModel: ObservableObject {
     @Published var customTransactionName: String = "" // For custom input
     @Published var isOtherSelected: Bool = false // Track if "Other" is selected
     private var expenseIdsByName: [String: UUID] = [:]
+    @Published var matchingTransactions: [TransactionEntry] = []
+
     
     init() {
         fetchTransactions()
     }
-
+    
+    func loadMatchingTransactions(for expense: Expenses) {
+           self.matchingTransactions = self.transactions.filter {
+               $0.transactionName.lowercased() == expense.name.lowercased() &&
+               $0.cardID == expense.cardID
+           }
+       }
     func fetchTransactions() {
         db.collection("newTransactions").getDocuments { [weak self] (querySnapshot, error) in
             guard let self = self else { return }
@@ -54,6 +62,7 @@ class TransactionViewModel: ObservableObject {
             }
         }
     }
+    
     private func processTransactions(pdfData: [[String]], cardID: String, userID: String) {
         let db = Firestore.firestore() // Ensure Firestore instance is initialized
 
@@ -93,46 +102,7 @@ class TransactionViewModel: ObservableObject {
                 self?.saveTransactions()
             }
     }
-    
-//    private func processTransactions(pdfData: [[String]], cardID: String, userID: String) {
-//        let db = Firestore.firestore() // Ensure Firestore instance is initialized
-//        
-//        db.collection("expenses")
-//            .whereField("cardID", isEqualTo: cardID)
-//            .getDocuments { [weak self] (querySnapshot, error) in
-//                guard let snapshot = querySnapshot else {
-//                    print("Error fetching documents: \(error?.localizedDescription ?? "Unknown error")")
-//                    return
-//                }
-//                
-//                let expenses = snapshot.documents.compactMap { doc -> Expenses? in
-//                    try? doc.data(as: Expenses.self)
-//                }
-//                let expenseNames = Set(expenses.map { $0.name })
-//                
-//                self?.transactions = pdfData.compactMap { row -> TransactionEntry? in
-//                    guard row.count >= 4, let amount = Double(row[3]) else { return nil }
-//                    
-//                    let singleName = row[1]
-//                    let expenseID = expenses.first(where: { $0.name == singleName })?.id
-//                    
-//                    // Use the ID of "Other" if no matching name is found
-//                    let otherExpenseID = expenses.first(where: { $0.name == "Other" })?.id
-//                    let useExpenseID = expenseID ?? otherExpenseID
-//                    
-//                    return TransactionEntry(
-//                        id: UUID().uuidString,
-//                        cardID: cardID,
-//                        userID: userID,
-//                        transactionName: singleName,
-//                        amount: amount,
-//                        date: row[0],
-//                        expenseID: useExpenseID
-//                    )
-//                }
-//                self?.saveTransactions()
-//            }
-//    }
+
     
     func saveTransactions() {
         if transactions.isEmpty {
@@ -208,7 +178,8 @@ class TransactionViewModel: ObservableObject {
             amount: Double(amount) ?? 0.0,
             date: Date().formatted(),
             expenseID: expenseID,
-            currency: currency
+            currency: currency,
+            fileURL: fileURL
         )
         
         do {

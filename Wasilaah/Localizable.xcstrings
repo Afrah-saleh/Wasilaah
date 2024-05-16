@@ -283,6 +283,7 @@
       }
     },
     "Amount: %.2f" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -929,6 +930,7 @@
       }
     },
     "Download File" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -937,6 +939,9 @@
           }
         }
       }
+    },
+    "Download invoice" : {
+
     },
     "Download Numbers File" : {
       "localizations" : {
@@ -968,6 +973,9 @@
           }
         }
       }
+    },
+    "Edit Expenses: %@" : {
+
     },
     "Email" : {
       "extractionState" : "manual",
@@ -1671,6 +1679,7 @@
       }
     },
     "Name: %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2374,6 +2383,7 @@
       }
     },
     "Update Transaction" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2402,6 +2412,9 @@
           }
         }
       }
+    },
+    "Upload invoice" : {
+
     },
     "User not logged in" : {
       "localizations" : {

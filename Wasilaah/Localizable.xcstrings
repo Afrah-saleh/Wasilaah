@@ -1,0 +1,2517 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    " %@" : {
+
+    },
+    " SAR" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ر.س"
+          }
+        }
+      }
+    },
+    " UpdateOperational Expenses of this \n card" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحديث"
+          }
+        }
+      }
+    },
+    "-" : {
+
+    },
+    "." : {
+
+    },
+    "(Max. File size: 25 MB)" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(Max. File size: 25 MB)"
+          }
+        }
+      }
+    },
+    "(Optional)" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(اختياري)"
+          }
+        }
+      }
+    },
+    "/" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "/"
+          }
+        }
+      }
+    },
+    "%.2f" : {
+
+    },
+    "%.2f %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$.2f %2$@"
+          }
+        }
+      }
+    },
+    "%.2f SAR" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ر.س"
+          }
+        }
+      }
+    },
+    "%.2f to %.2f" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$.2f to %2$.2f"
+          }
+        }
+      }
+    },
+    "%@" : {
+
+    },
+    "%@ %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@"
+          }
+        }
+      }
+    },
+    "%@!" : {
+
+    },
+    "%lld" : {
+
+    },
+    "%lld%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld%2$@"
+          }
+        }
+      }
+    },
+    "• By uploading the file, you agree to the collection and use of this information for the purposes of providing financial services only" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا يتم استخدام بياناتك الشخصية مطلقًا لأغراض أخرى."
+          }
+        }
+      }
+    },
+    "• We only keep expense data to help organize your expenses. We don't access other account information or save it and ensure your privacy." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " نحتفظ فقط ببيانات النفقات للمساعدة في تنظيم نفقاتك. "
+          }
+        }
+      }
+    },
+    "• Your personal data is never used for other purposes." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا يتم استخدام بياناتك الشخصية مطلقًا لأغراض أخرى."
+          }
+        }
+      }
+    },
+    "0" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "٠"
+          }
+        }
+      }
+    },
+    "00 / 000" : {
+
+    },
+    "00.00" : {
+
+    },
+    "00.00 SAR" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "00.00 ر.س"
+          }
+        }
+      }
+    },
+    "Account" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الحساب"
+          }
+        }
+      }
+    },
+    "Add" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إضافة"
+          }
+        }
+      }
+    },
+    "Add day of payment" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تاريخ الدفع في كل شهر"
+          }
+        }
+      }
+    },
+    "Add Expenses" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إضافة مصروف جديد"
+          }
+        }
+      }
+    },
+    "Add Later" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تخطى"
+          }
+        }
+      }
+    },
+    "All Expenses" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جميع المصروفات"
+          }
+        }
+      }
+    },
+    "All Transactions" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سجل العمليات"
+          }
+        }
+      }
+    },
+    "Already have an account?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هل تملك حساب بالفعل ؟"
+          }
+        }
+      }
+    },
+    "Amount" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المقدار"
+          }
+        }
+      }
+    },
+    "Amount:" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المقدار"
+          }
+        }
+      }
+    },
+    "Amount: %.2f" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المقدار"
+          }
+        }
+      }
+    },
+    "Amount: %.2f, Decrease: %@%%" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أقل من المعتاد"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Amount: %1$.2f, Decrease: %2$@%%"
+          }
+        }
+      }
+    },
+    "Amount: %.2f, Increase: %@%%" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإرتفاع"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Amount: %1$.2f, Increase: %2$@%%"
+          }
+        }
+      }
+    },
+    "Amount: %lf" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المبلغ"
+          }
+        }
+      }
+    },
+    "Annual" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سنوي"
+          }
+        }
+      }
+    },
+    "Apr" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أبريل"
+          }
+        }
+      }
+    },
+    "Are you sure you press on Save for each expenses form?" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هل انت متأكد انك ضغطت على حفظ لكل مصروف؟"
+          }
+        }
+      }
+    },
+    "Are you sure you want to Delete this card?" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هل انت متأكد أنك تريد حذف هذه البطاقة؟"
+          }
+        }
+      }
+    },
+    "Are you sure you want to delete this expense?" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هل انت متأكد انك تريد حذف هذا المصروف؟"
+          }
+        }
+      }
+    },
+    "Assign a Name to Your Card" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إنشئ أسم بطاقة وسيلة"
+          }
+        }
+      }
+    },
+    "At Wassila" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "في وسيلة نضمن لك:"
+          }
+        }
+      }
+    },
+    "Automate expense categorization" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أتمتة تصنيف النفقات"
+          }
+        }
+      }
+    },
+    "Best value" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "القيمة الأفضل"
+          }
+        }
+      }
+    },
+    "Budget" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ميزانية"
+          }
+        }
+      }
+    },
+    "Budget for Scheduled Expenses:" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ميزانية المصاريف الدورية"
+          }
+        }
+      }
+    },
+    "Budget Summary" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تلخيص مخطط الميزانية"
+          }
+        }
+      }
+    },
+    "By uploading the file, you agree to the collection and use of this information for the purposes of providing financial services only" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " لا نصل إلى معلومات الحساب الأخرى أو نحفظها ونضمن خصوصيتك."
+          }
+        }
+      }
+    },
+    "Cancel" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الغاء"
+          }
+        }
+      }
+    },
+    "Card" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "البطاقات"
+          }
+        }
+      }
+    },
+    "Card Name" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عنوان للبطاقة"
+          }
+        }
+      }
+    },
+    "Cards" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "البطاقات"
+          }
+        }
+      }
+    },
+    "Changable" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "متغير"
+          }
+        }
+      }
+    },
+    "Change Password" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تغيير كلمة السر"
+          }
+        }
+      }
+    },
+    "Changeable Expenses" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "متغير"
+          }
+        }
+      }
+    },
+    "Check Expenses%@" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التحقق من النفقات"
+          }
+        }
+      }
+    },
+    "Choose an option for the downloaded file." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حفظ الملف"
+          }
+        }
+      }
+    },
+    "Click to Read" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "انقر للقراءة"
+          }
+        }
+      }
+    },
+    "Confirm Expenses Records" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تأكيد المصاريف"
+          }
+        }
+      }
+    },
+    "Confirm Logout" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تأكيد تسجيل الخروج"
+          }
+        }
+      }
+    },
+    "Confirm New Password" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تأكيد كلمة السر الجديدة"
+          }
+        }
+      }
+    },
+    "Confirmation" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تأكيد"
+          }
+        }
+      }
+    },
+    "Congrats" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هلا واللّه!"
+          }
+        }
+      }
+    },
+    "Continue" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أكمل"
+          }
+        }
+      }
+    },
+    "Continue with Apple" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تسجيل حساب"
+          }
+        }
+      }
+    },
+    "Continue with Google" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تسجيل حساب"
+          }
+        }
+      }
+    },
+    "Cost Change" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تغير في التكلفة"
+          }
+        }
+      }
+    },
+    "Create a Card" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إنشاء بطاقة"
+          }
+        }
+      }
+    },
+    "Create Account" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إنشاء حساب "
+          }
+        }
+      }
+    },
+    "Create an account" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إنشاء حساب"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Create an account"
+          }
+        }
+      }
+    },
+    "Create an Account" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إنشاء حساب "
+          }
+        }
+      }
+    },
+    "Create Card" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إنشاء بطاقة"
+          }
+        }
+      }
+    },
+    "Create Title for you Wassila card" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إنشئ أسم بطاقة وسيلة"
+          }
+        }
+      }
+    },
+    "Currency" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " عملة الدفع "
+          }
+        }
+      }
+    },
+    "Currency: %@" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " عملة الدفع "
+          }
+        }
+      }
+    },
+    "Current Password" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "كلمة السر الحاليه"
+          }
+        }
+      }
+    },
+    "Dashboard" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الموجز"
+          }
+        }
+      }
+    },
+    "Date:" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التاريخ"
+          }
+        }
+      }
+    },
+    "Date: %@" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التاريخ"
+          }
+        }
+      }
+    },
+    "Day of Purchase" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تاريخ الدفع في كل شهر"
+          }
+        }
+      }
+    },
+    "Day of Purchase (1-30)" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تاريخ الدفع في كل شهر (1-30)"
+          }
+        }
+      }
+    },
+    "Day should be between 1 to 30" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أدخل تاريخ شهر صحيح"
+          }
+        }
+      }
+    },
+    "Decrease By" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الانخفاض من"
+          }
+        }
+      }
+    },
+    "Define your expenses that will be record from this card" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حدد مصاريفك الدورية التي سيتم تسجيلها من هذه البطاقة"
+          }
+        }
+      }
+    },
+    "Delete" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حذف"
+          }
+        }
+      }
+    },
+    "Delete Account" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حذف الحساب"
+          }
+        }
+      }
+    },
+    "Delete Card" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حذف"
+          }
+        }
+      }
+    },
+    "Difference: %lf" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الاختلاف"
+          }
+        }
+      }
+    },
+    "Document 3 analysis free" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحليل الوثيقة 3 مجانا"
+          }
+        }
+      }
+    },
+    "Dollar" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دولار"
+          }
+        }
+      }
+    },
+    "Don't have an account?" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ليس لديك حساب ؟"
+          }
+        }
+      }
+    },
+    "Done" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حفظ"
+          }
+        }
+      }
+    },
+    "Download" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحميل"
+          }
+        }
+      }
+    },
+    "Download File" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحميل"
+          }
+        }
+      }
+    },
+    "Download Numbers File" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحميل"
+          }
+        }
+      }
+    },
+    "Due" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مستحق"
+          }
+        }
+      }
+    },
+    "Edit Expenses" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعديل"
+          }
+        }
+      }
+    },
+    "Email" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "البريد الإلكتروني"
+          }
+        }
+      }
+    },
+    "Enter amount" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المقدار"
+          }
+        }
+      }
+    },
+    "Enter Manually" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحديث يدوي"
+          }
+        }
+      }
+    },
+    "Enter Passcode" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أدخل كلمة السر"
+          }
+        }
+      }
+    },
+    "Enter Password" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أدخل كلمة السر"
+          }
+        }
+      }
+    },
+    "Enter the bigger amount here" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أدخل المبلغ الأكبر هنا"
+          }
+        }
+      }
+    },
+    "Enter the email the your registered with it" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دخل البريد الإلكتروني الذي استخدمته لتسجيل حسابك."
+          }
+        }
+      }
+    },
+    "Enter your email" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "البريد الإلكتروني"
+          }
+        }
+      }
+    },
+    "Error" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خطأ"
+          }
+        }
+      }
+    },
+    "Ex: Development" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مثال : المصاريف التقنية"
+          }
+        }
+      }
+    },
+    "Example @appleid.com" : {
+
+    },
+    "Expense Amount: %.2f" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مقدار الصرف"
+          }
+        }
+      }
+    },
+    "Expenses" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المصاريف"
+          }
+        }
+      }
+    },
+    "Expenses Amount" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مقدار الصرف"
+          }
+        }
+      }
+    },
+    "Expenses Currency" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عملة الدفع "
+          }
+        }
+      }
+    },
+    "Expenses Date" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التاريخ"
+          }
+        }
+      }
+    },
+    "Expenses Name" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أسم المصرف"
+          }
+        }
+      }
+    },
+    "Expenses Payment period" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نمط السداد"
+          }
+        }
+      }
+    },
+    "Expenses This Month vs. Last Month" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "النفقات هذا الشهر مقابل الشهر الماضي"
+          }
+        }
+      }
+    },
+    "Expenses Type" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نوع المصروفات"
+          }
+        }
+      }
+    },
+    "Face ID could not authenticate you." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لم يتمكن Face ID من التعرف عليك"
+          }
+        }
+      }
+    },
+    "Face ID Error" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لم يتمكن Face ID من المصادقة عليك."
+          }
+        }
+      }
+    },
+    "Feb" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فبراير"
+          }
+        }
+      }
+    },
+    "File Downloaded" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحميل الملف"
+          }
+        }
+      }
+    },
+    "Fixed" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ثابت"
+          }
+        }
+      }
+    },
+    "Fixed Expenses" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ثابت"
+          }
+        }
+      }
+    },
+    "Forget Password?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نسيت كلمة السر؟"
+          }
+        }
+      }
+    },
+    "Forgot Password?" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نسيت كلمة السر؟"
+          }
+        }
+      }
+    },
+    "Free Budget Expenses:" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ميزانية المصاريف الحرة"
+          }
+        }
+      }
+    },
+    "Free expenses are undefined costs that might be occasional or non-mandatory, but they can still arise unexpectedly." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المصاريف الحرة هي نفقات غير محددة، يمكن أن تكون عابرة أو غير إلزامية، ولكنها قد تظهر فجأة من حين لآخر."
+          }
+        }
+      }
+    },
+    "From" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يبدأ"
+          }
+        }
+      }
+    },
+    "From Chaos to Clarity" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "من الفوضى إلى الوضوح"
+          }
+        }
+      }
+    },
+    "Full Name" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الاسم"
+          }
+        }
+      }
+    },
+    "Hello," : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هلا والله"
+          }
+        }
+      }
+    },
+    "Hello,!" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هلا والله"
+          }
+        }
+      }
+    },
+    "Highest Price" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الأعلى تكلفة"
+          }
+        }
+      }
+    },
+    "Highlights" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الاعلى"
+          }
+        }
+      }
+    },
+    "hint_costs" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يبدو أن هناك الكثير مما يحدث مع تكاليفك. العناصر المستحقة، والمبالغ غير المدفوعة، وتغير التكلفة... فلنحل هذه المشكلة معًا."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "There seems to be a lot going on with your costs. Due items, unpaid amounts, fluctuations... let's untangle this together."
+          }
+        }
+      }
+    },
+    "hint_due_date" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هناك موعد استحقاق قادم تحقق من قسم (لديك)"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "There's an upcoming due date"
+          }
+        }
+      }
+    },
+    "hint_higher_costs" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يبدو أن تكاليفك أعلى من المتوقع"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Looks like your costs are higher than expected."
+          }
+        }
+      }
+    },
+    "hint_track" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عظيم! يبدو أن كل شيء يسير على الطريق الصحيح."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Great! Seems like everything is on track."
+          }
+        }
+      }
+    },
+    "hint_unpaid_costs" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أرى أن هناك بعض التكاليف غير المدفوعة. دعنا نلقي نظرة ونرى ما يحتاج إلى الاهتمام."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I see there are some unpaid costs. Let's take a look and see what needs attention."
+          }
+        }
+      }
+    },
+    "History" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جميع المصروفات"
+          }
+        }
+      }
+    },
+    "Incorrect passcode. Please try again." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "كلمة السر غير صحيحه! الرجاء المحاوله مره اخرى"
+          }
+        }
+      }
+    },
+    "Increase By" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإرتفاع من"
+          }
+        }
+      }
+    },
+    "Increased" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإرتفاع"
+          }
+        }
+      }
+    },
+    "Increment" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ارتفاع"
+          }
+        }
+      }
+    },
+    "Jan" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يناير"
+          }
+        }
+      }
+    },
+    "Keep your startup budget in check" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تابع ميزانية شغلك وسجلها اسرع"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keep your startup budget in check"
+          }
+        }
+      }
+    },
+    "Key" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عنوان للصرف"
+          }
+        }
+      }
+    },
+    "Key 1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ر.س"
+          }
+        }
+      }
+    },
+    "Largest Decrease: %@" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أقل من المعتاد"
+          }
+        }
+      }
+    },
+    "Largest Increase: %@" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الأعلى تكلفة"
+          }
+        }
+      }
+    },
+    "Last 30 Days" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اخر 30 يوم"
+          }
+        }
+      }
+    },
+    "Last Month" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الشهر الماضي"
+          }
+        }
+      }
+    },
+    "Less than usual" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أقل من المعتاد"
+          }
+        }
+      }
+    },
+    "Load PDF" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحميل pdf"
+          }
+        }
+      }
+    },
+    "Log Out" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تسجيل الخروج"
+          }
+        }
+      }
+    },
+    "Login" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سجل الدخول"
+          }
+        }
+      }
+    },
+    "Logout" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تسجيل الخروج"
+          }
+        }
+      }
+    },
+    "Mar" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مارس"
+          }
+        }
+      }
+    },
+    "Matched Transactions" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المصروفات المتشابهه"
+          }
+        }
+      }
+    },
+    "Monthly" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "شهري"
+          }
+        }
+      }
+    },
+    "More" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المزيد"
+          }
+        }
+      }
+    },
+    "Name" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الاسم"
+          }
+        }
+      }
+    },
+    "Name: %@" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الاسم"
+          }
+        }
+      }
+    },
+    "New Password" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "كلمة السر الجديدة"
+          }
+        }
+      }
+    },
+    "Next" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التالي"
+          }
+        }
+      }
+    },
+    "No corresponding expense" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ".."
+          }
+        }
+      }
+    },
+    "No Data to show" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا يوجد بيانات لعرضها"
+          }
+        }
+      }
+    },
+    "No expenses records" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا يوجد مصروفات حاليه"
+          }
+        }
+      }
+    },
+    "Numbers File to Fill  Expenses           %@" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ملف لتعبئة المصاريف "
+          }
+        }
+      }
+    },
+    "OK" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حسنا"
+          }
+        }
+      }
+    },
+    "options" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الخيارات"
+          }
+        }
+      }
+    },
+    "OR" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "او اكمل من خلال"
+          }
+        }
+      }
+    },
+    "OR Continue With" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "او اكمل من خلال"
+          }
+        }
+      }
+    },
+    "Other" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اخرى"
+          }
+        }
+      }
+    },
+    "Password" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "كلمة السر"
+          }
+        }
+      }
+    },
+    "Password Reset" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نسيت كلمة السر ؟"
+          }
+        }
+      }
+    },
+    "Paste" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لصق"
+          }
+        }
+      }
+    },
+    "Paste from SMS Message" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لصق رسالة SMS"
+          }
+        }
+      }
+    },
+    "Paste SMS Message" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لصق SMS"
+          }
+        }
+      }
+    },
+    "Payment Date" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التاريخ"
+          }
+        }
+      }
+    },
+    "Percentage: %@%%" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "النسبه"
+          }
+        }
+      }
+    },
+    "Pick an option" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اختر من التالي"
+          }
+        }
+      }
+    },
+    "Please enter your email & password to confirm account deletion:" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ادخل الايميل وكلمة السر لحذف الحساب!"
+          }
+        }
+      }
+    },
+    "Please log in to view your expenses." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الرجاء تسجيل الدخول"
+          }
+        }
+      }
+    },
+    "Please provide your bank statement so we can read your expenses and confirm your Wassila Expense Records card" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يرجى تقديم كشف حسابك البنكي حتى نتمكن من قراءة نفقاتك والتأكد من انشاء بطاقة وسيلة الخاصة بك بشكل صحيح."
+          }
+        }
+      }
+    },
+    "Please sign in to create a card." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الرجاء تسجيل الدخول"
+          }
+        }
+      }
+    },
+    "Please wait patiently we're working on it" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "انتظر، نجهز تسجيل مصروفاتك."
+          }
+        }
+      }
+    },
+    "Prepare Card" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إعداد البطاقة"
+          }
+        }
+      }
+    },
+    "Prepare your Wassila Card" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حضر بطاقة وسيلة الخاصة بك"
+          }
+        }
+      }
+    },
+    "Quick view of all expenses" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عرض سريع لجميع النفقات"
+          }
+        }
+      }
+    },
+    "Range" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حدود الصرف"
+          }
+        }
+      }
+    },
+    "Record your expenses" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حدد مصاريفك الدورية التي سيتم تسجيلها من هذه البطاقة"
+          }
+        }
+      }
+    },
+    "Reset Passcode" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نسيت كلمة السر ؟"
+          }
+        }
+      }
+    },
+    "Reset Password" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نسيت كلمة السر ؟"
+          }
+        }
+      }
+    },
+    "Restore Purchase" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اعاده الشراء"
+          }
+        }
+      }
+    },
+    "Review my Expenses" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مراجعه المصروف"
+          }
+        }
+      }
+    },
+    "SAR" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ر.س"
+          }
+        }
+      }
+    },
+    "Save" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حفظ"
+          }
+        }
+      }
+    },
+    "Save time!" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حفظ"
+          }
+        }
+      }
+    },
+    "Select Payment period" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نمط السداد"
+          }
+        }
+      }
+    },
+    "Select the currency" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حدد عملة الدفع "
+          }
+        }
+      }
+    },
+    "Set a budget for free expenses" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حدد مقدار ميزانية المصاريف الحرة "
+          }
+        }
+      }
+    },
+    "Set custom spending limits & track \nprogress" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قم بتعيين حدود ومسارات الإنفاق المخصصة"
+          }
+        }
+      }
+    },
+    "Set Your Password" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "انشاء كلمة سر للمحفظة"
+          }
+        }
+      }
+    },
+    "Show more" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عرض المزيد"
+          }
+        }
+      }
+    },
+    "Show More" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عرض المزيد"
+          }
+        }
+      }
+    },
+    "Show Transactions" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اظهار المصاريف"
+          }
+        }
+      }
+    },
+    "Sign up" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إنشاء حساب"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign up"
+          }
+        }
+      }
+    },
+    "skip" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تخطي"
+          }
+        }
+      }
+    },
+    "Skip" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تخطى"
+          }
+        }
+      }
+    },
+    "Starup Wallet" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "محفظة الشركات الناشئة"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Starup Wallet"
+          }
+        }
+      }
+    },
+    "Stay accountable!" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "كن مسؤولا!"
+          }
+        }
+      }
+    },
+    "Stop Guessing, Start Knowing!" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اوقف التخمين وابدا المعرفه!"
+          }
+        }
+      }
+    },
+    "Summary" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ملخص لجميع النفقات"
+          }
+        }
+      }
+    },
+    "Take Control" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تابع مصروفات عملك"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Take Control"
+          }
+        }
+      }
+    },
+    "Terms & Conditions" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الاحكام والشروط"
+          }
+        }
+      }
+    },
+    "This action cannot be undone." : {
+
+    },
+    "This Month" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هذا الشهر"
+          }
+        }
+      }
+    },
+    "To" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ينتهي"
+          }
+        }
+      }
+    },
+    "Top Paid" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الأعلى صرف"
+          }
+        }
+      }
+    },
+    "Total Budget" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مجموع ميزانية"
+          }
+        }
+      }
+    },
+    "Total Expenses" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "جميع المصروفات"
+          }
+        }
+      }
+    },
+    "Total Spent out of the budget" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إجمالي ما تم إنفاقه من الميزانية"
+          }
+        }
+      }
+    },
+    "Transaction" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المصروفات"
+          }
+        }
+      }
+    },
+    "Transaction Amount: %.2f" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مقدار الصرف"
+          }
+        }
+      }
+    },
+    "Transaction Name:" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اسم المصروف"
+          }
+        }
+      }
+    },
+    "Transactions" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المصروفات "
+          }
+        }
+      }
+    },
+    "Unpaid" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "غير مدفوع"
+          }
+        }
+      }
+    },
+    "Update expenses" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحديث"
+          }
+        }
+      }
+    },
+    "Update Expenses" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحديث"
+          }
+        }
+      }
+    },
+    "Update Transaction" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحديث"
+          }
+        }
+      }
+    },
+    "Upload bank\nStatement" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رفع كشف الحساب البنكي"
+          }
+        }
+      }
+    },
+    "Upload File" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رفع ملف"
+          }
+        }
+      }
+    },
+    "User not logged in" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الرجاء تسجيل الدخول"
+          }
+        }
+      }
+    },
+    "View" : {
+
+    },
+    "Wasilaah" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وسيلة"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wasilaah"
+          }
+        }
+      }
+    },
+    "Wasilah" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وسيلة"
+          }
+        }
+      }
+    },
+    "Wassila" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وسيلة"
+          }
+        }
+      }
+    },
+    "Weekly" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اسبوعي"
+          }
+        }
+      }
+    },
+    "Yearly" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سنوي"
+          }
+        }
+      }
+    },
+    "You Have" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لديك"
+          }
+        }
+      }
+    },
+    "You have created your first Wassila card!" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لقد قمت بإنشاء أول بطاقة وسيلة لتسجيل مصروفاتك !"
+          }
+        }
+      }
+    },
+    "Your path to a more efficient business starts here" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خطوتك الاولى للوعي بمصروفاتك التشغيلية بإحترافية"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your path to a more efficient business starts here"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

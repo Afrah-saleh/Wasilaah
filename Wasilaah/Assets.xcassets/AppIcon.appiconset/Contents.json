@@ -1,8 +1,846 @@
 {
   "images" : [
     {
+      "display-gamut" : "sRGB",
+      "filename" : "40.png",
       "idiom" : "universal",
       "platform" : "ios",
+      "scale" : "2x",
+      "size" : "20x20"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "40 1.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "2x",
+      "size" : "20x20"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "60.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "3x",
+      "size" : "20x20"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "60 1.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "3x",
+      "size" : "20x20"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "58.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "2x",
+      "size" : "29x29"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "58 1.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "2x",
+      "size" : "29x29"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "87.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "3x",
+      "size" : "29x29"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "87 1.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "3x",
+      "size" : "29x29"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "76.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "2x",
+      "size" : "38x38"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "76 1.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "2x",
+      "size" : "38x38"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "114.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "3x",
+      "size" : "38x38"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "114 1.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "3x",
+      "size" : "38x38"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "80.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "2x",
+      "size" : "40x40"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "80 1.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "2x",
+      "size" : "40x40"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "120.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "3x",
+      "size" : "40x40"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "120 1.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "3x",
+      "size" : "40x40"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "120 2.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "2x",
+      "size" : "60x60"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "120 3.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "2x",
+      "size" : "60x60"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "180.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "3x",
+      "size" : "60x60"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "180 1.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "3x",
+      "size" : "60x60"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "128.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "2x",
+      "size" : "64x64"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "128 1.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "2x",
+      "size" : "64x64"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "3x",
+      "size" : "64x64"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "3x",
+      "size" : "64x64"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "2x",
+      "size" : "68x68"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "2x",
+      "size" : "68x68"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "2x",
+      "size" : "76x76"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "2x",
+      "size" : "76x76"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "167.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "2x",
+      "size" : "83.5x83.5"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "167 1.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "scale" : "2x",
+      "size" : "83.5x83.5"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "1024.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "size" : "1024x1024"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "1024 1.png",
+      "idiom" : "universal",
+      "platform" : "ios",
+      "size" : "1024x1024"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "16.png",
+      "idiom" : "mac",
+      "scale" : "1x",
+      "size" : "16x16"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "16 1.png",
+      "idiom" : "mac",
+      "language-direction" : "left-to-right",
+      "scale" : "1x",
+      "size" : "16x16"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "16 2.png",
+      "idiom" : "mac",
+      "language-direction" : "right-to-left",
+      "scale" : "1x",
+      "size" : "16x16"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "16 3.png",
+      "idiom" : "mac",
+      "scale" : "1x",
+      "size" : "16x16"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "16 4.png",
+      "idiom" : "mac",
+      "language-direction" : "left-to-right",
+      "scale" : "1x",
+      "size" : "16x16"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "16 5.png",
+      "idiom" : "mac",
+      "language-direction" : "right-to-left",
+      "scale" : "1x",
+      "size" : "16x16"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "32.png",
+      "idiom" : "mac",
+      "scale" : "2x",
+      "size" : "16x16"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "32 1.png",
+      "idiom" : "mac",
+      "language-direction" : "left-to-right",
+      "scale" : "2x",
+      "size" : "16x16"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "32 2.png",
+      "idiom" : "mac",
+      "language-direction" : "right-to-left",
+      "scale" : "2x",
+      "size" : "16x16"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "32 3.png",
+      "idiom" : "mac",
+      "scale" : "2x",
+      "size" : "16x16"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "32 4.png",
+      "idiom" : "mac",
+      "language-direction" : "left-to-right",
+      "scale" : "2x",
+      "size" : "16x16"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "32 5.png",
+      "idiom" : "mac",
+      "language-direction" : "right-to-left",
+      "scale" : "2x",
+      "size" : "16x16"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "32 6.png",
+      "idiom" : "mac",
+      "scale" : "1x",
+      "size" : "32x32"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "32 7.png",
+      "idiom" : "mac",
+      "language-direction" : "left-to-right",
+      "scale" : "1x",
+      "size" : "32x32"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "32 8.png",
+      "idiom" : "mac",
+      "language-direction" : "right-to-left",
+      "scale" : "1x",
+      "size" : "32x32"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "32 9.png",
+      "idiom" : "mac",
+      "scale" : "1x",
+      "size" : "32x32"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "32 10.png",
+      "idiom" : "mac",
+      "language-direction" : "left-to-right",
+      "scale" : "1x",
+      "size" : "32x32"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "32 11.png",
+      "idiom" : "mac",
+      "language-direction" : "right-to-left",
+      "scale" : "1x",
+      "size" : "32x32"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "64.png",
+      "idiom" : "mac",
+      "scale" : "2x",
+      "size" : "32x32"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "64 1.png",
+      "idiom" : "mac",
+      "language-direction" : "left-to-right",
+      "scale" : "2x",
+      "size" : "32x32"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "64 2.png",
+      "idiom" : "mac",
+      "language-direction" : "right-to-left",
+      "scale" : "2x",
+      "size" : "32x32"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "64 3.png",
+      "idiom" : "mac",
+      "scale" : "2x",
+      "size" : "32x32"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "64 4.png",
+      "idiom" : "mac",
+      "language-direction" : "left-to-right",
+      "scale" : "2x",
+      "size" : "32x32"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "64 5.png",
+      "idiom" : "mac",
+      "language-direction" : "right-to-left",
+      "scale" : "2x",
+      "size" : "32x32"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "128 2.png",
+      "idiom" : "mac",
+      "scale" : "1x",
+      "size" : "128x128"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "128 3.png",
+      "idiom" : "mac",
+      "language-direction" : "left-to-right",
+      "scale" : "1x",
+      "size" : "128x128"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "128 4.png",
+      "idiom" : "mac",
+      "language-direction" : "right-to-left",
+      "scale" : "1x",
+      "size" : "128x128"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "128 5.png",
+      "idiom" : "mac",
+      "scale" : "1x",
+      "size" : "128x128"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "128 6.png",
+      "idiom" : "mac",
+      "language-direction" : "left-to-right",
+      "scale" : "1x",
+      "size" : "128x128"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "128 7.png",
+      "idiom" : "mac",
+      "language-direction" : "right-to-left",
+      "scale" : "1x",
+      "size" : "128x128"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "256.png",
+      "idiom" : "mac",
+      "scale" : "2x",
+      "size" : "128x128"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "256 1.png",
+      "idiom" : "mac",
+      "language-direction" : "left-to-right",
+      "scale" : "2x",
+      "size" : "128x128"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "256 2.png",
+      "idiom" : "mac",
+      "language-direction" : "right-to-left",
+      "scale" : "2x",
+      "size" : "128x128"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "256 3.png",
+      "idiom" : "mac",
+      "scale" : "2x",
+      "size" : "128x128"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "256 4.png",
+      "idiom" : "mac",
+      "language-direction" : "left-to-right",
+      "scale" : "2x",
+      "size" : "128x128"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "256 5.png",
+      "idiom" : "mac",
+      "language-direction" : "right-to-left",
+      "scale" : "2x",
+      "size" : "128x128"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "256 6.png",
+      "idiom" : "mac",
+      "scale" : "1x",
+      "size" : "256x256"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "256 7.png",
+      "idiom" : "mac",
+      "language-direction" : "left-to-right",
+      "scale" : "1x",
+      "size" : "256x256"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "256 8.png",
+      "idiom" : "mac",
+      "language-direction" : "right-to-left",
+      "scale" : "1x",
+      "size" : "256x256"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "256 9.png",
+      "idiom" : "mac",
+      "scale" : "1x",
+      "size" : "256x256"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "256 10.png",
+      "idiom" : "mac",
+      "language-direction" : "left-to-right",
+      "scale" : "1x",
+      "size" : "256x256"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "256 11.png",
+      "idiom" : "mac",
+      "language-direction" : "right-to-left",
+      "scale" : "1x",
+      "size" : "256x256"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "512.png",
+      "idiom" : "mac",
+      "scale" : "2x",
+      "size" : "256x256"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "512 1.png",
+      "idiom" : "mac",
+      "language-direction" : "left-to-right",
+      "scale" : "2x",
+      "size" : "256x256"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "512 2.png",
+      "idiom" : "mac",
+      "language-direction" : "right-to-left",
+      "scale" : "2x",
+      "size" : "256x256"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "512 3.png",
+      "idiom" : "mac",
+      "scale" : "2x",
+      "size" : "256x256"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "512 4.png",
+      "idiom" : "mac",
+      "language-direction" : "left-to-right",
+      "scale" : "2x",
+      "size" : "256x256"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "512 5.png",
+      "idiom" : "mac",
+      "language-direction" : "right-to-left",
+      "scale" : "2x",
+      "size" : "256x256"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "512 6.png",
+      "idiom" : "mac",
+      "scale" : "1x",
+      "size" : "512x512"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "512 7.png",
+      "idiom" : "mac",
+      "language-direction" : "left-to-right",
+      "scale" : "1x",
+      "size" : "512x512"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "512 8.png",
+      "idiom" : "mac",
+      "language-direction" : "right-to-left",
+      "scale" : "1x",
+      "size" : "512x512"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "512 9.png",
+      "idiom" : "mac",
+      "scale" : "1x",
+      "size" : "512x512"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "512 10.png",
+      "idiom" : "mac",
+      "language-direction" : "left-to-right",
+      "scale" : "1x",
+      "size" : "512x512"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "512 11.png",
+      "idiom" : "mac",
+      "language-direction" : "right-to-left",
+      "scale" : "1x",
+      "size" : "512x512"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "1024 2.png",
+      "idiom" : "mac",
+      "scale" : "2x",
+      "size" : "512x512"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "1024 3.png",
+      "idiom" : "mac",
+      "language-direction" : "left-to-right",
+      "scale" : "2x",
+      "size" : "512x512"
+    },
+    {
+      "display-gamut" : "sRGB",
+      "filename" : "1024 4.png",
+      "idiom" : "mac",
+      "language-direction" : "right-to-left",
+      "scale" : "2x",
+      "size" : "512x512"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "1024 5.png",
+      "idiom" : "mac",
+      "scale" : "2x",
+      "size" : "512x512"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "1024 6.png",
+      "idiom" : "mac",
+      "language-direction" : "left-to-right",
+      "scale" : "2x",
+      "size" : "512x512"
+    },
+    {
+      "display-gamut" : "display-P3",
+      "filename" : "1024 7.png",
+      "idiom" : "mac",
+      "language-direction" : "right-to-left",
+      "scale" : "2x",
+      "size" : "512x512"
+    },
+    {
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "22x22"
+    },
+    {
+      "filename" : "48.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "24x24"
+    },
+    {
+      "filename" : "55.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "27.5x27.5"
+    },
+    {
+      "filename" : "58 2.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "29x29"
+    },
+    {
+      "filename" : "60 2.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "30x30"
+    },
+    {
+      "filename" : "64 6.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "32x32"
+    },
+    {
+      "filename" : "66.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "33x33"
+    },
+    {
+      "filename" : "80 2.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "40x40"
+    },
+    {
+      "filename" : "87 2.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "43.5x43.5"
+    },
+    {
+      "filename" : "88.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "44x44"
+    },
+    {
+      "filename" : "92.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "46x46"
+    },
+    {
+      "filename" : "100.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "50x50"
+    },
+    {
+      "filename" : "102.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "51x51"
+    },
+    {
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "54x54"
+    },
+    {
+      "filename" : "172.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "86x86"
+    },
+    {
+      "filename" : "196.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "98x98"
+    },
+    {
+      "filename" : "216.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "108x108"
+    },
+    {
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "117x117"
+    },
+    {
+      "idiom" : "universal",
+      "platform" : "watchos",
+      "scale" : "2x",
+      "size" : "129x129"
+    },
+    {
+      "filename" : "1024 8.png",
+      "idiom" : "universal",
+      "platform" : "watchos",
       "size" : "1024x1024"
     }
   ],

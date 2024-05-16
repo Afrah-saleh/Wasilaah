@@ -20,8 +20,9 @@ struct SubscriptionView: View {
     @State private var monthlyProduct: Product?
 
     var body: some View {
+        GeometryReader { geometry in
         VStack(spacing: 20) {
-            
+            Spacer()
             Button(action: {
                 presentationMode.wrappedValue.dismiss()
             }) {
@@ -61,7 +62,7 @@ struct SubscriptionView: View {
                 Text("Set custom spending limits & track \nprogress")
             }
             
-
+            
             if let annual = annualProduct {
                 Button(action:{
                     Task {
@@ -96,7 +97,7 @@ struct SubscriptionView: View {
                 .cornerRadius(12)
             }
             
-
+            
             if let monthly = monthlyProduct {
                 Button(action:{
                     Task {
@@ -108,8 +109,8 @@ struct SubscriptionView: View {
                     }
                 }){
                     VStack(alignment:.leading){
-                            Text("Monthly")
-                                .bold()
+                        Text("Monthly")
+                            .bold()
                         HStack(spacing:30){
                             Text("Document 3 analysis free")
                                 .font(.caption)
@@ -122,7 +123,7 @@ struct SubscriptionView: View {
                 .background(Color.pprl)
                 .cornerRadius(12)
             }
-
+            
             // Restore Purchase, Terms and Conditions, and Upgrade button
             HStack(spacing: 4) {
                 Button("Restore Purchase") {
@@ -135,16 +136,18 @@ struct SubscriptionView: View {
             }
             .font(.caption)
             .foregroundColor(.blue)
-
+            
             Spacer()
-//            Button("Upgrade to Pro") {
-//                // Handle upgrade action
-//            }
-//            .frame(width: 320, height: 60)
-//            .background(Color.pprl)
-//            .foregroundColor(.white)
-//            .cornerRadius(12)
+            //            Button("Upgrade to Pro") {
+            //                // Handle upgrade action
+            //            }
+            //            .frame(width: 320, height: 60)
+            //            .background(Color.pprl)
+            //            .foregroundColor(.white)
+            //            .cornerRadius(12)
         }
+        .frame(maxWidth: .infinity,maxHeight: .infinity)
+    }
         .task {
             do {
                 let loadedProducts = try await Product.products(for: productIds)
@@ -192,3 +195,151 @@ struct SubscriptionView_Previews: PreviewProvider {
         SubscriptionView()
     }
 }
+
+
+
+//import SwiftUI
+//import StoreKit
+//
+//struct SubscriptionView: View {
+//    let productIds = ["Annual", "Monthly"]
+//    @Environment(\.presentationMode) var presentationMode
+//    @State private var products: [Product] = []
+//    @State private var annualProduct: Product?
+//    @State private var monthlyProduct: Product?
+//
+//    var body: some View {
+//        GeometryReader { geometry in
+//            VStack(spacing: 20) {
+//                closeButton
+//                
+//                Image("Subscription")
+//                
+//                Text("Stop Guessing, Start Knowing!")
+//                    .font(.title2)
+//                    .bold()
+//                
+//                featureList
+//                
+//                if let annual = annualProduct {
+//                    subscriptionButton(for: annual, label: "Annual", geometry: geometry)
+//                }
+//                
+//                if let monthly = monthlyProduct {
+//                    subscriptionButton(for: monthly, label: "Monthly", geometry: geometry)
+//                }
+//
+//                restoreAndTerms
+//                
+//                Spacer()
+//            }
+//            .task {
+//                await loadProducts()
+//            }
+//        }
+//    }
+//
+//    private var closeButton: some View {
+//        Button(action: {
+//            presentationMode.wrappedValue.dismiss()
+//        }) {
+//            Image(systemName: "xmark.circle.fill")
+//                .font(.title)
+//                .foregroundColor(.gray)
+//        }
+//        .padding(.trailing)
+//        .frame(maxWidth: .infinity, alignment: .trailing)
+//    }
+//    
+//    private var featureList: some View {
+//        VStack(alignment: .leading, spacing: 10) {
+//            featureItem(icon: "checkmark", title: "Save time!", description: "Automate expense categorization")
+//            featureItem(icon: "checkmark", title: "Stay accountable!", description: "Set custom spending limits & track progress")
+//        }
+//    }
+//    
+//    private func featureItem(icon: String, title: String, description: String) -> some View {
+//        VStack(alignment: .leading) {
+//            HStack {
+//                Image(systemName: icon)
+//                    .foregroundColor(.blue)
+//                    .bold()
+//                Text(title)
+//                    .font(.headline)
+//            }
+//            Text(description)
+//        }
+//    }
+//    
+//    private func subscriptionButton(for product: Product, label: String, geometry: GeometryProxy) -> some View {
+//        Button(action: {
+//            Task {
+//                do {
+//                    try await purchase(product)
+//                } catch {
+//                    print(error)
+//                }
+//            }
+//        }) {
+//            VStack(alignment: .leading) {
+//                HStack {
+//                    Text(label)
+//                        .bold()
+//                    Spacer()
+//                    Text("Best value")
+//                        .font(.caption)
+//                        .padding(6)
+//                        .background(.white)
+//                        .cornerRadius(12)
+//                }
+//                HStack {
+//                    Text("Document 3 analysis free")
+//                        .font(.caption)
+//                    Spacer()
+//                    Text("\(product.displayPrice) \(product.displayName)")
+//                }
+//            }
+//            .padding()
+//            .frame(width: geometry.size.width * 0.9)
+//            .foregroundColor(.white)
+//            .background(Color.blue)
+//            .cornerRadius(12)
+//        }
+//    }
+//    
+//    private var restoreAndTerms: some View {
+//        HStack(spacing: 4) {
+//            Button("Restore Purchase") {}
+//            Text(".")
+//            Button("Terms & Conditions") {}
+//        }
+//        .font(.caption)
+//        .foregroundColor(.blue)
+//    }
+//    
+//    private func loadProducts() async {
+//        do {
+//            let loadedProducts = try await Product.products(for: productIds)
+//            for product in loadedProducts {
+//                if product.id == "Annual" {
+//                    annualProduct = product
+//                } else if product.id == "Monthly" {
+//                    monthlyProduct = product
+//                }
+//            }
+//        } catch {
+//            print(error)
+//        }
+//    }
+//    
+//    private func purchase(_ product: Product) async throws {
+//        let result = try await product.purchase()
+//        // Handle purchase result cases
+//    }
+//}
+//
+//struct SubscriptionView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SubscriptionView()
+//    }
+//}

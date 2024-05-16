@@ -44,23 +44,28 @@ struct Summary: View {
                     }
                 }
                 .frame(height: 10)
-                Spacer()
+                
                 // Congrats Message
-                VStack{
+                VStack(spacing:50){
                     Text("Congrats")
                         .font(.title)
                         .bold()
                     
                     Text("You have created your first Wassila card!")
                         .font(.subheadline)
+                        .foregroundColor(.gray)
                 }
-                    Spacer()
                 // Budget Card
                 ZStack{
                     Image("Card")
                         .resizable()
-                        .frame(width: 400.52,height: 250)
-                    VStack{
+                        .frame(width: 440.52,height: 260)
+                    VStack(alignment:.leading){
+                        HStack(spacing:280){
+                            Image("icon")
+                            Image(systemName: "pencil.line")
+                                .foregroundColor(.white)
+                        }
                         Text("Total Expenses")
                             .font(.subheadline)
                             .foregroundColor(.gry)
@@ -74,11 +79,12 @@ struct Summary: View {
                                 .font(.subheadline)
                                 .foregroundColor(.gry)
                         }
+                        .padding(.bottom,70)
                         
                     }
-                    Image(systemName: "pencil.line")
-                        .offset(x:130,y:-70)
-                        .foregroundColor(.white)
+                    
+//                    .offset(x:130,y:-70)
+                    
                 }
                 Spacer()
                 // Budget Summary
@@ -89,32 +95,33 @@ struct Summary: View {
                     
                         .padding()
                     VStack{
-                        HStack {
+                        HStack(spacing:20){
                             Text("Budget for Scheduled Expenses:")
-                            Spacer()
                             Text ("\(expensesViewModel.totalNonOtherExpenses, specifier: "%.2f") SAR")
+                                .fixedSize()
                             
                         }
-                        HStack {
+                        HStack(spacing:90){
                             Text("Free Budget Expenses:")
-                            Spacer()
                             Text ("\(expensesViewModel.totalOtherExpenses, specifier: "%.2f") SAR")
+                                .fixedSize()
                             
                         }
                         Divider()
-                        HStack {
+                        HStack(spacing:150){
                             Text("Total Budget")
                                 .bold()
                                 .foregroundColor(.pprl)
-                            Spacer()
                             Text ("\(expensesViewModel.totalExpensesInSAR, specifier: "%.2f") SAR")
                                 .foregroundColor(.pprl)
+                                .fixedSize()
                         }
                     }
                     .background(
                         RoundedRectangle(cornerRadius: 12)
                             .stroke(Color.gray,lineWidth: /*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
                             .frame(width: 380, height: 120)
+                            .frame(maxWidth: .infinity,maxHeight: .infinity)
                     )
                     
                     
@@ -132,7 +139,6 @@ struct Summary: View {
                         .background(Color.pprl)
                         .cornerRadius(10)
                 }
-                Spacer()
                 
             } .padding(.all)
             

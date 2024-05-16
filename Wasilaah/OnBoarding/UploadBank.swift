@@ -125,7 +125,7 @@ struct UploadBank: View {
                         
                         // Disclaimer text
                         VStack(alignment: .leading, spacing: 10) {
-                            Text("At Wassila")
+                            Text("At Wasilaah")
                                 .fontWeight(.semibold)
                                 .font(.system(size: 16))
                             Text("• We only keep expense data to help organize your expenses. We don't access other account information or save it and ensure your privacy.")

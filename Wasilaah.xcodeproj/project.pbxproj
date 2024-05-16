@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		352603782BF6857C0009927E /* ffffff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352603772BF6857C0009927E /* ffffff.swift */; };
 		945697702BF5F8BB00EB5FA3 /* WasilaahApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9456976F2BF5F8BB00EB5FA3 /* WasilaahApp.swift */; };
 		945697742BF5F8BD00EB5FA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 945697732BF5F8BD00EB5FA3 /* Assets.xcassets */; };
 		945697772BF5F8BD00EB5FA3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 945697762BF5F8BD00EB5FA3 /* Preview Assets.xcassets */; };
@@ -97,6 +98,7 @@
 
 /* Begin PBXFileReference section */
 		352603742BF640C00009927E /* Subscription.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Subscription.storekit; sourceTree = "<group>"; };
+		352603772BF6857C0009927E /* ffffff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ffffff.swift; sourceTree = "<group>"; };
 		9456976C2BF5F8BB00EB5FA3 /* Wasilaah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wasilaah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9456976F2BF5F8BB00EB5FA3 /* WasilaahApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasilaahApp.swift; sourceTree = "<group>"; };
 		945697732BF5F8BD00EB5FA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -601,6 +603,7 @@
 				945698372BF637AE00EB5FA3 /* FreeBudgent.swift */,
 				945698382BF637AE00EB5FA3 /* incrementProgress.swift */,
 				945698342BF637AE00EB5FA3 /* Summary.swift */,
+				352603772BF6857C0009927E /* ffffff.swift */,
 				945698392BF637AE00EB5FA3 /* UploadBank.swift */,
 			);
 			path = OnBoarding;
@@ -743,6 +746,7 @@
 				945697B42BF6356F00EB5FA3 /* CardViewBlocked.swift in Sources */,
 				945698112BF636B100EB5FA3 /* Card.swift in Sources */,
 				945698022BF6367900EB5FA3 /* ExpensesForm.swift in Sources */,
+				352603782BF6857C0009927E /* ffffff.swift in Sources */,
 				9456979E2BF6353A00EB5FA3 /* SingleExpensesStatus.swift in Sources */,
 				945697AA2BF6355300EB5FA3 /* SummarySection.swift in Sources */,
 				945698312BF6376A00EB5FA3 /* PasscodeResetView.swift in Sources */,
@@ -909,7 +913,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Wasilaah/Preview Content\"";
-				DEVELOPMENT_TEAM = Y64UFA9C5L;
+				DEVELOPMENT_TEAM = DFQ2G36PPT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -922,7 +926,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Wasilaah.Wasilaah;
+				PRODUCT_BUNDLE_IDENTIFIER = Wasilaah1.Wasilaah;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -939,7 +943,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Wasilaah/Preview Content\"";
-				DEVELOPMENT_TEAM = Y64UFA9C5L;
+				DEVELOPMENT_TEAM = DFQ2G36PPT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -952,7 +956,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Wasilaah.Wasilaah;
+				PRODUCT_BUNDLE_IDENTIFIER = Wasilaah1.Wasilaah;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

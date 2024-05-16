@@ -27,37 +27,47 @@ struct FileNumber: View {
             
             Text("Download Numbers File")
                 .padding(.leading,-130)
-            Button("Numbers File to Fill  Expenses           \(Image(systemName: "square.and.arrow.down"))") {
+            
+            Button(action:{
                 downloadFile { url in
                     self.fileURL = url
                     self.showAlert = true
                 }
-            }
-            .background(Image("load"))
-            .foregroundColor(.pprl)
-            .alert(isPresented: $showAlert) {
-                Alert(
-                    title: Text("File Downloaded"),
-                    message: Text("Choose an option for the downloaded file."),
-                    primaryButton: .default(Text("View")) {
-                        // Trigger the file viewer
-                        self.showViewer = true
-                    },
-                    secondaryButton: .default(Text("Download")) {
-                        if fileURL != nil {
-                            self.showShareSheet = true
+            }){
+                HStack(spacing:50){
+                    Text("Numbers File to Fill  Expenses")
+                    Image(systemName: "square.and.arrow.down")
+                }
+            }.background(Image("load"))
+                .foregroundColor(.pprl)
+                .alert(isPresented: $showAlert) {
+                    Alert(
+                        title: Text("File Downloaded"),
+                        message: Text("Choose an option for the downloaded file."),
+                        primaryButton: .default(Text("View")) {
+                            // Trigger the file viewer
+                            self.showViewer = true
+                        },
+                        secondaryButton: .default(Text("Download")) {
+                            if fileURL != nil {
+                                self.showShareSheet = true
+                            }
                         }
-                    }
-                )
-            }
+                    )
+                }
             
             
             
             Text("Download Numbers File")
                 .padding(.leading,-130)
-            Button("Check Expenses\(Image(systemName: "square.and.arrow.up"))") {
+            
+            Button(action:{
                 isShowingDocumentPicker = true
-
+            }){
+                HStack(spacing:150){
+                    Text("Check Expenses")
+                    Image(systemName: "square.and.arrow.up")
+                }
             }
             .background(Image("load"))
             .foregroundColor(.pprl)
@@ -66,11 +76,13 @@ struct FileNumber: View {
                     viewModel.uploadExpensesFromPDF(url: url)
                 }
             }
+
         }
         .background(
             RoundedRectangle(cornerRadius: 12)
                 .stroke(Color.gray,lineWidth: 1.0)
-                .padding(-45)
+                .frame(width: 355, height: 220)
+//                .padding(-45)
                 .opacity(0.5)
             
         )

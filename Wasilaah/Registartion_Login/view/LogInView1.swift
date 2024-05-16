@@ -24,7 +24,6 @@ struct LogInView1: View {
     var body: some View {
         NavigationStack{
             ScrollView{
-                
                 Spacer(minLength: 40)
                 VStack{
                     

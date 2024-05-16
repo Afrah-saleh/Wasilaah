@@ -42,7 +42,7 @@ struct SetPasscodeView: View {
                     
                 }
                 .padding()
-                .navigationTitle("Wasilah")
+                .navigationTitle("Wasilaah")
                 .navigationBarTitleDisplayMode(.inline)
                 .alert(isPresented: $errorShowing) {
                     Alert(title: Text("Error"), message: Text(errorMessage), dismissButton: .default(Text("OK")))

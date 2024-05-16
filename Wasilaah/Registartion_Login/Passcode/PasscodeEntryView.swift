@@ -54,7 +54,7 @@ struct PasscodeEntryView: View {
 //                        PasscodeResetView()
 //                    }
                 }
-                .navigationTitle("Wasilah")
+                .navigationTitle("Wasilaah")
                 .navigationBarTitleDisplayMode(.inline)
                 .alert("Face ID Error", isPresented: $showingFaceIDAlert) {
                     Button("OK", role: .cancel) { }
@@ -70,6 +70,7 @@ struct PasscodeEntryView: View {
                         .environmentObject(authViewModel)
                 }
             }
+            .navigationBarBackButtonHidden(true)
         
             .onChange(of: passcode) { newValue in
                 if newValue.count == 4 {
@@ -113,9 +114,9 @@ struct CustomNumericKeypad: View {
     @Binding var passcode: String
     let onFaceID: () -> Void
     
-    let buttonBackgroundColor = Color.white.opacity(0.2)
+    let buttonBackgroundColor = Color.white11.opacity(0.2)
     let textColor = Color.pprl
-    let keypadBackgroundColor = Color.white
+    let keypadBackgroundColor = Color.white11
 
     var body: some View {
         GeometryReader { geometry in

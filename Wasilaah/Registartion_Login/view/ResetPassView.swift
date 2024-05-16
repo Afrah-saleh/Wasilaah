@@ -28,7 +28,7 @@ struct ResetPassView: View {
                 .padding(50)
                 
                 Text("Reset Password")
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                    .font(.title)
                     .bold()
                     .padding(.leading,-120)
                 

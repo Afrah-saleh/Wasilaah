@@ -33,10 +33,10 @@ struct SignUpView: View {
         NavigationStack{
             VStack(spacing:5){
                 HStack{
-                    Text("Wassila")
+                    Text("Wasilaah")
                         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                         .bold()
-                        .padding(.horizontal, 90)
+                        .padding(.horizontal, 70)
                     
                     Button(action:{
                         shouldNavigateHome = true
@@ -46,6 +46,8 @@ struct SignUpView: View {
                 }
                 .padding(.leading, 40)
                 
+                Spacer()
+
                 Image("WelcomePage")
                 TabView(selection: $selection) {
                             ForEach(texts.indices, id: \.self) { index in
@@ -164,6 +166,7 @@ struct SignUpView: View {
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .center)
+                Spacer()
             }
         }
         .onChange(of: authViewModel.signedIn) { isSignedIn in

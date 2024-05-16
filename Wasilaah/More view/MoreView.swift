@@ -27,130 +27,134 @@ struct MoreView: View {
     var body: some View {
         NavigationView {
             ScrollView{
+                GeometryReader { geometry in
                 VStack {
-                    if let profile = authViewModel.session {
+                    //                    if let profile = authViewModel.session {
+                    
+                    VStack(alignment:.leading, spacing: 20){
+                        Text("Account")
+                            .bold()
+                            .font(.title3)
+                            .padding(.leading,-160)
+                        VStack(alignment:.leading){
+                            Text("fghiuhrtgr")
+                            //                                Text("\(profile.fullName ?? "")!")
+                                .font(.headline)
+                                .padding(.leading,-150)
+                                .foregroundColor(.black)
+                            Text("fghiuhrtgr")
+                            //                                Text("\(profile.email)")
+                                .foregroundColor(.gray)
+                                .font(.caption)
+                                .padding(.leading,-150)
+                        }
+                        .background(
+                            RoundedRectangle(cornerRadius: 12)
+                                .foregroundColor(.gry)
+                            //                            .stroke(Color.gry, lineWidth: /*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
+                                .frame(width: 350,height: 60)
+                        )
+                    }
+                    .padding()
+                    
+                    
+                    VStack{
+                        Text("Reset Password")
+                            .bold()
+                            .font(.title3)
+                            .padding(.leading,-160)
                         
-                        VStack(alignment:.leading, spacing: 20){
-                            Text("Account")
-                                .bold()
-                                .font(.title3)
-                                .padding(.leading,-160)
-                            VStack(alignment:.leading){
-                                Text("\(profile.fullName ?? "")!")
-                                    .font(.headline)
-                                    .padding(.leading,-150)
-                                    .foregroundColor(.black)
-                                
-                                Text("\(profile.email)")
-                                    .foregroundColor(.gray)
-                                    .font(.caption)
-                                    .padding(.leading,-150)
+                        Button(action:{
+                            showingChangePasswordPopup = true
+                        }){
+                            ZStack{
+                                RoundedRectangle(cornerRadius: 12)
+                                    .foregroundColor(.gry)
+                                    .frame(width: 350,height: 60)
+                                HStack(spacing: 160){
+                                    Text("Change Password")
+                                        .foregroundColor(.black)
+                                    Image(systemName: "chevron.forward")
+                                        .foregroundColor(.gray)
+                                }
+                            }
+                        }
+                        if showingChangePasswordPopup {
+                            ChangePasswordPopup(isPresented: $showingChangePasswordPopup)
+                        }
+                        
+                    }
+                    
+                    Spacer()
+                    
+                    
+                    
+                    VStack(spacing: 40){
+                        if showDeleteAccountAlert {
+                            DeleteAccountAlert(authViewModel: sessionStore(), showDeleteAccountAlert: $showDeleteAccountAlert)
+                                .frame(width: 350, height: 320) // Adjusted height for better spacing
+                                .background(Color.white)
+                                .cornerRadius(20)
+                                .shadow(radius: 10)
+                                .padding()
+                        }
+                        
+                        Button(action: {
+                            showingLogoutAlert = true
+                        }){
+                            HStack{
+                                Image(systemName: "rectangle.portrait.and.arrow.right")
+                                Text("Logout")
                             }
                             .background(
                                 RoundedRectangle(cornerRadius: 12)
-                                    .foregroundColor(.gry)
-                                //                            .stroke(Color.gry, lineWidth: /*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
-                                    .frame(width: 350,height: 60)
+                                    .stroke( lineWidth: 1)
+                                    .frame(width: 300, height: 48)
+                                
                             )
                         }
-                        .padding()
+                        .foregroundColor(.pprl)
                         
-                        
-                        VStack{
-                            Text("Reset Password")
-                                .bold()
-                                .font(.title3)
-                                .padding(.leading,-160)
+                        Button(action:{
+                            showDeleteAccountAlert = true
                             
-                            Button(action:{
-                                showingChangePasswordPopup = true
-                            }){
-                                ZStack{
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .foregroundColor(.gry)
-                                        .frame(width: 350,height: 60)
-                                    HStack(spacing: 160){
-                                        Text("Change Password")
-                                            .foregroundColor(.black)
-                                        Image(systemName: "chevron.forward")
-                                            .foregroundColor(.gray)
-                                    }
-                                }
+                        }){
+                            HStack{
+                                Image(systemName: "trash")
+                                Text("Delete Account")
                             }
-                            if showingChangePasswordPopup {
-                                            ChangePasswordPopup(isPresented: $showingChangePasswordPopup)
-                                        }
-                            
+                            .background(
+                                RoundedRectangle(cornerRadius: 12)
+                                    .stroke( lineWidth: 1)
+                                    .frame(width: 300, height: 48)
+                            )
                         }
-                        
-                        Spacer()
-
-                        
-                        
-                        VStack(spacing: 40){
-                            if showDeleteAccountAlert {
-                                DeleteAccountAlert(authViewModel: sessionStore(), showDeleteAccountAlert: $showDeleteAccountAlert)
-                                    .frame(width: 350, height: 320) // Adjusted height for better spacing
-                                    .background(Color.white)
-                                    .cornerRadius(20)
-                                    .shadow(radius: 10)
-                                    .padding()
-                            }
-                            
-                            Button(action: {
-                                showingLogoutAlert = true
-                            }){
-                                HStack{
-                                    Image(systemName: "rectangle.portrait.and.arrow.right")
-                                    Text("Logout")
-                                }
-                                .background(
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .stroke( lineWidth: 1)
-                                        .frame(width: 300, height: 48)
-                                    
-                                )
-                            }
-                            .foregroundColor(.pprl)
-                            
-                            Button(action:{
-                                showDeleteAccountAlert = true
-                                
-                            }){
-                                HStack{
-                                    Image(systemName: "trash")
-                                    Text("Delete Account")
-                                }
-                                .background(
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .stroke( lineWidth: 1)
-                                        .frame(width: 300, height: 48)
-                                )
-                            }
-                            .foregroundColor(.red)
-                            .disabled(showDeleteAccountAlert)
-                            
-                            
-                        }
-                        
-                        //                    Spacer()
-                                            .padding()
+                        .foregroundColor(.red)
+                        .disabled(showDeleteAccountAlert)
                         
                         
-                        
-                    } else {
-                        MoreViewBlocked()
-                            .onTapGesture {
-                                showingSignUp = true
-                            }
-//                        
-                            .navigationDestination(isPresented: $showingSignUp) {
-                                SignUpView(authViewModel: sessionStore())
-                                
-                            }
-//
                     }
+                    
+                    //                    Spacer()
+                    .padding()
+                    
+                    
+                    
+                    //                    } else {
+                    //                        MoreViewBlocked()
+                    //                            .onTapGesture {
+                    //                                showingSignUp = true
+                    //                            }
+                    ////
+                    //                            .navigationDestination(isPresented: $showingSignUp) {
+                    //                                SignUpView(authViewModel: sessionStore())
+                    //
+                    //                            }
+                    ////
+                    //                    }
                 }
+                .frame(maxWidth: .infinity,maxHeight: .infinity)
+            }
                 
             }
             .alert(alertTitle, isPresented: $showingAlert) {

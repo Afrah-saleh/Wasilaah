@@ -27,31 +27,32 @@ struct NewExpenses: View {
     @State private var isShowingSubscriptionView = false
     @State private var addButtonCount = 0
     @State private var isShowingAlert = false
-
+    
     
     // Corrected initializer
     init(cardID: String) {
         self.cardID = cardID // Initialize the cardID property
         _viewModel = ObservedObject(wrappedValue: ExpensesViewModel(cardID: cardID))
     }
+    
     var body: some View {
         NavigationView {
+            VStack{
                 ScrollView{
                     VStack{
-                    Text(" UpdateOperational Expenses of this \n card")
-                        .font(.title3)
-                        .padding(.leading, -60)
-                    
-                        .padding(35)
-                    
-                    FileNumber(cardID: cardID)
-                    
-                        .padding()
-                    
-                    Spacer()
-                    
-                    
-                    // Expenses Forms
+                        Spacer()
+                        // Text Description
+                        VStack(alignment:.leading){
+                            Text("Update Expenses of this card")
+                                .font(.headline)
+                                .foregroundColor(.black11)
+                            
+                        }
+                        
+                        FileNumber(cardID: cardID)
+                            .padding(30)
+                        
+                        // Expenses Forms
                         VStack(alignment: .leading, spacing: 20) {
                             VStack(alignment: .leading, spacing: 20) {
                                 ForEach(viewModel.expenses.indices, id: \.self) { index in
@@ -61,15 +62,19 @@ struct NewExpenses: View {
                                 }
                             }
                         }
-                        .padding(30)
-                    
-                    Spacer()
+                        .padding()
+                        
+                        //                            Spacer()
+                    }
                 }
+                .frame(maxWidth: .infinity,maxHeight: .infinity)
+                
+                
                 
                 // Save Button
                 Button("Done") {
                     isShowingAlert = true
-//                    presentationMode.wrappedValue.dismiss()
+                    //                    presentationMode.wrappedValue.dismiss()
                 }
                 .padding()
                 .frame(maxWidth: .infinity)
@@ -77,40 +82,41 @@ struct NewExpenses: View {
                 .foregroundColor(.white)
                 .cornerRadius(8)
                 .padding([.leading, .trailing, .bottom])
+                
+                
             }
-            .padding()
             .sheet(isPresented: $isShowingSubscriptionView) {
                 SubscriptionView()
             }
             .alert(isPresented: $isShowingAlert) {
-                            Alert(
-                                title: Text("Confirmation"),
-                                message: Text("Are you sure you press on Save for each expenses form?"),
-                                primaryButton: .default(Text("OK")) {
-                                    // Action for "Next" button
-                                    presentationMode.wrappedValue.dismiss()
-                                },
-                                secondaryButton: .cancel()
-                            )
-                        }
+                Alert(
+                    title: Text("Confirmation"),
+                    message: Text("Are you sure you press on Save for each expenses form?"),
+                    primaryButton: .default(Text("OK")) {
+                        // Action for "Next" button
+                        presentationMode.wrappedValue.dismiss()
+                    },
+                    secondaryButton: .cancel()
+                )
+            }
             .navigationBarItems(leading: Button(action: {
-                            self.presentationMode.wrappedValue.dismiss()
-                        }) {
-                                Image(systemName: "chevron.left") // Customize your icon
-                            .foregroundColor(.black11) // Customize the color
-                        })
-                        .navigationBarTitle("Update expenses", displayMode: .inline)
-                        .navigationBarItems(trailing: Button(action: {
-                            addButtonCount += 1
-                            if addButtonCount >= 6 {
-                                isShowingSubscriptionView = true
-                            } else {
-                                viewModel.NewExpense()
-                            }
-                        }) {
-                            Image(systemName: "plus")
-                        })
-                        .foregroundColor(.black11)
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                Image(systemName: "chevron.left") // Customize your icon
+                    .foregroundColor(.black11) // Customize the color
+            })
+            .navigationBarTitle("Update expenses", displayMode: .inline)
+            .navigationBarItems(trailing: Button(action: {
+                addButtonCount += 1
+                if addButtonCount >= 6 {
+                    isShowingSubscriptionView = true
+                } else {
+                    viewModel.NewExpense()
+                }
+            }) {
+                Image(systemName: "plus")
+            })
+            .foregroundColor(.black11)
         }
         .navigationBarBackButtonHidden(true)
     }

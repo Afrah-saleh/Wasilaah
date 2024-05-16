@@ -23,16 +23,14 @@ struct SummaryView: View {
         ScrollView{
             VStack{
                 Text("Quick view of all expenses")
-                    .fontWeight(.medium)
-                   
-                
+                    .font(.title)
                     .multilineTextAlignment(.center)
                     .padding(.leading,-10)
                     .padding(.bottom,18)
                     .padding(.top,18)
+                
+                Divider()
                 VStack(){
-                    
-                    
                     
                     VStack(){
                         Text("Expenses This Month vs. Last Month")

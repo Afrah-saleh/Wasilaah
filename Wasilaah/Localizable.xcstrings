@@ -18,6 +18,7 @@
       }
     },
     " UpdateOperational Expenses of this \n card" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -231,6 +232,9 @@
         }
       }
     },
+    "Add New Expenses" : {
+
+    },
     "All Expenses" : {
       "localizations" : {
         "ar" : {
@@ -396,7 +400,11 @@
         }
       }
     },
+    "At Wasilaah" : {
+
+    },
     "At Wassila" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -538,7 +546,11 @@
         }
       }
     },
+    "Check Expenses" : {
+
+    },
     "Check Expenses%@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1740,7 +1752,11 @@
         }
       }
     },
+    "Numbers File to Fill  Expenses" : {
+
+    },
     "Numbers File to Fill  Expenses           %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1943,6 +1959,9 @@
         }
       }
     },
+    "Prepare your Wasilaah Card" : {
+
+    },
     "Prepare your Wassila Card" : {
       "localizations" : {
         "ar" : {
@@ -2127,6 +2146,7 @@
       }
     },
     "Show Transactions" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2382,6 +2402,9 @@
         }
       }
     },
+    "Update Expenses of this card" : {
+
+    },
     "Update Transaction" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -2394,6 +2417,7 @@
       }
     },
     "Upload bank\nStatement" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2402,6 +2426,9 @@
           }
         }
       }
+    },
+    "Upload bank Statement" : {
+
     },
     "Upload File" : {
       "localizations" : {
@@ -2447,6 +2474,7 @@
       }
     },
     "Wasilah" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2457,6 +2485,7 @@
       }
     },
     "Wassila" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {

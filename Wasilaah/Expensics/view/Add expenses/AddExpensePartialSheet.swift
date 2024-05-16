@@ -20,23 +20,24 @@ struct AddExpensePartialSheet: View {
     var body: some View {
         VStack {
             Spacer() // Pushes the sheet content to the bottom
-
-            VStack(spacing: 10) {
                 
-                HStack{
-                    Text("Add Expenses")
-                        .foregroundColor(.black11)
-                    Spacer()
-                    Button(action: {
-                        self.isPresented = false
-                    }) {
-                        Image(systemName: "xmark.circle.fill")
-                            .padding()
-                            .foregroundColor(.gray)
+                
+                VStack(spacing: 10) {
+                
+                    HStack(spacing: 160){
+                        Text("Add Expenses")
+                            .bold()
+                            .foregroundColor(.black11)
+                        Button(action: {
+                            self.isPresented = false
+                        }) {
+                            Image(systemName: "xmark.circle.fill")
+                                .padding()
+                                .foregroundColor(.gray)
+                        }
                     }
-
-                }
-                .font(.title2)
+                    .font(.title2)
+                
                 
 
                 HStack(spacing:60){
@@ -48,10 +49,11 @@ struct AddExpensePartialSheet: View {
 //                                Image("base")
                                 VStack (spacing:5){
                                     Image(systemName: "doc.text")
+                                        .font(.title2)
                                         .foregroundColor(.pprl)
-                                    Text("Upload bank\nStatement")
+                                    Text("Upload bank Statement")
                                         .foregroundColor(.black11)
-                                        .font(.caption)
+                                        .font(.headline)
                                 }
                             }
                            
@@ -78,10 +80,11 @@ struct AddExpensePartialSheet: View {
 //                                           Image("base")
                                            VStack(spacing:5) {
                                                Image(systemName: "bubble.left")
+                                                   .font(.title2)
                                                    .foregroundColor(.pprl)
                                                Text("Paste SMS Message")
                                                    .foregroundColor(.black11)
-                                                   .font(.caption)
+                                                   .font(.headline)
                                            }
                                        }
                                    }
@@ -104,10 +107,11 @@ struct AddExpensePartialSheet: View {
 //                            Image("base")
                             VStack(spacing:10) {
                                 Image(systemName: "plus.circle")
+                                    .font(.title2)
                                     .foregroundColor(.pprl)
                                 Text("Enter Manually")
                                     .foregroundColor(.black11)
-                                    .font(.caption)
+                                    .font(.headline)
                             }
                         }
                        
@@ -126,7 +130,7 @@ struct AddExpensePartialSheet: View {
                 .padding(20)
             }
 //            .padding(40)
-            .frame(width: 390, height: 200)
+            .frame(width: 390, height: 250)
 //            .frame(maxWidth: .infinity)
             .background(Color.white11)
             .cornerRadius(20)
@@ -158,8 +162,9 @@ struct AddExpense: View {
 
             VStack(spacing: 10) {
             
-                HStack(spacing: 180){
+                HStack(spacing: 160){
                     Text("Edit Expenses")
+                        .bold()
                         .foregroundColor(.black11)
                     Button(action: {
                         self.isPresented = false
@@ -181,10 +186,11 @@ struct AddExpense: View {
 //                            Image("base") // Make sure this image exists in your assets
                             VStack(spacing: 5) {
                                 Image(systemName: "pencil.line")
+                                    .font(.title)
                                     .foregroundColor(.pprl) // Replace with your actual color
                                 Text("Update Expenses")
                                     .foregroundColor(.black11) // Replace with your actual color
-                                    .font(.caption)
+                                    .font(.headline)
                             }
                         }
                        
@@ -192,11 +198,10 @@ struct AddExpense: View {
                     .background(
                         RoundedRectangle(cornerRadius: 12)
                             .stroke(Color.gray,lineWidth: 1.0)
-                            .frame(width: 100, height: 100)
+                            .frame(width: 140, height: 120)
                     )
                     
-                    .padding()
-                    
+                    Spacer()
                     
                     Button(action: {
                         
@@ -209,10 +214,12 @@ struct AddExpense: View {
 //                                        Image("base") // Make sure this image exists in your assets
                                         VStack(spacing: 5) {
                                             Image(systemName: "plus")
+                                                .font(.title)
                                                 .foregroundColor(.pprl) // Replace with your actual color
-                                            Text("Update Expenses")
+                                            Text("Add New Expenses")
                                                 .foregroundColor(.black11) // Replace with your actual color
-                                                .font(.caption)
+                                                .font(.headline)
+                                                
                                         }
                                     }
                                 }
@@ -222,14 +229,14 @@ struct AddExpense: View {
                     .background(
                         RoundedRectangle(cornerRadius: 12)
                             .stroke(Color.gray,lineWidth: 1.0)
-                            .frame(width: 100, height: 100)
+                            .frame(width: 140, height: 120)
                     )
                 }
                 
-                .padding(20)
+                .padding(40)
             }
             .padding(10)
-            .frame(width: 390, height: 200)
+            .frame(width: 390, height: 250)
             .frame(maxWidth: .infinity)
             .background(Color.white11)
             .cornerRadius(20)

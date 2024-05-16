@@ -78,6 +78,7 @@ struct FileNumber: View {
             }
 
         }
+        .frame(maxWidth: .infinity,maxHeight: .infinity)
         .background(
             RoundedRectangle(cornerRadius: 12)
                 .stroke(Color.gray,lineWidth: 1.0)

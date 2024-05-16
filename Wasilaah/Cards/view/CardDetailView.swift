@@ -43,8 +43,8 @@ struct CardDetailView: View {
                     ZStack {
                         Image("Card")
                             .resizable()
-                            .frame(width: 400,height: 270)
-                            .shadow(color:.gry, radius: 2)
+                            .frame(width: 420,height: 270)
+//                            .shadow(color:.gry, radius: 2)
                         
                         VStack (alignment:.leading){
                             Image("icon")
@@ -115,13 +115,13 @@ struct CardDetailView: View {
                 }
                 let transactionsViewModel = TransactionViewModel() // Create an instance of TransactionViewModel
                 
-                NavigationLink(destination: AllTransactionsView(transactionsViewModel: transactionsViewModel, expensesViewModel: expensesViewModel, cardID: card.cardID, authViewModel: authViewModel)) {
-                    HStack {
-                        Text("Show Transactions")
-                        Image(systemName: "chevron.forward")
-                    }
-                    .font(.caption)
-                }
+//                NavigationLink(destination: AllTransactionsView(transactionsViewModel: transactionsViewModel, expensesViewModel: expensesViewModel, cardID: card.cardID, authViewModel: authViewModel)) {
+//                    HStack {
+//                        Text("Show Transactions")
+//                        Image(systemName: "chevron.forward")
+//                    }
+//                    .font(.caption)
+//                }
 
                 
                 Spacer()
@@ -177,10 +177,6 @@ struct CardDetailView: View {
         }
     }
 }
-
-
-
-
 
 #Preview {
 CardDetailView(

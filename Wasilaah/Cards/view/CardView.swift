@@ -175,14 +175,12 @@ struct CardRow: View {
     @ViewBuilder
     private func cardContent() -> some View {
         ZStack {
-
                 VStack(alignment:.leading){
-
                     ZStack {
                         Image("Card")
                             .resizable()
                             .frame(width: 400,height: 270)
-                            .shadow(color:.gry, radius: 2)
+                            .shadow(color:.gry, radius: 1)
                         
                         VStack (alignment:.leading){
                             Image("icon")

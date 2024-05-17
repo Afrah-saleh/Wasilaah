@@ -77,15 +77,15 @@ struct WasilaahApp: App {
 
     var body: some Scene {
         WindowGroup {
-          //  SplashScreen()
-           RootView(authViewModel: authService, expenses: ExpensesViewModel(cardID: ""))
-            .environmentObject(authService) // Pass the authService to your views
-                //.environmentObject(ExpensesViewModel(cardID: "")) // Pass ExpensesViewModel here if it's needed globally
-                .environmentObject(transactionViewModel)
-                .environmentObject(expensesViewModel)
-            .onAppear {
-                authService.checkCurrentUser()
-            }
+            SplashScreen(authViewModel: sessionStore())
+//           RootView(authViewModel: authService, expenses: ExpensesViewModel(cardID: ""))
+//            .environmentObject(authService) // Pass the authService to your views
+//                //.environmentObject(ExpensesViewModel(cardID: "")) // Pass ExpensesViewModel here if it's needed globally
+//                .environmentObject(transactionViewModel)
+//                .environmentObject(expensesViewModel)
+//            .onAppear {
+//                authService.checkCurrentUser()
+//            }
         }
     }
 }

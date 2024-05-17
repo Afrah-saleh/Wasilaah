@@ -141,10 +141,13 @@ struct Home: View {
                     .frame(width: 20,height: 20)
                 Spacer() // This pushes everything else to the sides
                 
-                // This will align the bell image to the right
-                Image(systemName: "bell.badge")
-                    .fixedSize() // This will prevent the image from being compressed or stretched
-                NavigationLink("View Notifications", destination: NotificationsListView())
+//                // This will align the bell image to the right
+//                Image(systemName: "bell.badge")
+//                    .fixedSize() // This will prevent the image from being compressed or stretched
+//                NavigationLink("View Notifications", destination: NotificationsListView())
+                NavigationLink("\(Image(systemName: "bell.badge"))", destination: NotificationsListView())
+                                   .foregroundColor(.black11)
+                                   .fixedSize() // This will prevent the image from being compressed or stretched
             }
             .padding()
             .font(.title2)

@@ -13,12 +13,22 @@ struct SplashScreen: View {
     @State var textScale: CGFloat = 0.5
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
+    @StateObject var transactionViewModel = TransactionViewModel()
+    @StateObject var expensesViewModel = ExpensesViewModel(cardID: "")
     @StateObject var authService = sessionStore()
+    @StateObject var authViewModel: sessionStore
 
     var body: some View {
         if isActive {
             RootView(authViewModel: authService, expenses: ExpensesViewModel(cardID: ""))
-           .environmentObject(authService) // Pass the authService to your views
+             .environmentObject(authService) // Pass the authService to your views
+                 //.environmentObject(ExpensesViewModel(cardID: "")) // Pass ExpensesViewModel here if it's needed globally
+                 .environmentObject(transactionViewModel)
+                 .environmentObject(authViewModel)
+                 .environmentObject(expensesViewModel)
+             .onAppear {
+                 authService.checkCurrentUser()
+             }
         } else {
             VStack {
                 Image("logo") // Replace "logo" with your image name in the asset catalog
@@ -56,5 +66,5 @@ struct SplashScreen: View {
 
 
 #Preview {
-    SplashScreen()
+    SplashScreen(authViewModel: sessionStore())
 }

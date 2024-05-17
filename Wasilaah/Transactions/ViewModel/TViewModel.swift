@@ -361,10 +361,10 @@ class TViewModel: ObservableObject {
         content.body = "It's been a week since your last update. Please update your expenses to keep everything on track."
         content.sound = UNNotificationSound.default
 
-       // let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false) // Fire after 5 seconds for demo
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false) // Fire after 5 seconds for demo
         
         // Fire every 7 days
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 604800, repeats: true)
+//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 604800, repeats: true)
         let request = UNNotificationRequest(identifier: "updateReminder", content: content, trigger: trigger)
         
         UNUserNotificationCenter.current().add(request) { error in

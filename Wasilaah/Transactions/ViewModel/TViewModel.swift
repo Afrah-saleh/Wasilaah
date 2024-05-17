@@ -8,6 +8,7 @@ import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 import Foundation
+import UserNotifications
 
 
 class TViewModel: ObservableObject {
@@ -18,9 +19,9 @@ class TViewModel: ObservableObject {
     @Published var summaryIncrease: (name: String, percentage: Double)?
     @Published var summaryDecrease: (name: String, percentage: Double)?
     @Published var totalTransactionAmount: Double = 0.0
-     @Published var totalExpenseAmount: Double = 0.0
+    @Published var totalExpenseAmount: Double = 0.0
     var conversionRates: [String: Double] = ["Dollar": 3.75, "EUR": 4.05, "SAR": 1.0]  // Example rates
-
+    
     // Firestore database instance
     private var db = Firestore.firestore()
     
@@ -37,7 +38,7 @@ class TViewModel: ObservableObject {
                 } ?? []
                 self.matchTransactionsWithExpenses()
                 self.calculateTotalTransactionAmount()
-
+                
             }
         }
     }
@@ -54,19 +55,16 @@ class TViewModel: ObservableObject {
                 } ?? []
                 self.matchTransactionsWithExpenses()
                 self.calculateTotalExpenseAmount()
-
+                
             }
         }
     }
     // Calculate the total amount of transactions
-        private func calculateTotalTransactionAmount() {
-            totalTransactionAmount = transactions.reduce(0) { $0 + $1.amount }
-        }
-
-        // Calculate the total amount of expenses
-//        private func calculateTotalExpenseAmount() {
-//            totalExpenseAmount = expenses.reduce(0) { $0 + $1.amount }
-//        }
+    private func calculateTotalTransactionAmount() {
+        totalTransactionAmount = transactions.reduce(0) { $0 + $1.amount }
+    }
+    
+    
     private func calculateTotalExpenseAmount() {
         totalExpenseAmount = expenses.reduce(0) { total, expense in
             let rate = conversionRates[expense.currency.rawValue] ?? 1.0
@@ -75,17 +73,20 @@ class TViewModel: ObservableObject {
             return total + convertedAmount
         }
     }
-
+    
+    
     private func matchTransactionsWithExpenses() {
+        updateExpensesPaymentStatus()  // Ensure statuses are up to date
         DispatchQueue.main.async {
             for transaction in self.transactions {
                 if let index = self.expenses.firstIndex(where: { $0.name == transaction.transactionName }) {
                     self.expenses[index].lastTransactionDate = transaction.dateCreated
+                    self.expenses[index].isPaid = true  // Mark as paid upon matching transaction
                 }
             }
         }
     }
-
+    
     
     // Function to fetch and display matching transactions
     func fetchAndDisplayMatchingTransactions(cardID: String) {
@@ -240,12 +241,16 @@ class TViewModel: ObservableObject {
             let hasRecentTransaction = expense.lastTransactionDate.map {
                 Calendar.current.isDate($0, inSameDayAs: today) || $0 > today
             } ?? false
-            // Check if days left is between -5 (5 days past due) and 5 (due within next 5 days)
-            let isActionable = !hasRecentTransaction && expense.name != "Other"
-            print("Expense: \(expense.name), Days Left: \(daysLeft), Has Recent Transaction: \(hasRecentTransaction), Is Actionable: \(isActionable)")
+            // Check if the expense is not paid, is not of type "Other", and is within the actionable range
+            let isActionable = !hasRecentTransaction && expense.name != "Other" && !(expense.isPaid ?? false)
+            //  print("Expense: \(expense.name), Days Left: \(daysLeft), Has Recent Transaction: \(hasRecentTransaction), Is Actionable: \(isActionable), Is Paid: \(expense.isPaid)")
             return isActionable
         }
     }
+    func getUnpaidExpenses() -> [Expenses] {
+        return expenses.filter { !($0.isPaid ?? false) }
+    }
+    
     
     func daysUntilNextPayment(for expense: Expenses) -> Int {
         let calendar = Calendar.current
@@ -302,6 +307,73 @@ class TViewModel: ObservableObject {
             return total + convertedAmount
         }
     }
+    func updateExpensesPaymentStatus() {
+        let today = Date()
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.expenses = self.expenses.map { expense in
+                var updatedExpense = expense
+                let daysUntilNextPayment = self.daysUntilNextPayment(for: expense)
+                // If the next payment is due today or past, mark as unpaid
+                if daysUntilNextPayment <= 0 {
+                    updatedExpense.isPaid = false
+                }
+                return updatedExpense
+            }
+        }
+    }
+    func scheduleNotifications() {
+        let expenses = getSortedExpenses()
+        let notificationCenter = UNUserNotificationCenter.current()
+
+        // Remove all previous notifications to avoid duplicates
+        notificationCenter.removeAllPendingNotificationRequests()
+        
+        print("Scheduling notifications for expenses with days left <= 10")
+        
+        // Schedule new notifications
+        for expense in expenses {
+            let daysLeft = daysUntilNextPayment(for: expense)
+            print("Expense: \(expense.name), Days Left: \(daysLeft)")
+
+            if daysLeft <= 10 {
+                let content = UNMutableNotificationContent()
+                content.title = "Upcoming Payment Due"
+                content.body = "Your payment for \(expense.name) of \(expense.amount) \(expense.currency.rawValue) is due in \(daysLeft) days."
+                content.sound = UNNotificationSound.default
+
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+                let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+                
+                notificationCenter.add(request) { error in
+                    if let error = error {
+                        print("Error scheduling notification for \(expense.name): \(error)")
+                    } else {
+                        print("Notification scheduled for \(expense.name), \(daysLeft) days ahead.")
+                    }
+                }
+            }
+        }
+    }
+    func scheduleUpdateReminder() {
+        let content = UNMutableNotificationContent()
+        content.title = "Update Your Expenses"
+        content.body = "It's been a week since your last update. Please update your expenses to keep everything on track."
+        content.sound = UNNotificationSound.default
+
+       // let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false) // Fire after 5 seconds for demo
+        
+        // Fire every 7 days
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 604800, repeats: true)
+        let request = UNNotificationRequest(identifier: "updateReminder", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request) { error in
+            if let error = error {
+                print("Error scheduling update reminder: \(error)")
+            }
+        }
+    }
+
 }
 
 

@@ -880,6 +880,9 @@
         }
       }
     },
+    "Delivered Notifications" : {
+
+    },
     "Difference: %lf" : {
       "localizations" : {
         "ar" : {
@@ -2454,6 +2457,9 @@
       }
     },
     "View" : {
+
+    },
+    "View Notifications" : {
 
     },
     "Wasilaah" : {

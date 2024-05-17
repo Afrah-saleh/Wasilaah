@@ -248,11 +248,11 @@ class TransactionViewModel: ObservableObject {
             if let transactionDate = formatter.date(from: transaction.date),
                expense.lastTransactionDate == nil || expense.lastTransactionDate! < transactionDate {
                 expense.lastTransactionDate = transactionDate
+                expense.isPaid = true  // Mark the expense as paid
                 try? expenseRef.setData(from: expense)
             }
         }
     }
-    
 }
 
 extension TransactionViewModel{

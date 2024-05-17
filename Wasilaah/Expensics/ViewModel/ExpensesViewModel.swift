@@ -316,24 +316,23 @@ class ExpensesViewModel: ObservableObject {
        private func clearField() {
            amount = ""
        }
-    
-        func setupDataListeners() {
-            subscribeToExpensesUpdates()
-            // Add other data listeners as needed
-        }
-    
-        func subscribeToExpensesUpdates() {
-            db.collection("expenses").whereField("cardID", isEqualTo: self.cardID)
-                .addSnapshotListener { [weak self] querySnapshot, error in
-                    guard let documents = querySnapshot?.documents else {
-                        print("No documents or error: \(error?.localizedDescription ?? "Unknown error")")
-                        return
-                    }
-                    self?.expenses = documents.compactMap { document in
-                        try? document.data(as: Expenses.self)
-                    }
-                }
-        }
+    func setupDataListeners() {
+           subscribeToExpensesUpdates()
+           // Add other data listeners as needed
+       }
+
+       func subscribeToExpensesUpdates() {
+           db.collection("expenses").whereField("cardID", isEqualTo: self.cardID)
+               .addSnapshotListener { [weak self] querySnapshot, error in
+                   guard let documents = querySnapshot?.documents else {
+                       print("No documents or error: \(error?.localizedDescription ?? "Unknown error")")
+                       return
+                   }
+                   self?.expenses = documents.compactMap { document in
+                       try? document.data(as: Expenses.self)
+                   }
+               }
+       }
     
     
 }

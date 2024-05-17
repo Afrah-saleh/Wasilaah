@@ -24,6 +24,7 @@ struct Expenses: Codable, Identifiable {
     var range: Range1?               // Optional range with two decimal values
     var dateCreated: Date        // Date when the expense was created
     var lastTransactionDate: Date?  // New field to track the last transaction date
+    var isPaid: Bool? = false  // New field to track if the expense is paid
 
 }
 

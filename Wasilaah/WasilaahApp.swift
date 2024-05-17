@@ -9,8 +9,9 @@ import SwiftUI
 import FirebaseCore
 import FirebaseAuth
 import GoogleSignIn
+import UserNotifications
 
-class AppDelegate: NSObject, UIApplicationDelegate {
+class AppDelegate: NSObject, UIApplicationDelegate , UNUserNotificationCenterDelegate {
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
     FirebaseApp.configure()
@@ -32,10 +33,21 @@ class AppDelegate: NSObject, UIApplicationDelegate {
               print("Error signing out: \(error)")
           }
       }
-
+      requestNotificationPermission() 
       return true
   }
-  
+    func requestNotificationPermission() {
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+            if granted {
+                print("Notification permission granted.")
+            } else if let error = error {
+                print("Notification permission error: \(error)")
+            }
+        }
+    }
+    
+    
   @available(iOS 9.0, *)
   func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any]) -> Bool {
       return GIDSignIn.sharedInstance.handle(url)

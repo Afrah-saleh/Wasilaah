@@ -105,6 +105,8 @@ struct Home: View {
             
         }
         .onAppear {
+            viewModel.scheduleNotifications()
+            viewModel.scheduleUpdateReminder()
                   fetchTransactions()
                   fetchexpensesIfNeeded()
                   fetchExpensesForSelectedCard()
@@ -142,6 +144,7 @@ struct Home: View {
                 // This will align the bell image to the right
                 Image(systemName: "bell.badge")
                     .fixedSize() // This will prevent the image from being compressed or stretched
+                NavigationLink("View Notifications", destination: NotificationsListView())
             }
             .padding()
             .font(.title2)
@@ -303,6 +306,9 @@ struct Home: View {
             }
         }
         .onAppear {
+            viewModel.scheduleNotifications()
+            viewModel.scheduleUpdateReminder()
+
                   fetchTransactions()
                   fetchexpensesIfNeeded()
                   fetchExpensesForSelectedCard()

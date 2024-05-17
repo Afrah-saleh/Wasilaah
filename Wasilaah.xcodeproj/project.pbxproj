@@ -93,6 +93,8 @@
 		945698482BF6381E00EB5FA3 /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945698462BF6381E00EB5FA3 /* SubscriptionManager.swift */; };
 		9456984B2BF638A600EB5FA3 /* StrokChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945698492BF638A600EB5FA3 /* StrokChart.swift */; };
 		9456984C2BF638A600EB5FA3 /* ToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9456984A2BF638A600EB5FA3 /* ToolBar.swift */; };
+		9456984F2BF783D700EB5FA3 /* NotificationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9456984E2BF783D700EB5FA3 /* NotificationsListView.swift */; };
+		945698512BF784D300EB5FA3 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945698502BF784D300EB5FA3 /* NotificationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -178,6 +180,8 @@
 		945698492BF638A600EB5FA3 /* StrokChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrokChart.swift; sourceTree = "<group>"; };
 		9456984A2BF638A600EB5FA3 /* ToolBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolBar.swift; sourceTree = "<group>"; };
 		9456984D2BF6395E00EB5FA3 /* Wasilaah.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Wasilaah.entitlements; sourceTree = "<group>"; };
+		9456984E2BF783D700EB5FA3 /* NotificationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsListView.swift; sourceTree = "<group>"; };
+		945698502BF784D300EB5FA3 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +267,8 @@
 				945697972BF6350100EB5FA3 /* ExpennsesStatus */,
 				945697962BF634FE00EB5FA3 /* ExpensesList */,
 				945697952BF634FA00EB5FA3 /* CircleChart */,
+				9456984E2BF783D700EB5FA3 /* NotificationsListView.swift */,
+				945698502BF784D300EB5FA3 /* NotificationManager.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -703,6 +709,8 @@
 				945697AB2BF6355300EB5FA3 /* SingleSummary.swift in Sources */,
 				945697F62BF6366000EB5FA3 /* AllExpensesView.swift in Sources */,
 				945697B22BF6356F00EB5FA3 /* MoreViewBlocked.swift in Sources */,
+				9456984F2BF783D700EB5FA3 /* NotificationsListView.swift in Sources */,
+				945698512BF784D300EB5FA3 /* NotificationManager.swift in Sources */,
 				945697F22BF6364C00EB5FA3 /* Expenses.swift in Sources */,
 				945697A32BF6354800EB5FA3 /* ExpensesSection.swift in Sources */,
 				945697DA2BF6360500EB5FA3 /* SMS.swift in Sources */,
@@ -909,7 +917,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Wasilaah/Preview Content\"";
-				DEVELOPMENT_TEAM = DFQ2G36PPT;
+				DEVELOPMENT_TEAM = Y64UFA9C5L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -922,7 +930,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Wasilaah1.Wasilaah;
+				PRODUCT_BUNDLE_IDENTIFIER = Wasilaah.Wasilaah;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -939,7 +947,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Wasilaah/Preview Content\"";
-				DEVELOPMENT_TEAM = DFQ2G36PPT;
+				DEVELOPMENT_TEAM = Y64UFA9C5L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -952,7 +960,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Wasilaah1.Wasilaah;
+				PRODUCT_BUNDLE_IDENTIFIER = Wasilaah.Wasilaah;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

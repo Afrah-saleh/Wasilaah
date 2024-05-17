@@ -880,9 +880,6 @@
         }
       }
     },
-    "Delivered Notifications" : {
-
-    },
     "Difference: %lf" : {
       "localizations" : {
         "ar" : {
@@ -1754,6 +1751,9 @@
           }
         }
       }
+    },
+    "Notifications" : {
+
     },
     "Numbers File to Fill  Expenses" : {
 

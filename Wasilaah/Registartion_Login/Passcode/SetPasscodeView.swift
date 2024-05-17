@@ -69,6 +69,7 @@ struct SetPasscodeView: View {
             }
 
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

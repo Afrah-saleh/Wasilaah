@@ -19,6 +19,7 @@ struct SetPasscodeView: View {
         NavigationView {
             GeometryReader { geometry in
                 VStack {
+                    Spacer()
                     Text("Set Your Password")
                         .font(.title2)
                     
@@ -32,7 +33,7 @@ struct SetPasscodeView: View {
                         }
                     }
                     .padding(.bottom)
-                    
+                    Spacer()
                     // Custom numeric keypad
                     CustomNumericKeypad(passcode: $passcode, onFaceID: {
                 

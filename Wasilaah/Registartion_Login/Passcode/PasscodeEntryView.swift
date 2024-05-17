@@ -5,54 +5,38 @@ struct PasscodeEntryView: View {
     @State private var passcode: String = ""
     @State private var showError: Bool = false
     @EnvironmentObject var authViewModel: sessionStore
-    @State private var navigateToHome = false // State to control navigation
-    // State to handle Face ID authentication
+    @EnvironmentObject var appState: AppState
     @State private var isUnlocked = false
     @State private var showingFaceIDAlert = false
     @State private var shouldShowReset = false
 
     var body: some View {
-            NavigationView {
-                GeometryReader { geometry in
-                    VStack {
-                        VStack(spacing: 10) {
-                            Spacer()
-                            
-                            Text("Enter Passcode")
-                                .font(.title)
-                                .padding(.bottom,40)
-                            
-                            // Dots for the passcode
-                            HStack(spacing: 15) {
-                                ForEach(0..<4, id: \.self) { index in
-                                    Circle()
-                                        .fill(passcode.count > index ? Color.pprl : Color.gray.opacity(0.5))
-                                        .frame(width: 15, height: 15)
-                                }
+        NavigationView {
+            GeometryReader { geometry in
+                VStack {
+                    VStack(spacing: 10) {
+                        Spacer()
+                        Text("Enter Passcode")
+                            .font(.title)
+                            .padding(.bottom, 40)
+                        HStack(spacing: 15) {
+                            ForEach(0..<4, id: \.self) { index in
+                                Circle()
+                                    .fill(passcode.count > index ? Color.pprl : Color.gray.opacity(0.5))
+                                    .frame(width: 15, height: 15)
                             }
                         }
-                        .frame(height: geometry.size.height * 0.3) // Adjust this value based on your content size
-                        
-                        Spacer()
-                        if showError {
-                            Text("Incorrect passcode. Please try again.")
-                                .foregroundColor(.red)
-                                .padding(.all)
-                        }
-//                        Button("Reset Passcode") {
-//                            // Perform any checks or preparations here
-//                            self.shouldShowReset = true
-//                        } .buttonStyle(.borderedProminent) // Optional: Styling the button
-                        // Custom Keypad
-                        CustomNumericKeypad(passcode: $passcode, onFaceID: authenticate)
-                            .frame(height: geometry.size.height * 0.6) // Adjust this value based on your keypad size
-                            .padding(.bottom)
-                        
                     }
-                    
-//                    .navigationDestination(isPresented: $shouldShowReset) {
-//                        PasscodeResetView()
-//                    }
+                    .frame(height: geometry.size.height * 0.3)
+                    Spacer()
+                    if showError {
+                        Text("Incorrect passcode. Please try again`")
+                            .foregroundColor(.red)
+                            .padding(.all)
+                    }
+                    CustomNumericKeypad(passcode: $passcode, onFaceID: authenticate)
+                        .frame(height: geometry.size.height * 0.6)
+                        .padding(.bottom)
                 }
                 .navigationTitle("Wasilaah")
                 .navigationBarTitleDisplayMode(.inline)
@@ -62,29 +46,24 @@ struct PasscodeEntryView: View {
                     Text("Face ID could not authenticate you.")
                 }
                 .onAppear {
-                    // Automatically trigger Face ID authentication
                     authenticate()
                 }
-                .navigationDestination(isPresented: $navigateToHome) {
-                    Home(expensesViewModel: ExpensesViewModel(cardID: ""),cardViewModel: CardViewModel())
-                        .environmentObject(authViewModel)
-                }
-            }
-            .navigationBarBackButtonHidden(true)
-        
-            .onChange(of: passcode) { newValue in
-                if newValue.count == 4 {
-                    // Retrieve the passcode from Keychain and check if it matches the entered passcode
-                    if let storedPasscode = KeychainHelper.getPasscode(account: "userSecondaryPasscode"), storedPasscode == passcode {
-                        navigateToHome = true
-                        showError = false
-                    } else {
-                        showError = true
-                        passcode = "" // Reset passcode after a failed attempt
+                .onChange(of: passcode) { newValue in
+                    if newValue.count == 4 {
+                        if let storedPasscode = KeychainHelper.getPasscode(account: "userSecondaryPasscode"), storedPasscode == passcode {
+                            appState.showPasscodeEntry = false // Hide the passcode view
+                            showError = false
+                        } else {
+                            showError = true
+                            passcode = "" // Reset passcode after a failed attempt
+                        }
                     }
                 }
             }
         }
+        .navigationBarBackButtonHidden(true)
+    }
+
 
     func authenticate() {
         let context = LAContext()
@@ -98,7 +77,7 @@ struct PasscodeEntryView: View {
                 DispatchQueue.main.async {
                     if success {
                         isUnlocked = true
-                        navigateToHome = true
+                       // navigateToHome = true
                     } else {
                         showingFaceIDAlert = true
                     }

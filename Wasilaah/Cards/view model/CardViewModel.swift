@@ -14,26 +14,47 @@ class CardViewModel: ObservableObject {
 
       private var cancellables = Set<AnyCancellable>()
     private let db = Firestore.firestore()
+    var expensesViewModels: [String: ExpensesViewModel] = [:]
 
       // Function to fetch cards for a specific user
+//    func fetchCards(userID: String) {
+//        db.collection("cards")
+//            .whereField("userID", isEqualTo: userID)
+//            .addSnapshotListener { querySnapshot, error in
+//                if let error = error {
+//                    print("Error fetching cards: \(error)")
+//                    return
+//                }
+//                guard let documents = querySnapshot?.documents else {
+//                    print("No documents")
+//                    return
+//                }
+//                self.cards = documents.compactMap { queryDocumentSnapshot in
+//                    try? queryDocumentSnapshot.data(as: Card.self)
+//                }
+//            }
+//    }
     func fetchCards(userID: String) {
-        db.collection("cards")
-            .whereField("userID", isEqualTo: userID)
-            .addSnapshotListener { querySnapshot, error in
-                if let error = error {
-                    print("Error fetching cards: \(error)")
-                    return
-                }
-                guard let documents = querySnapshot?.documents else {
-                    print("No documents")
-                    return
-                }
-                self.cards = documents.compactMap { queryDocumentSnapshot in
-                    try? queryDocumentSnapshot.data(as: Card.self)
-                }
-            }
-    }
-
+           db.collection("cards")
+               .whereField("userID", isEqualTo: userID)
+               .addSnapshotListener { querySnapshot, error in
+                   if let error = error {
+                       print("Error fetching cards: \(error)")
+                       return
+                   }
+                   guard let documents = querySnapshot?.documents else {
+                       print("No documents")
+                       return
+                   }
+                   self.cards = documents.compactMap { queryDocumentSnapshot in
+                       let card = try? queryDocumentSnapshot.data(as: Card.self)
+                       if let card = card {
+                           self.expensesViewModels[card.cardID] = ExpensesViewModel(cardID: card.cardID)
+                       }
+                       return card
+                   }
+               }
+       }
     func createCard(userID: String, cardName: String, completion: @escaping (Result<Card, Error>) -> Void) {
         let newCard = Card(
             cardID: UUID().uuidString,  // Convert UUID to String for the cardID

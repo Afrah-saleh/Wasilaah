@@ -177,7 +177,7 @@ struct Home: View {
                             }
                             
                             
-                            ScrollView(.horizontal, showsIndicators: true) {
+                            ScrollView(.horizontal, showsIndicators: false) {
                                 LazyHStack {
                                     ForEach(cardViewModel.cards) { card in
                                         NavigationLink(destination: CardDetailView(card: card, cardViewModel: CardViewModel(), expensesViewModel: ExpensesViewModel(cardID: card.cardID))) {
@@ -196,7 +196,9 @@ struct Home: View {
                                                         .font(.caption)
                                                     HStack(spacing: 2){
 //                                                        Text ("\(viewModel.totalExpenseAmount, specifier: "%.2f")")
-                                                        Text ("\(viewModel.totalExpenseAmount, specifier: "%.2f")")
+                                                    //    Text ("\(viewModel.totalExpenseAmount, specifier: "%.2f")")
+                                                        Text("\(cardViewModel.expensesViewModels[card.cardID]?.totalExpensesInSAR ?? 0, specifier: "%.2f")")
+
                                                             .bold()
                                                         Text("SAR")
                                                             .font(.footnote)

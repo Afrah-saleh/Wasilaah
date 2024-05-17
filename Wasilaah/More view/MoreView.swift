@@ -29,7 +29,7 @@ struct MoreView: View {
             ScrollView{
                 GeometryReader { geometry in
                 VStack {
-                    //                    if let profile = authViewModel.session {
+                                        if let profile = authViewModel.session {
                     
                     VStack(alignment:.leading, spacing: 20){
                         Text("Account")
@@ -37,13 +37,13 @@ struct MoreView: View {
                             .font(.title3)
                             .padding(.leading,-160)
                         VStack(alignment:.leading){
-                            Text("fghiuhrtgr")
-                            //                                Text("\(profile.fullName ?? "")!")
+//                            Text("fghiuhrtgr")
+                                                            Text("\(profile.fullName ?? "")!")
                                 .font(.headline)
                                 .padding(.leading,-150)
                                 .foregroundColor(.black)
-                            Text("fghiuhrtgr")
-                            //                                Text("\(profile.email)")
+//                            Text("fghiuhrtgr")
+                                                            Text("\(profile.email)")
                                 .foregroundColor(.gray)
                                 .font(.caption)
                                 .padding(.leading,-150)
@@ -140,18 +140,18 @@ struct MoreView: View {
                     
                     
                     
-                    //                    } else {
-                    //                        MoreViewBlocked()
-                    //                            .onTapGesture {
-                    //                                showingSignUp = true
-                    //                            }
-                    ////
-                    //                            .navigationDestination(isPresented: $showingSignUp) {
-                    //                                SignUpView(authViewModel: sessionStore())
+                                        } else {
+                                            MoreViewBlocked()
+                                                .onTapGesture {
+                                                    showingSignUp = true
+                                                }
                     //
-                    //                            }
-                    ////
-                    //                    }
+                                                .navigationDestination(isPresented: $showingSignUp) {
+                                                    SignUpView(authViewModel: sessionStore())
+                    
+                                                }
+                    //
+                                        }
                 }
                 .frame(maxWidth: .infinity,maxHeight: .infinity)
             }
@@ -280,7 +280,7 @@ struct ChangePasswordPopup: View {
             }
         }
         .padding()
-        .background(Color.white)
+        .background(Color.white11)
         .frame(width: 330)
         .cornerRadius(12)
         .shadow(radius: 3)

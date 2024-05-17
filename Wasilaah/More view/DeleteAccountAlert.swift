@@ -80,6 +80,7 @@ struct DeleteAccountAlert: View {
         }
         .padding(.bottom,50)
         .navigationBarTitleDisplayMode(.inline)
+        .background(Color.white11)
     }
 }
 

@@ -8,7 +8,6 @@
 
 
 
-
 import SwiftUI
 import Charts
 
@@ -16,21 +15,25 @@ struct SummaryView: View {
     
     
     var body: some View {
+       
         @EnvironmentObject var authViewModel: sessionStore
-
+      
+        var expense: Expenses
         let expensesViewModel = ExpensesViewModel(cardID: "yourCardID")
         let cardViewModel = CardViewModel()
         ScrollView{
             VStack{
                 Text("Quick view of all expenses")
-                    .font(.title)
+                    .fontWeight(.medium)
+                   
+                
                     .multilineTextAlignment(.center)
                     .padding(.leading,-10)
                     .padding(.bottom,18)
                     .padding(.top,18)
-                
-                Divider()
                 VStack(){
+                    
+                    
                     
                     VStack(){
                         Text("Expenses This Month vs. Last Month")

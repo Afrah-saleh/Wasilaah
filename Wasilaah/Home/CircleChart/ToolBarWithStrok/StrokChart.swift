@@ -46,10 +46,10 @@ struct StrokeChart: View {
             // HintView positioned relative to the pie chart
             HintView()
                 .frame(width: 50, height: 80)
-                .padding(.leading, -120)
+                .padding(.leading, -110)
                 .padding(.top, -73)
         }
-        .frame(width: 180, height: 180) // Fixed size for the pie chart
+        .frame(width: 150, height: 150) // Fixed size for the pie chart
     }
 }
 

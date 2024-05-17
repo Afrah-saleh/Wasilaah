@@ -134,6 +134,9 @@ struct Home: View {
                 Text("\(authViewModel.session?.fullName ?? "")")
                     .fixedSize() // This will prevent the text from being compressed or stretched
                 
+                Image("weekly")
+                    .resizable()
+                    .frame(width: 20,height: 20)
                 Spacer() // This pushes everything else to the sides
                 
                 // This will align the bell image to the right

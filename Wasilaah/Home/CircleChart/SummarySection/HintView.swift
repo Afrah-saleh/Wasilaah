@@ -38,7 +38,7 @@ struct HintView: View {
                     Image(localizedImageName)
                    // Image(isArabic() ? "RectangleTextArabic" : "RectangleText")
                    // Image("RectangleText").resizable()
-                        .frame(width: 170, height: 70)
+                        .frame(width: 170, height: 60)
                         //.padding()
                     Text(cases[currentIndex].0)
                         .multilineTextAlignment(.leading)

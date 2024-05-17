@@ -22,6 +22,7 @@ struct AddTransactionManually: View {
     var cardID: String
     var body: some View {
         NavigationView {
+            ScrollView{
                 VStack{
                     if let user = authViewModel.session {
                         VStack{
@@ -47,27 +48,28 @@ struct AddTransactionManually: View {
                                             .stroke(Color.gray, lineWidth: 1) // Define the border color and width
                                     )
                                     .frame(width: 150)
+                                    
                                 
                                 Text("Currency")
                                 SegmentedControlButton(selection: $viewModel.currency, options: Currency1.allCases)
-                                
-                                Button("Upload File") {
-                                    showingImagePicker = true
-                                    //  viewModel.loadExpense(transaction)
-                                    //  presentationMode.wrappedValue.dismiss()
-                                }
-                                .foregroundColor(.white)
-                                .frame(width: 300)
-                                .padding()
-                                .padding(.leading,20)
-                                .background(Color.pprl)
-                                .cornerRadius(12)
-                                .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
-                                    ImagePicker(image: self.$inputImage)
-                                    
-                                }
-                            }
-                            .padding(.leading,20)
+                                //                                
+                                //                                Button("Upload File") {
+                                //                                    showingImagePicker = true
+                                //                                    //  viewModel.loadExpense(transaction)
+                                //                                    //  presentationMode.wrappedValue.dismiss()
+                                //                                }
+                                //                                .foregroundColor(.white)
+                                //                                .frame(width: 300)
+                                //                                .padding()
+                                //                                .padding(.leading,20)
+                                //                                .background(Color.pprl)
+                                //                                .cornerRadius(12)
+                                //                                .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
+                                //                                    ImagePicker(image: self.$inputImage)
+                                //                                    
+                                //                                }
+                            }.padding(.all)
+                            //.padding(.leading,20)
                             .background(
                                 RoundedRectangle(cornerRadius: 12)
                                     .stroke(Color.gray,lineWidth: 1.0)
@@ -76,7 +78,7 @@ struct AddTransactionManually: View {
                             )
                             
                             Button(action:{
-                                                        viewModel.saveTransaction(cardID: cardID, userID: user.uid)
+                                viewModel.saveTransaction(cardID: cardID, userID: user.uid)
                                 viewModel.updateTransactions(transaction)
                             }){
                                 Text("Done")
@@ -87,9 +89,9 @@ struct AddTransactionManually: View {
                                     .cornerRadius(12)
                                     .padding(.top,100)
                             }
-                            .padding(70)
+                          //  .padding(70)
                             
-                            
+                        }.padding()
                         }
                     }
             }
@@ -140,28 +142,32 @@ struct AddTransactionManually: View {
     
     //download file
     func loadImage() {
-           guard let inputImage = inputImage else { return }
-           guard let imageData = inputImage.jpegData(compressionQuality: 1.0) else { return }
+        guard let inputImage = inputImage else { return }
+        guard let imageData = inputImage.jpegData(compressionQuality: 1.0) else { return }
 
-           let storageRef = Storage.storage().reference().child("transaction_files/\(transaction.id).jpg")
-           storageRef.putData(imageData, metadata: nil) { metadata, error in
-               guard metadata != nil else {
-                   print("Error uploading file: \(error?.localizedDescription ?? "Unknown error")")
-                   return
-               }
-               storageRef.downloadURL { url, error in
-                   guard let downloadURL = url else {
-                       print("Error getting download URL: \(error?.localizedDescription ?? "Unknown error")")
-                       return
-                   }
-                   // Update transaction with file URL
-                   var updatedTransaction = transaction
-                   //updatedTransaction.fileURL = downloadURL
-                   viewModel.updateTransaction(transaction: updatedTransaction)
-                   
-               }
-           }
-       }
+        let storageRef = Storage.storage().reference().child("transaction_files/\(transaction.id).jpg")
+        storageRef.putData(imageData, metadata: nil) { metadata, error in
+            if let error = error {
+                print("Error uploading file: \(error.localizedDescription)")
+                return
+            }
+            print("File uploaded successfully")
+            storageRef.downloadURL { url, error in
+                if let error = error {
+                    print("Error getting download URL: \(error.localizedDescription)")
+                    return
+                }
+                guard let downloadURL = url else {
+                    print("Download URL is nil")
+                    return
+                }
+                print("File URL: \(downloadURL)")
+                // Update transaction with file URL
+                self.transaction.fileURL = downloadURL
+                self.viewModel.updateTransaction(transaction: self.transaction)
+            }
+        }
+    }
     
     
     

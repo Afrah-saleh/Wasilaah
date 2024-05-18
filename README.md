@@ -1,6 +1,7 @@
+  # Wasilaah App 
+
 <p>
 <img src="logo.png" width="100" align="left" />
-  # Wasilaah App 
 </p>
 
 
@@ -23,28 +24,67 @@ So they can increase their awareness of the finances of their business and reduc
 
 ## **Tables.**
 
-1-Session Table 
+1-login/signup Table 
 
 |        Column       |      TYPE     |     Key
 |--------------------:|--------------:|---------------|
-|   Sessionid         |     uuid      |      PK       |
-|   Title             |    String     |               |
-|   Desc              |    String     |               |
-|   SpeakerName       |    String     |               |
-|   HallNumber        |    String     |               |
-|   StartTime         |    String     |               |
-|   Endime            |    String     |               |
-|   Status            |    String     |               |
-|   Location          |    String     |               |
+|   auth_record_id    |     uuid      |      PK       |
+|   userID            |     uuid      |      FK       |
+|   email             |    String     |               |
+|   Password          |    String     |               |
 
 
-2-Attendee Table 
+
+2-User Table 
 
 |        Column       |      TYPE     |     Key
 |--------------------:|--------------:|---------------|
-|   AttendeeID        |     uuid      |      PK       |
-|   FullName          |    String     |               |
-|   Email             |    String     |               |
+|   userID            |     uuid      |      PK       |
+|   fullName          |    String     |               |
+|   email             |    String     |               |
+|   password          |    String     |               |
+
+
+2-Card Table 
+
+|        Column       |      TYPE     |     Key
+|--------------------:|--------------:|---------------|
+|   cardID            |     uuid      |      PK       |
+|   userID            |     uuid      |      FK       |
+|   cardName          |    String     |               |
+|   totalExpenses     |    Double     |               |
+
+
+
+2-Expenses Table 
+
+|        Column       |      TYPE     |     Key
+|--------------------:|--------------:|---------------|
+|   expensesID        |     uuid      |      PK       |
+|   cardID            |     uuid      |      FK       |
+|   expensesName      |    String     |               |
+|   expensesType      |    String     |               |
+|   expensescurrency  |    String     |               |
+| expensespaymentDate |    String     |               |
+|expensesdayOfPurchase|    String     |               |
+|   expensesAmount    |    Double     |               |
+|   expensesRange     |    String     |               |
+
+
+
+2-Transaction Table 
+
+|        Column       |      TYPE     |     Key
+|--------------------:|--------------:|---------------|
+|   transactionID     |     uuid      |      PK       |
+|   cardID            |     uuid      |      FK       |
+|   userID            |     uuid      |      FK       |
+|   expensesID        |     uuid      |      PK       |
+|   transactionName   |    String     |               |
+|   transactionAmount |    String     |               |
+|   transactionDate   |    String     |               |
+| transactioncurrency |    String     |               |
+|   dateCreated       |    Date       |               |
 
 
 

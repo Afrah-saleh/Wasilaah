@@ -5,7 +5,7 @@
   # Wasilaah App 
 
 <details>
-<summary>Introduction</summary>
+<summary>**APP INTRODUCTION.**</summary>
 
 ## **APP INTRODUCTION.**
 

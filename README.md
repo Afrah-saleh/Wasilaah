@@ -27,6 +27,7 @@ So they can increase their awareness of the finances of their business and reduc
 
 </details>
 
+<details>
 ## **APP FEATURES.**
 
 Introducing **Wasilaah**, the innovative application designed specifically for startup founders facing the challenge of securing a company credit card. In today’s fast-paced business environment, managing finances efficiently is crucial for growth and stability. Wasilaah revolutionizes this process by enabling founders to easily document work-related expenses on their personal cards. This not only streamlines financial tracking but also enhances the awareness of business finances, allowing leaders to make informed decisions and reduce manual workload. Embrace the power of simplicity and focus on what truly matters—growing your business. Wasilaah is here to ensure your financial management is as dynamic and agile as your startup.
@@ -109,7 +110,7 @@ Introducing **Wasilaah**, the innovative application designed specifically for s
 
 ## **DATABASE SCHEMA.**
 
-<img src="DataSchema" width="1161" align="center" />
+<img src="DataSchema.png" width="1161" align="center" />
 
 </details>
 

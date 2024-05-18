@@ -1,8 +1,8 @@
-  # Wasilaah App 
-
 <p>
-<img src="logo.png" width="100" align="left" />
+<img src="logo.png" width="100" align="center" />
 </p>
+
+  # Wasilaah App 
 
 
 <details>
@@ -16,7 +16,6 @@ By creating an app, easily document their work-related expenses in their persona
 So they can increase their awareness of the finances of their business and reduce their manual work.
 
 </details>
-
 
 
 <details>
@@ -86,18 +85,6 @@ So they can increase their awareness of the finances of their business and reduc
 | transactioncurrency |    String     |               |
 |   dateCreated       |    Date       |               |
 
-
-
-**Relationship table**
-
-3-SessionAttendee Table
-
-|        Column       |      TYPE     |     Key
-|--------------------:|--------------:|---------------|
-|   AttendeeSessionID |     uuid      |      PK       |
-|   AttendeeID        |     uuid      |      FK       |
-|   Sessionid         |     uuid      |      FK       |
-|   Status            |    String     |               |
 
 
 </details>

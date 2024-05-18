@@ -1,4 +1,3 @@
-<img width="604" alt="image" src="https://github.com/Afrah-saleh/Wasilaah/assets/144011837/9f73878a-65d3-4efd-b4ed-eba78e4282b9"><p>
 <img src="logo.png" width="100" align="center" />
 </p>
 
@@ -9,7 +8,7 @@
 
 ## **APP INTRODUCTION.**
 
-Introducing **Wasilaah**, the innovative application designed specifically for startup founders facing the challenge of securing a company credit card. In today’s fast-paced business environment, managing finances efficiently is crucial for growth and stability. Wasilaah revolutionizes this process by enabling founders to easily document work-related expenses on their personal cards. This not only streamlines financial tracking but also enhances the awareness of business finances, allowing leaders to make informed decisions and reduce manual workload. Embrace the power of simplicity and focus on what truly matters—growing your business. Wasilaah is here to ensure your financial management is as dynamic and agile as your startup.
+**Wasilaah**, the innovative application designed specifically for startup founders facing the challenge of securing a company credit card. In today’s fast-paced business environment, managing finances efficiently is crucial for growth and stability. Wasilaah revolutionizes this process by enabling founders to easily document work-related expenses on their personal cards. This not only streamlines financial tracking but also enhances the awareness of business finances, allowing leaders to make informed decisions and reduce manual workload. Embrace the power of simplicity and focus on what truly matters—growing your business. Wasilaah is here to ensure your financial management is as dynamic and agile as your startup.
 
 </details>
 

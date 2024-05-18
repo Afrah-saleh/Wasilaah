@@ -44,7 +44,7 @@ So they can increase their awareness of the finances of their business and reduc
 |   password          |    String     |               |
 
 
-2-Card Table 
+3-Card Table 
 
 |        Column       |      TYPE     |     Key
 |--------------------:|--------------:|---------------|
@@ -55,7 +55,7 @@ So they can increase their awareness of the finances of their business and reduc
 
 
 
-2-Expenses Table 
+4-Expenses Table 
 
 |        Column       |      TYPE     |     Key
 |--------------------:|--------------:|---------------|
@@ -71,7 +71,7 @@ So they can increase their awareness of the finances of their business and reduc
 
 
 
-2-Transaction Table 
+5-Transaction Table 
 
 |        Column       |      TYPE     |     Key
 |--------------------:|--------------:|---------------|

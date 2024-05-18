@@ -4,16 +4,32 @@
 
   # Wasilaah App 
 
+<details>
+<summary>Introduction</summary>
+
+## **APP INTRODUCTION.**
+
+Introducing **Wasilaah**, the innovative application designed specifically for startup founders facing the challenge of securing a company credit card. In today’s fast-paced business environment, managing finances efficiently is crucial for growth and stability. Wasilaah revolutionizes this process by enabling founders to easily document work-related expenses on their personal cards. This not only streamlines financial tracking but also enhances the awareness of business finances, allowing leaders to make informed decisions and reduce manual workload. Embrace the power of simplicity and focus on what truly matters—growing your business. Wasilaah is here to ensure your financial management is as dynamic and agile as your startup.
+
+</details>
+
+
 
 <details>
 <summary>App Statement</summary>
 
-## **App Statement.**
+## **APP STATEMENT.**
 
-_An application that helps founders of startups.
+An application that helps founders of startups.
 Who are struggling to get a credit card for their company quickly.
 By creating an app, easily document their work-related expenses in their personal card.
 So they can increase their awareness of the finances of their business and reduce their manual work.
+
+</details>
+
+## **APP FEATURES.**
+
+Introducing **Wasilaah**, the innovative application designed specifically for startup founders facing the challenge of securing a company credit card. In today’s fast-paced business environment, managing finances efficiently is crucial for growth and stability. Wasilaah revolutionizes this process by enabling founders to easily document work-related expenses on their personal cards. This not only streamlines financial tracking but also enhances the awareness of business finances, allowing leaders to make informed decisions and reduce manual workload. Embrace the power of simplicity and focus on what truly matters—growing your business. Wasilaah is here to ensure your financial management is as dynamic and agile as your startup.
 
 </details>
 
@@ -21,7 +37,7 @@ So they can increase their awareness of the finances of their business and reduc
 <details>
 <summary>Tables</summary>
 
-## **Tables.**
+## **TABLES.**
 
 1-login/signup Table 
 
@@ -64,8 +80,8 @@ So they can increase their awareness of the finances of their business and reduc
 |   expensesName      |    String     |               |
 |   expensesType      |    String     |               |
 |   expensescurrency  |    String     |               |
-| expensespaymentDate |    String     |               |
-|expensesdayOfPurchase|    String     |               |
+| expensesPaymentDate |    Date       |               |
+|expensesDayOfPurchase|    String     |               |
 |   expensesAmount    |    Double     |               |
 |   expensesRange     |    String     |               |
 
@@ -77,14 +93,42 @@ So they can increase their awareness of the finances of their business and reduc
 |--------------------:|--------------:|---------------|
 |   transactionID     |     uuid      |      PK       |
 |   cardID            |     uuid      |      FK       |
-|   userID            |     uuid      |      FK       |
-|   expensesID        |     uuid      |      PK       |
+|   expensesID        |     uuid      |      FK       |
 |   transactionName   |    String     |               |
 |   transactionAmount |    String     |               |
-|   transactionDate   |    String     |               |
+|   transactionDate   |    Date       |               |
 | transactioncurrency |    String     |               |
-|   dateCreated       |    Date       |               |
 
 
 
 </details>
+
+
+<details>
+<summary>Database Schema</summary>
+
+## **DATABASE SCHEMA.**
+
+<img src="DataSchema" width="1161" align="center" />
+
+</details>
+
+<details>
+  
+<summary>RelationShip</summary>
+
+## **RELATIONSHIP.**
+  
+### One-To-Many (1:M) Relationship.
+
+**One User can have a Many logIn/SignUp.**
+
+**One user can have a group of Cards.**
+
+**One Card can have a group of Expenses.**
+
+**One Expense can have a group of Transaction.**
+
+</details>
+
+

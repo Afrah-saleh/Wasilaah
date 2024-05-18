@@ -165,11 +165,14 @@ struct MoreView: View {
             .alert("Confirm Logout", isPresented: $showingLogoutAlert) {
                 Button("Log Out", role: .destructive) {
                     authViewModel.signOut()
-                    showRootView = true
+                    showingSignUp = true
                 }
                 Button("Cancel", role: .cancel) {}
             }
-            
+            .navigationDestination(isPresented: $showingSignUp) {
+                SignUpView(authViewModel: sessionStore())
+
+            }
             .navigationTitle("More")
             .navigationBarTitleDisplayMode(.inline)
             .fullScreenCover(isPresented: $showRootView) {

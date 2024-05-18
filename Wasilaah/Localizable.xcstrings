@@ -1490,7 +1490,6 @@
       }
     },
     "Incorrect passcode. Please try again." : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1501,6 +1500,7 @@
       }
     },
     "Incorrect passcode. Please try again`" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2626,7 +2626,6 @@
       }
     },
     "Wasilah" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {

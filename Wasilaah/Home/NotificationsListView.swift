@@ -88,7 +88,7 @@ struct NotificationsListView: View {
                 self.presentationMode.wrappedValue.dismiss()
             }) {
                 Image(systemName: "chevron.left")
-                    .foregroundColor(.black)
+                    .foregroundColor(.black11)
             })
             .navigationBarTitle("Notifications", displayMode: .inline)
             .onAppear {

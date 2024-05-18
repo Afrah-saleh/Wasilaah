@@ -85,9 +85,7 @@ struct NewExpenses: View {
                 
                 
             }
-            .sheet(isPresented: $isShowingSubscriptionView) {
-                SubscriptionView()
-            }
+            
             .alert(isPresented: $isShowingAlert) {
                 Alert(
                     title: Text("Confirmation"),
@@ -107,12 +105,7 @@ struct NewExpenses: View {
             })
             .navigationBarTitle("Update expenses", displayMode: .inline)
             .navigationBarItems(trailing: Button(action: {
-                addButtonCount += 1
-                if addButtonCount >= 6 {
-                    isShowingSubscriptionView = true
-                } else {
                     viewModel.NewExpense()
-                }
             }) {
                 Image(systemName: "plus")
             })

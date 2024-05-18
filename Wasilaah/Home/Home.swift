@@ -288,7 +288,7 @@ struct Home: View {
                             Text("Total Spent out of the budget")
                                 .font(.caption)
                                 .fontWeight(.light)
-                                .foregroundColor(Color("TextGray"))
+                                .foregroundColor(Color.gray)
                         }
                         
     

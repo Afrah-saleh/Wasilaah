@@ -27,7 +27,7 @@ struct SetPasscodeView: View {
                     HStack(spacing: 15) {
                         ForEach(0..<4, id: \.self) { index in
                             Circle()
-                                .fill(passcode.count > index ? Color.black : Color.clear)
+                                .fill(passcode.count > index ? Color.black : Color.white)
                                 .frame(width: 20, height: 20)
                                 .overlay(Circle().stroke(Color.gray, lineWidth: 1))
                         }
@@ -42,6 +42,8 @@ struct SetPasscodeView: View {
                     })
                     .frame(height: geometry.size.height * 0.6) // Adjust this value based on your keypad size
                     .padding(.bottom)
+                    .background(Color.white11)
+
                 }
                 .padding()
                 .navigationTitle("Wasilaah")
@@ -70,6 +72,7 @@ struct SetPasscodeView: View {
                     .environmentObject(CardViewModel())
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

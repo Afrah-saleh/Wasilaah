@@ -7,7 +7,6 @@
 
 
 import SwiftUI
-
 struct SetPasscodeView: View {
     @State private var passcode: String = ""
     @State private var navigateToHome = false
@@ -15,6 +14,7 @@ struct SetPasscodeView: View {
     @State private var errorMessage = ""
     @EnvironmentObject var authViewModel: sessionStore
     @EnvironmentObject var expensesViewModel: ExpensesViewModel
+
     var body: some View {
         NavigationView {
             GeometryReader { geometry in
@@ -33,14 +33,15 @@ struct SetPasscodeView: View {
                         }
                     }
                     .padding(.bottom)
+                    
                     Spacer()
+                    
                     // Custom numeric keypad
                     CustomNumericKeypad(passcode: $passcode, onFaceID: {
-                
+                        // Handle FaceID action if necessary
                     })
                     .frame(height: geometry.size.height * 0.6) // Adjust this value based on your keypad size
                     .padding(.bottom)
-                    
                 }
                 .padding()
                 .navigationTitle("Wasilaah")
@@ -63,14 +64,12 @@ struct SetPasscodeView: View {
                     }
                 }
             }
-            .navigationDestination(isPresented: $navigateToHome ) {
-                Home(expensesViewModel: expensesViewModel ,cardViewModel: CardViewModel())
-                    .environmentObject(expensesViewModel)  // Make sure EnvironmentObject is passed here if needed
-                            .environmentObject(CardViewModel())  // Assuming CardViewModel is also required
+            .navigationDestination(isPresented: $navigateToHome) {
+                Home(expensesViewModel: expensesViewModel, cardViewModel: CardViewModel())
+                    .environmentObject(expensesViewModel)
+                    .environmentObject(CardViewModel())
             }
-
         }
-        .navigationBarBackButtonHidden(true)
     }
 }
 

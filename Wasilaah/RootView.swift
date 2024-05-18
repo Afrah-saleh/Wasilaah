@@ -16,8 +16,8 @@ import GoogleSignInSwift
 struct RootView: View {
     @StateObject var authViewModel: sessionStore
     @StateObject var expenses: ExpensesViewModel
-    @State private var currentCard: Card? = nil  // Assuming you need a card object for CardsFirstTime
-
+    @State private var currentCard: Card? = nil
+    
     var body: some View {
         NavigationStack {
             if authViewModel.signedIn {
@@ -30,7 +30,6 @@ struct RootView: View {
                     Home(expensesViewModel: expenses, cardViewModel: CardViewModel())
                 }
             } else {
-                // Show SignUpView if not signed in
                 SignUpView(authViewModel: authViewModel)
             }
         }
@@ -38,6 +37,7 @@ struct RootView: View {
             setupNotifications()
         }
     }
+
 
 
     private func setupNotifications() {

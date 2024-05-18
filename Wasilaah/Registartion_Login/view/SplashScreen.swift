@@ -73,7 +73,7 @@ struct SplashScreen: View {
     @State var textOpacity: Double = 0.0
     @State var textScale: CGFloat = 0.5
     @EnvironmentObject var appState: AppState
-
+    
     var body: some View {
         VStack {
             Image("logo") // Replace "logo" with your image name in the asset catalog
@@ -95,6 +95,6 @@ struct SplashScreen: View {
         .foregroundColor(.white)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.pprl)
-        .edgesIgnoringSafeArea(.all)
+          .edgesIgnoringSafeArea(.all)
     }
 }

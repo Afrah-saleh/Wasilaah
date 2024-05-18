@@ -77,6 +77,8 @@ struct PasscodeEntryView: View {
                 DispatchQueue.main.async {
                     if success {
                         isUnlocked = true
+                        appState.showPasscodeEntry = false // Hide the passcode view
+
                        // navigateToHome = true
                     } else {
                         showingFaceIDAlert = true

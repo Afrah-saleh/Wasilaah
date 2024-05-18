@@ -32,7 +32,14 @@
 
     },
     "." : {
-
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "."
+          }
+        }
+      }
     },
     "(Max. File size: 25 MB)" : {
       "localizations" : {
@@ -233,7 +240,14 @@
       }
     },
     "Add New Expenses" : {
-
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إضافة مصروف جديد"
+          }
+        }
+      }
     },
     "All Expenses" : {
       "localizations" : {
@@ -401,7 +415,14 @@
       }
     },
     "At Wasilaah" : {
-
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "في وسيلة نضمن لك:"
+          }
+        }
+      }
     },
     "At Wassila" : {
       "extractionState" : "stale",
@@ -953,7 +974,14 @@
       }
     },
     "Download invoice" : {
-
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحميل الفاتورة"
+          }
+        }
+      }
     },
     "Download Numbers File" : {
       "localizations" : {
@@ -987,7 +1015,14 @@
       }
     },
     "Edit Expenses: %@" : {
-
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعديل"
+          }
+        }
+      }
     },
     "Email" : {
       "extractionState" : "manual",
@@ -1466,7 +1501,14 @@
       }
     },
     "Incorrect passcode. Please try again`" : {
-
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "كلمة السر غير صحيحة! "
+          }
+        }
+      }
     },
     "Increase By" : {
       "extractionState" : "manual",
@@ -1757,7 +1799,14 @@
       }
     },
     "Notifications" : {
-
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "التنبيهات"
+          }
+        }
+      }
     },
     "Numbers File to Fill  Expenses" : {
 
@@ -1886,6 +1935,23 @@
         }
       }
     },
+    "payment_due_body" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دفعتك لـ %@ من %@ %@ مستحقة في %d أيام"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your payment for %@ of %@ %@ is due in %d days."
+          }
+        }
+      }
+    },
     "Percentage: %@%%" : {
       "localizations" : {
         "ar" : {
@@ -1967,7 +2033,14 @@
       }
     },
     "Prepare your Wasilaah Card" : {
-
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحضير البطاقة"
+          }
+        }
+      }
     },
     "Prepare your Wassila Card" : {
       "localizations" : {
@@ -2389,6 +2462,23 @@
         }
       }
     },
+    "upcoming_payment_due" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الدفعة القادمة"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upcoming Payment Due"
+          }
+        }
+      }
+    },
     "Update expenses" : {
       "localizations" : {
         "ar" : {
@@ -2410,7 +2500,14 @@
       }
     },
     "Update Expenses of this card" : {
-
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحديث المصروفات"
+          }
+        }
+      }
     },
     "Update Transaction" : {
       "extractionState" : "stale",
@@ -2419,6 +2516,40 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "تحديث"
+          }
+        }
+      }
+    },
+    "update_body" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حان الوقت لتحديث مصروفاتك لكي تبقى على اطلاع دائم"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "It's time to update your expenses to stay on top of things"
+          }
+        }
+      }
+    },
+    "update_expenses" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تحديث المصروفات"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Update Your Expenses"
           }
         }
       }
@@ -2435,7 +2566,14 @@
       }
     },
     "Upload bank Statement" : {
-
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عبر كشف الحساب"
+          }
+        }
+      }
     },
     "Upload File" : {
       "localizations" : {
@@ -2448,7 +2586,14 @@
       }
     },
     "Upload invoice" : {
-
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رفع الفاتورة"
+          }
+        }
+      }
     },
     "User not logged in" : {
       "localizations" : {

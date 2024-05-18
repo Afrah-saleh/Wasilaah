@@ -331,6 +331,9 @@ class TViewModel: ObservableObject {
         
         print("Scheduling notifications for expenses with days left <= 10")
         
+        // Determine the current locale
+        let currentLanguageCode = Locale.current.language.languageCode?.identifier
+
         // Schedule new notifications
         for expense in expenses {
             let daysLeft = daysUntilNextPayment(for: expense)
@@ -338,9 +341,20 @@ class TViewModel: ObservableObject {
 
             if daysLeft <= 10 {
                 let content = UNMutableNotificationContent()
-                content.title = "Upcoming Payment Due"
-                content.body = "Your payment for \(expense.name) of \(expense.amount) \(expense.currency.rawValue) is due in \(daysLeft) days."
-                content.sound = UNNotificationSound.default
+                // Set title and body based on the current locale
+                         if currentLanguageCode == "ar" {
+                             content.title = "الدفعة القادمة"
+                             content.body = "دفعتك لـ \(expense.name) من \(expense.amount) \(expense.currency.rawValue) مستحقة في \(daysLeft) أيام"
+                         } else {
+                             content.title = "Upcoming Payment Due"
+                             content.body = "Your payment for \(expense.name) of \(expense.amount) \(expense.currency.rawValue) is due in \(daysLeft) days."
+                         }
+                         
+                         content.sound = UNNotificationSound.default
+
+//                content.title = "Upcoming Payment Due"
+//                content.body = "Your payment for \(expense.name) of \(expense.amount) \(expense.currency.rawValue) is due in \(daysLeft) days."
+  //              content.sound = UNNotificationSound.default
 
                 let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
                 let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
@@ -357,8 +371,11 @@ class TViewModel: ObservableObject {
     }
     func scheduleUpdateReminder() {
         let content = UNMutableNotificationContent()
-        content.title = "Update Your Expenses"
-        content.body = "It's been a week since your last update. Please update your expenses to keep everything on track."
+//        content.title = "Update Your Expenses"
+//        content.body = "It's time to update your expenses to stay on top of things"
+        // Fetching title and body from Localizable.strings based on current locale
+        content.title = NSLocalizedString("update_expenses", comment: "Title for updating expenses reminder")
+        content.body = NSLocalizedString("update_body", comment: "Body text for expenses update reminder")
         content.sound = UNNotificationSound.default
 
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false) // Fire after 5 seconds for demo

@@ -103,6 +103,8 @@ struct WasilaahApp: App {
                     .environmentObject(authService)
                     .environmentObject(transactionViewModel)
                     .environmentObject(expensesViewModel)
+                    .environmentObject(appState)
+
             }
         }
     }

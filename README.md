@@ -1,11 +1,11 @@
-<p>
+<img width="604" alt="image" src="https://github.com/Afrah-saleh/Wasilaah/assets/144011837/9f73878a-65d3-4efd-b4ed-eba78e4282b9"><p>
 <img src="logo.png" width="100" align="center" />
 </p>
 
   # Wasilaah App 
 
 <details>
-<summary>**APP INTRODUCTION.**</summary>
+<summary>APP INTRODUCTION.</summary>
 
 ## **APP INTRODUCTION.**
 
@@ -16,7 +16,7 @@ Introducing **Wasilaah**, the innovative application designed specifically for s
 
 
 <details>
-<summary>App Statement</summary>
+<summary>APP STATEMENT.</summary>
 
 ## **APP STATEMENT.**
 
@@ -40,7 +40,7 @@ So they can increase their awareness of the finances of their business and reduc
 
 
 <details>
-<summary>Tables</summary>
+<summary>TABLES</summary>
 
 ## **TABLES.**
 
@@ -110,7 +110,7 @@ So they can increase their awareness of the finances of their business and reduc
 
 
 <details>
-<summary>Database Schema</summary>
+<summary>DATABASE SCHEMA</summary>
 
 ## **DATABASE SCHEMA.**
 
@@ -120,7 +120,7 @@ So they can increase their awareness of the finances of their business and reduc
 
 <details>
   
-<summary>RelationShip</summary>
+<summary>RELATIONSHIP</summary>
 
 ## **RELATIONSHIP.**
   
@@ -135,5 +135,25 @@ So they can increase their awareness of the finances of their business and reduc
 **One Expense can have a group of Transaction.**
 
 </details>
+
+<details>
+<summary>TECHNOLOGY USED</summary>
+
+## **TECHNOLOGY USED.**
+**10 kit.**
+* CryptoKit
+* PDFKIt
+* KeyChain
+* SwiftUI
+* Push Notification
+* Accessibility
+* Combain
+* Foundation
+* UIKit
+* StoreKit
+
+</details>
+
+
 
 

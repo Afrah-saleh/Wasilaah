@@ -1,6 +1,6 @@
 <p>
-  ![Uploading Screenshot 1445-11-10 at 2.33.19 PM.png…]()
-# Wasilaah App 
+<img src="images/logo.png" alt="API Logo" width="100" align="left" />
+  # Wasilaah App 
 </p>
 
 

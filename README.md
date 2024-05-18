@@ -1,5 +1,5 @@
 <p>
-<img src="images/logo.png" alt="API Logo" width="100" align="left" />
+<img src="images/logo.png" alt="logo" width="100" align="left" />
   # Wasilaah App 
 </p>
 

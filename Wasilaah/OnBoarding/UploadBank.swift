@@ -51,7 +51,7 @@ struct UploadBank: View {
                             .padding(.top,30)
                         
                         
-                        Text("Please provide your bank statement so we can read your expenses and confirm your Wassila Expense Records card")
+                        Text("Please provide your bank statement so we can read your expenses and confirm your Wasilaah Expense Records card")
                             .padding(.bottom, 20)
                             .font(.callout)
                             .opacity(0.6)

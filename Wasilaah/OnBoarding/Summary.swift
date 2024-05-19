@@ -230,7 +230,7 @@ struct Summary: View {
                 .font(.title)
                 .bold()
 
-            Text("You have created your first Wassila card!")
+            Text("You have created your first Wasilaah card!")
                 .font(.subheadline)
                 .foregroundColor(.white)
         }

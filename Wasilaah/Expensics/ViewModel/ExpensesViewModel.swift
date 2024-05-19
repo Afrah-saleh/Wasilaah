@@ -52,7 +52,6 @@ class ExpensesViewModel: ObservableObject {
     }
     
     
-    
     // Computed property to get sorted expenses
     var sortedExpenses: [Expenses] {
         expenses.sorted { $0.dateCreated > $1.dateCreated }

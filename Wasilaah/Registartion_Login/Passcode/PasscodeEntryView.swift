@@ -234,7 +234,7 @@ struct PasscodeEntryView: View {
 //                        PasscodeResetView()
 //                    }
                 }
-                .navigationTitle("Wasilah")
+                .navigationTitle("Wasilaah")
                 .navigationBarTitleDisplayMode(.inline)
                 .alert("Face ID Error", isPresented: $showingFaceIDAlert) {
                     Button("OK", role: .cancel) { }

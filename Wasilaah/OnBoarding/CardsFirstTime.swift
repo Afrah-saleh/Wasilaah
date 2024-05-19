@@ -204,7 +204,7 @@ struct CardsFirstTime: View {
                 
                 Divider()
                 
-                Text("Prepare your Wassila Card")
+                Text("Prepare your Wasilaah Card")
                     .font(.title3)
                     .padding(.leading,-165)
                 

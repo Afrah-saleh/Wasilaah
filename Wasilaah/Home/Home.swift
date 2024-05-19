@@ -266,9 +266,9 @@ struct Home: View {
                                      .animation(.default, value: selectedButtonIndex)
                     
                     VStack(spacing:5) {
-                        ToolBar(spendingAmounts: $spendingAmounts)
-                            .padding()
-                        
+//                        ToolBar(spendingAmounts: $spendingAmounts)
+//                            .padding()
+//                        
                         StrokeChart(spendingPercentages: calculateSpendingPercentages(), colors: mapColorsToTransactions())
                             .padding(.top, 10)
                             .padding(.bottom, 30)

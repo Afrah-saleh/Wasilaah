@@ -42,7 +42,7 @@ struct FreeBudgent: View {
                 
                 
                 
-                Text("Prepare your Wassila Card")
+                Text("Prepare your Wasilaah Card")
                     .font(.title2)
                     .fontWeight(.bold)
                     .padding(.top,20)

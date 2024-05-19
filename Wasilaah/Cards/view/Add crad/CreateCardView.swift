@@ -35,7 +35,7 @@ struct CreateCardView: View {
             
                 .padding()
 
-                Text("Create Title for you Wassila card")
+                Text("Create Title for you Wasilaah card")
                 .padding(.leading, -130)
                 TextField("Card Name", text: $cardName)
                     .padding()

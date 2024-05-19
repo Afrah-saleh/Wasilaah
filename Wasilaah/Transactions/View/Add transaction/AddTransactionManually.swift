@@ -24,7 +24,7 @@ struct AddTransactionManually: View {
         NavigationView {
             ScrollView{
                 VStack{
-//                    if let user = authViewModel.session {
+                    if let user = authViewModel.session {
                         VStack{
                             VStack(alignment:.leading, spacing:15){
                                 Text("Expenses Name")
@@ -79,8 +79,8 @@ struct AddTransactionManually: View {
                             )
                             
                             Button(action:{
-//                                viewModel.saveTransaction(cardID: cardID, userID: user.uid)
-//                                viewModel.updateTransactions(transaction)
+                                viewModel.saveTransaction(cardID: cardID, userID: user.uid)
+                                viewModel.updateTransactions(transaction)
                             }){
                                 Text("Done")
                                     .foregroundColor(.white)
@@ -93,7 +93,7 @@ struct AddTransactionManually: View {
                           //  .padding(70)
                             
                         }.padding()
-//                        }
+                        }
                     }
             }
                 .onAppear {

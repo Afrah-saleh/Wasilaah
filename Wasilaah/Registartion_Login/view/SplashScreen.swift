@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct SplashScreen: View {
-    @State var isActive: Bool = false
-    @State var textOpacity: Double = 0.0
-    @State var textScale: CGFloat = 0.5
+    @State private var isActive=false
+    @State private var size=0.8
+    @State private var opacity=0.5
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     @StateObject var transactionViewModel = TransactionViewModel()
@@ -28,40 +28,76 @@ struct SplashScreen: View {
                  authService.checkCurrentUser()
              }
         } else {
-            VStack {
-                Image("logo") // Replace "logo" with your image name in the asset catalog
-                    .resizable()
-                    .frame(width: 200,height: 120)
-                
-                    .padding(40)
-                Text("From Chaos to Clarity")
-                    .font(.title2)
+//            VStack {
+//                Image("logo") // Replace "logo" with your image name in the asset catalog
+//                    .resizable()
+//                    .frame(width: 200,height: 120)
+//                
+//                    .padding(40)
+////                Text("From Chaos to Clarity")
+////                    .font(.title2)
+////                    
+////                                        .padding(.top, 20)
+////                                        .opacity(textOpacity)
+////                                        .scaleEffect(textScale)
+////                                        .onAppear {
+////                                            withAnimation(.easeInOut(duration: 1.5)) {
+////                                                textOpacity = 1.0
+////                                                textScale = 1.0
+////                                            }
+////                                        }
+//                                }
+////            .onAppear {
+////                DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) { // Adjust time as needed
+////                    withAnimation {
+////                        self.isActive = true
+////                    }
+////                }
+////            }
+//            .foregroundColor(.white)
+//            .frame(maxWidth: .infinity, maxHeight: .infinity)
+//                        .background(Color.pprl)
+//                        .edgesIgnoringSafeArea(.all)
+//        }
+//    }
+//}
+
+            ZStack{
+                Color(Color.pprl)
+                    .edgesIgnoringSafeArea(.all)
+                VStack {
                     
-                                        .padding(.top, 20)
-                                        .opacity(textOpacity)
-                                        .scaleEffect(textScale)
-                                        .onAppear {
-                                            withAnimation(.easeInOut(duration: 1.5)) {
-                                                textOpacity = 1.0
-                                                textScale = 1.0
-                                            }
-                                        }
-                                }
-            .onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) { // Adjust time as needed
-                    withAnimation {
-                        self.isActive = true
+                    
+                    VStack {
+                        Image("logo")
+                            .resizable()
+                                                .frame(width: 200,height: 120)
+                            
+                                                .padding(40)
+                        
+                    }
+                    
+                    .scaleEffect(size)
+                    .opacity(opacity)
+                    .onAppear {
+                        withAnimation(.easeIn(duration: 0.5)) {
+                            self.size = 0.9
+                            self.opacity = 1.0
+                        }
                     }
                 }
+//                .onAppear {
+//                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+//                        withAnimation {
+//                            self.isActive = true
+//                        }
+//                    }
+//                }
             }
-            .foregroundColor(.white)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .background(Color.pprl)
-                        .edgesIgnoringSafeArea(.all)
+            .background(.pprl)
         }
     }
 }
-
 
 #Preview {
     SplashScreen()

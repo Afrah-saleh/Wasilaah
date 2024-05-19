@@ -1353,6 +1353,7 @@
       }
     },
     "From Chaos to Clarity" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2502,6 +2503,9 @@
           }
         }
       }
+    },
+    "Update \n Expenses" : {
+
     },
     "Update expenses" : {
       "localizations" : {

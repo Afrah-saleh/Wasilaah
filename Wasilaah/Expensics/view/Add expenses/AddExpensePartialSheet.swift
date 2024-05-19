@@ -186,11 +186,11 @@ struct AddExpense: View {
 //                            Image("base") // Make sure this image exists in your assets
                             VStack(spacing: 5) {
                                 Image(systemName: "pencil.line")
-                                    .font(.title2)
+                                    .font(.title)
                                     .foregroundColor(.pprl) // Replace with your actual color
-                                Text("Update Expenses")
+                                Text("Update \n Expenses")
                                     .foregroundColor(.black11) // Replace with your actual color
-                                    .font(.headline)
+                                    .font(.subheadline)
                             }
                         }
                        
@@ -198,7 +198,7 @@ struct AddExpense: View {
                     .background(
                         RoundedRectangle(cornerRadius: 12)
                             .stroke(Color.gray,lineWidth: 1.0)
-                            .frame(width: 130, height: 120)
+                            .frame(width: 120, height: 120)
                     )
                     
                     Spacer()
@@ -214,11 +214,11 @@ struct AddExpense: View {
 //                                        Image("base") // Make sure this image exists in your assets
                                         VStack(spacing: 5) {
                                             Image(systemName: "plus")
-                                                .font(.title2)
+                                                .font(.title)
                                                 .foregroundColor(.pprl) // Replace with your actual color
                                             Text("Add New \n Expenses")
                                                 .foregroundColor(.black11) // Replace with your actual color
-                                                .font(.headline)
+                                                .font(.subheadline)
                                                 
                                         }
                                     }
@@ -229,7 +229,7 @@ struct AddExpense: View {
                     .background(
                         RoundedRectangle(cornerRadius: 12)
                             .stroke(Color.gray,lineWidth: 1.0)
-                            .frame(width: 130, height: 120)
+                            .frame(width: 120, height: 120)
                     )
                 }
                 

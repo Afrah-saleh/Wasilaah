@@ -246,13 +246,17 @@ class sessionStore: NSObject, ObservableObject, ASAuthorizationControllerDelegat
         authorizationController.delegate = self
         authorizationController.performRequests()
     }
+    
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
-        if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential, let nonce = currentNonce, let appleIDToken = appleIDCredential.identityToken, let idTokenString = String(data: appleIDToken, encoding: .utf8) {
+        if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential,
+           let nonce = currentNonce,
+           let appleIDToken = appleIDCredential.identityToken,
+           let idTokenString = String(data: appleIDToken, encoding: .utf8) {
+
             let credential = OAuthProvider.credential(withProviderID: "apple.com", idToken: idTokenString, rawNonce: nonce)
             Auth.auth().signIn(with: credential) { authResult, error in
-                
                 if let error = error {
-                    print("Firebase sign in error: (error.localizedDescription)")
+                    print("Firebase sign in error: \(error.localizedDescription)")
                 } else if let uid = authResult?.user.uid {
                     print("Signed in with Firebase using Apple ID.")
                     if appleIDCredential.email != nil {
@@ -268,7 +272,7 @@ class sessionStore: NSObject, ObservableObject, ASAuthorizationControllerDelegat
                                     self.needsCompanyInfo = true  // Indicate this is a new user
                                 }
                             } else {
-                                print("Error creating profile: (error!.localizedDescription)")
+                                print("Error creating profile: \(error?.localizedDescription ?? "Unknown error")")
                             }
                         }
                     } else {
@@ -281,10 +285,9 @@ class sessionStore: NSObject, ObservableObject, ASAuthorizationControllerDelegat
                                     self.profile = profile
                                     self.signedIn = true
                                     self.needsCompanyInfo = false
-                                    //  self.needsCompanyInfo = profile.companyName == nil  // Check if company info is set
                                 }
                             } else {
-                                print("Error fetching profile: \(error?.localizedDescription ?? "No profilefound")")
+                                print("Error fetching profile: \(error?.localizedDescription ?? "No profile found")")
                             }
                         }
                     }
@@ -292,6 +295,52 @@ class sessionStore: NSObject, ObservableObject, ASAuthorizationControllerDelegat
             }
         }
     }
+//    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+//        if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential, let nonce = currentNonce, let appleIDToken = appleIDCredential.identityToken, let idTokenString = String(data: appleIDToken, encoding: .utf8) {
+//            let credential = OAuthProvider.credential(withProviderID: "apple.com", idToken: idTokenString, rawNonce: nonce)
+//            Auth.auth().signIn(with: credential) { authResult, error in
+//                
+//                if let error = error {
+//                    print("Firebase sign in error: (error.localizedDescription)")
+//                } else if let uid = authResult?.user.uid {
+//                    print("Signed in with Firebase using Apple ID.")
+//                    if appleIDCredential.email != nil {
+//                        // New user
+//                        print("Detected new user.")
+//                        let newUser = User(uid: uid, email: appleIDCredential.email ?? "", fullName: appleIDCredential.fullName?.formatted())
+//                        self.profileRepository.createProfile(profile: newUser) { profile, error in
+//                            if let profile = profile {
+//                                DispatchQueue.main.async {
+//                                    self.session = profile
+//                                    self.profile = profile
+//                                    self.signedIn = true
+//                                    self.needsCompanyInfo = true  // Indicate this is a new user
+//                                }
+//                            } else {
+//                                print("Error creating profile: (error!.localizedDescription)")
+//                            }
+//                        }
+//                    } else {
+//                        // Existing user
+//                        print("Detected existing user.")
+//                        self.profileRepository.fetchProfile(userId: uid) { profile, error in
+//                            if let profile = profile {
+//                                DispatchQueue.main.async {
+//                                    self.session = profile
+//                                    self.profile = profile
+//                                    self.signedIn = true
+//                                    self.needsCompanyInfo = false
+//                                    //  self.needsCompanyInfo = profile.companyName == nil  // Check if company info is set
+//                                }
+//                            } else {
+//                                print("Error fetching profile: \(error?.localizedDescription ?? "No profilefound")")
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
            func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
     print("Sign in with Apple errored: (error)")
     }

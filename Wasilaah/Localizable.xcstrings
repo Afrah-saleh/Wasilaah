@@ -1054,9 +1054,6 @@
         }
       }
     },
-    "Email:" : {
-
-    },
     "Enter amount" : {
       "localizations" : {
         "ar" : {
@@ -1917,9 +1914,6 @@
           }
         }
       }
-    },
-    "Password:" : {
-
     },
     "Paste" : {
       "localizations" : {

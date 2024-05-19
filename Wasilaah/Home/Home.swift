@@ -83,8 +83,9 @@ struct Home: View {
             }
             .tag(0)
             
-            
-            SummaryView()
+            SummaryView(expensesViewModel: expensesViewModel, cardViewModel: cardViewModel)
+
+           // SummaryView()
                 .tabItem {
                     Label("Summary", systemImage: "doc.plaintext")
                 }

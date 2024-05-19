@@ -110,7 +110,7 @@ struct TransactionDetailView: View {
             self.presentationMode.wrappedValue.dismiss()
         }) {
             Image(systemName: "chevron.left")
-                .foregroundColor(.black)
+                .foregroundColor(.black11)
         })
         .navigationBarItems(trailing: Button(action: {
             showingDeleteAlert = true

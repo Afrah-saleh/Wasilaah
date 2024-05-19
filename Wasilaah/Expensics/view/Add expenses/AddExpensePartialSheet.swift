@@ -16,6 +16,7 @@ struct AddExpensePartialSheet: View {
     @State private var showingAddTransactionManually = false // State to control the sheet presentation
     @ObservedObject var viewModel = TransactionViewModel()
     @State private var showingDocumentPicker = false
+    
 
     var body: some View {
         VStack {
@@ -73,7 +74,7 @@ struct AddExpensePartialSheet: View {
                     
                     
                     Button(action: {
-                                       self.showingSmsCoreFunction = true // Show the BankSMSParserView when this button is tapped
+                        self.showingSmsCoreFunction = true // Show the BankSMSParserView when this button is tapped
                                    }) {
                                        ZStack {
 //                                           Image("base")

@@ -5,6 +5,7 @@
 //  Created by Afrah Saleh on 21/10/1445 AH.
 //
 
+
 import SwiftUI
 import UIKit  // Needed to access UIPasteboard
 
@@ -28,20 +29,20 @@ struct smsView: View {
                 Text("Transaction Name:")
                     .font(.headline)
                    Text(viewModel.companyName)
-                    .foregroundColor(.black)
+                    .foregroundColor(.black11)
                     .opacity(0.6)
                       
                    
                    Text("Amount:")
                     .font(.headline)
                    Text(viewModel.amount)
-                    .foregroundColor(.black)
+                    .foregroundColor(.black11)
                     .opacity(0.6)
 
                    Text("Date:")
                     .font(.headline)
                    Text(viewModel.dateTime)
-                    .foregroundColor(.black)
+                    .foregroundColor(.black11)
                     .opacity(0.6)
                                    
                 

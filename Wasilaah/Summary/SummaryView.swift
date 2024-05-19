@@ -10,6 +10,7 @@
 
 import SwiftUI
 import Charts
+
 struct SummaryView: View {
     @EnvironmentObject var authViewModel: sessionStore
     @StateObject var expensesViewModel = ExpensesViewModel(cardID: "yourCardID")
@@ -25,34 +26,33 @@ struct SummaryView: View {
                     .padding(.top, 18)
                     .padding(.bottom, 18)
 
-                VStack {
+                VStack(alignment: .leading) {
                     Text("Expenses This Month vs. Last Month")
                         .font(.title3)
                         .fontWeight(.medium)
-                        .multilineTextAlignment(.leading)
-
+                        .padding(.leading, -20)
                     CompareExpenses(expensesViewModel: expensesViewModel, cardViewModel: cardViewModel)
                 }
                 .frame(width: 400, height: 400)
 
                 Divider()
 
-                VStack {
+                VStack(alignment: .leading) {
                     Text("Fixed Expenses")
                         .font(.title3)
                         .fontWeight(.medium)
-
+                        .padding(.leading, 15)
                     SingleChart(expensesViewModel: expensesViewModel, cardViewModel: cardViewModel)
                 }
                 .frame(width: 400, height: 400)
 
                 Divider()
 
-                VStack {
+                VStack(alignment: .leading) {
                     Text("Changeable Expenses")
                         .font(.title3)
                         .fontWeight(.medium)
-
+                        .padding(.leading, 15)
                     ChangeableExpenses(expensesViewModel: expensesViewModel, cardViewModel: cardViewModel)
                 }
                 .frame(width: 400, height: 400)
@@ -71,6 +71,7 @@ struct SummaryView: View {
         }
     }
 }
+
 //    struct SummaryView: View {
 //        @EnvironmentObject var authViewModel: sessionStore
 //        @StateObject var expensesViewModel = ExpensesViewModel(cardID: "yourCardID")

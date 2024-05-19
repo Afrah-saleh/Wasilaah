@@ -103,7 +103,7 @@ struct NewExpenses: View {
                 Image(systemName: "chevron.left") // Customize your icon
                     .foregroundColor(.black11) // Customize the color
             })
-            .navigationBarTitle("Update expenses", displayMode: .inline)
+            .navigationBarTitle("Update Expenses of this card", displayMode: .inline)
             .navigationBarItems(trailing: Button(action: {
                     viewModel.NewExpense()
             }) {

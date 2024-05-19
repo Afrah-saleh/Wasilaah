@@ -53,7 +53,7 @@ struct AddExpensePartialSheet: View {
                                         .foregroundColor(.pprl)
                                     Text("Upload bank Statement")
                                         .foregroundColor(.black11)
-                                        .font(.headline)
+                                        .font(.subheadline)
                                 }
                             }
                            
@@ -61,7 +61,7 @@ struct AddExpensePartialSheet: View {
                         .background(
                             RoundedRectangle(cornerRadius: 12)
                                 .stroke(Color.gray,lineWidth: 1.0)
-                                .frame(width: 100, height: 100)
+                                .frame(width: 110, height: 120)
                         )
                         .sheet(isPresented: $showingDocumentPicker) {
                             DocumentPicker { url in
@@ -71,7 +71,6 @@ struct AddExpensePartialSheet: View {
                             }
                         }
                     
-//                    Spacer()
                     
                     Button(action: {
                                        self.showingSmsCoreFunction = true // Show the BankSMSParserView when this button is tapped
@@ -84,14 +83,14 @@ struct AddExpensePartialSheet: View {
                                                    .foregroundColor(.pprl)
                                                Text("Paste SMS Message")
                                                    .foregroundColor(.black11)
-                                                   .font(.headline)
+                                                   .font(.subheadline)
                                            }
                                        }
                                    }
                                    .background(
                                        RoundedRectangle(cornerRadius: 12)
                                            .stroke(Color.gray,lineWidth: 1.0)
-                                           .frame(width: 100, height: 100)
+                                           .frame(width: 110, height: 120)
                                    )
                                    .sheet(isPresented: $showingSmsCoreFunction) {
                                        // Present the BankSMSParserView here
@@ -111,7 +110,7 @@ struct AddExpensePartialSheet: View {
                                     .foregroundColor(.pprl)
                                 Text("Enter Manually")
                                     .foregroundColor(.black11)
-                                    .font(.headline)
+                                    .font(.subheadline)
                             }
                         }
                        
@@ -119,14 +118,16 @@ struct AddExpensePartialSheet: View {
                     .background(
                         RoundedRectangle(cornerRadius: 12)
                             .stroke(Color.gray,lineWidth: 1.0)
-                            .frame(width: 100, height: 100)
+                            .frame(width: 110, height: 120)
                     )
                     .sheet(isPresented: $showingAddTransactionManually) {
                         // Present the AddTransactionManually view as a sheet
                         AddTransactionManually(viewModel: TransactionViewModel(), authViewModel: sessionStore(), transaction: TransactionEntry.init(id: "12", cardID: "11", userID: "11", transactionName: "ss", amount: 200.0, date: "12-2-24"), expensesViewModel: ExpensesViewModel(cardID: ""), cardID: cardID) // Replace with your actual card ID
                     }
                     
-                }
+                }               
+                .padding(.horizontal, 30) // Reduced padding from the horizontal edges of the HStack
+
                 .padding(20)
             }
 //            .padding(40)
@@ -201,7 +202,8 @@ struct AddExpense: View {
                             .frame(width: 120, height: 120)
                     )
                     
-                    Spacer()
+                    Spacer(minLength: 10) // Further reduced space between buttons
+
                     
                     Button(action: {
                         
@@ -232,7 +234,8 @@ struct AddExpense: View {
                             .frame(width: 120, height: 120)
                     )
                 }
-                
+                .padding(.horizontal, 30) // Reduced padding from the horizontal edges of the HStack
+
                 .padding(40)
             }
             .padding(10)
@@ -258,5 +261,11 @@ struct AddExpense: View {
             }
         )
         .edgesIgnoringSafeArea(.all)
+    }
+}
+
+struct AddExpense_Previews: PreviewProvider {
+    static var previews: some View {
+        AddExpense(card: Card(cardID: "12", cardName: "1", userID: "1"), isPresented: .constant(true), cardID: "12345", expensesViewModel: ExpensesViewModel(cardID: "12"))
     }
 }

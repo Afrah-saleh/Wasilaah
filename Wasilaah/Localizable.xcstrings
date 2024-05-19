@@ -2514,6 +2514,7 @@
 
     },
     "Update expenses" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {

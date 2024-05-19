@@ -24,7 +24,7 @@ struct AddTransactionManually: View {
         NavigationView {
             ScrollView{
                 VStack{
-                    if let user = authViewModel.session {
+//                    if let user = authViewModel.session {
                         VStack{
                             VStack(alignment:.leading, spacing:15){
                                 Text("Expenses Name")
@@ -41,7 +41,8 @@ struct AddTransactionManually: View {
                                 Text("Amount")
                                 TextField("Amount", text: $viewModel.amount)
                                     .padding(12)
-                                    .background(Color.white) // Set the background color to white
+                                    .foregroundColor(.black11)
+                                    .background(Color.white11) // Set the background color to white
                                     .cornerRadius(10) // Apply a corner radius to make the edges rounded
                                     .overlay(
                                         RoundedRectangle(cornerRadius: 10) // Use RoundedRectangle for smooth corners
@@ -52,7 +53,7 @@ struct AddTransactionManually: View {
                                 
                                 Text("Currency")
                                 SegmentedControlButton(selection: $viewModel.currency, options: Currency1.allCases)
-                                //                                
+                                //
                                 //                                Button("Upload File") {
                                 //                                    showingImagePicker = true
                                 //                                    //  viewModel.loadExpense(transaction)
@@ -66,7 +67,7 @@ struct AddTransactionManually: View {
                                 //                                .cornerRadius(12)
                                 //                                .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
                                 //                                    ImagePicker(image: self.$inputImage)
-                                //                                    
+                                //
                                 //                                }
                             }.padding(.all)
                             //.padding(.leading,20)
@@ -78,8 +79,8 @@ struct AddTransactionManually: View {
                             )
                             
                             Button(action:{
-                                viewModel.saveTransaction(cardID: cardID, userID: user.uid)
-                                viewModel.updateTransactions(transaction)
+//                                viewModel.saveTransaction(cardID: cardID, userID: user.uid)
+//                                viewModel.updateTransactions(transaction)
                             }){
                                 Text("Done")
                                     .foregroundColor(.white)
@@ -92,7 +93,7 @@ struct AddTransactionManually: View {
                           //  .padding(70)
                             
                         }.padding()
-                        }
+//                        }
                     }
             }
                 .onAppear {
@@ -136,7 +137,7 @@ struct AddTransactionManually: View {
        .padding(.horizontal)
        .padding(.vertical, 12)
        .background(RoundedRectangle(cornerRadius: 8).strokeBorder(Color.pprl, lineWidth: 1))
-       .background(Color.white) // Ensures the capsule's background is white
+       .background(Color.white11) // Ensures the capsule's background is white
        .clipShape(RoundedRectangle(cornerRadius: 8))
    }
     

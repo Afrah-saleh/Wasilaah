@@ -23,17 +23,21 @@ struct TransactionDetailView: View {
                 HStack(spacing: 170) {
                     Text("Expenses Name")
                         .font(.title3)
+                        .foregroundColor(.black11)
                 }
                 TextField("Name", text: $viewModel.transactionName)
                     .padding()
+                    .foregroundColor(.black11)
                     .frame(height: 44)
                     .background(Color(UIColor.systemGray6))
                     .cornerRadius(8)
                 
                 Text("Expenses Amount")
+                    .foregroundColor(.black11)
                     .font(.title3)
                 TextField("Amount", text: $viewModel.amount)
                     .padding()
+                    .foregroundColor(.black11)
                     .frame(height: 44)
                     .background(Color(UIColor.systemGray6))
                     .cornerRadius(8)
@@ -113,8 +117,8 @@ struct TransactionDetailView: View {
         }) {
             Image(systemName: "trash")
         })
-        .navigationBarTitle("Edit Expenses: \(transaction.transactionName)", displayMode: .inline)
-        .foregroundColor(.black)
+        .navigationBarTitle("\(transaction.transactionName)", displayMode: .inline)
+        .foregroundColor(.black11)
         .navigationBarBackButtonHidden(true)
     }
 

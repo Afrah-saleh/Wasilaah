@@ -51,7 +51,6 @@
 		945697E72BF6361A00EB5FA3 /* AddTransactionManually.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945697E32BF6361A00EB5FA3 /* AddTransactionManually.swift */; };
 		945697E82BF6361A00EB5FA3 /* smsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945697E42BF6361A00EB5FA3 /* smsView.swift */; };
 		945697E92BF6361A00EB5FA3 /* BankStatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945697E52BF6361A00EB5FA3 /* BankStatment.swift */; };
-		945697EA2BF6361A00EB5FA3 /* clean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945697E62BF6361A00EB5FA3 /* clean.swift */; };
 		945697F02BF6364300EB5FA3 /* ExpensesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945697EF2BF6364300EB5FA3 /* ExpensesViewModel.swift */; };
 		945697F22BF6364C00EB5FA3 /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945697F12BF6364C00EB5FA3 /* Expenses.swift */; };
 		945697F62BF6366000EB5FA3 /* AllExpensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945697F32BF6366000EB5FA3 /* AllExpensesView.swift */; };
@@ -137,7 +136,6 @@
 		945697E32BF6361A00EB5FA3 /* AddTransactionManually.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTransactionManually.swift; sourceTree = "<group>"; };
 		945697E42BF6361A00EB5FA3 /* smsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = smsView.swift; sourceTree = "<group>"; };
 		945697E52BF6361A00EB5FA3 /* BankStatment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankStatment.swift; sourceTree = "<group>"; };
-		945697E62BF6361A00EB5FA3 /* clean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = clean.swift; sourceTree = "<group>"; };
 		945697EF2BF6364300EB5FA3 /* ExpensesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpensesViewModel.swift; sourceTree = "<group>"; };
 		945697F12BF6364C00EB5FA3 /* Expenses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
 		945697F32BF6366000EB5FA3 /* AllExpensesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllExpensesView.swift; sourceTree = "<group>"; };
@@ -441,7 +439,6 @@
 			children = (
 				945697E32BF6361A00EB5FA3 /* AddTransactionManually.swift */,
 				945697E52BF6361A00EB5FA3 /* BankStatment.swift */,
-				945697E62BF6361A00EB5FA3 /* clean.swift */,
 				945697E42BF6361A00EB5FA3 /* smsView.swift */,
 			);
 			path = "Add transaction";
@@ -736,7 +733,6 @@
 				945698272BF6375500EB5FA3 /* sessionStore.swift in Sources */,
 				945697DC2BF6360A00EB5FA3 /* TransactionEntry.swift in Sources */,
 				945697C52BF635A000EB5FA3 /* MoreView.swift in Sources */,
-				945697EA2BF6361A00EB5FA3 /* clean.swift in Sources */,
 				9456980B2BF6369E00EB5FA3 /* CardDetailView.swift in Sources */,
 				9456981D2BF6374C00EB5FA3 /* SplashScreen.swift in Sources */,
 				945697D82BF635FD00EB5FA3 /* SMSVM.swift in Sources */,

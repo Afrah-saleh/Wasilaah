@@ -1033,6 +1033,7 @@
       }
     },
     "Edit Expenses: %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2599,6 +2600,7 @@
       }
     },
     "Upload File" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {

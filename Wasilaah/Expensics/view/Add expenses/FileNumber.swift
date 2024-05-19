@@ -9,6 +9,7 @@ import SwiftUI
 import FirebaseStorage
 import UniformTypeIdentifiers
 import QuickLook
+import Firebase
 
 struct FileNumber: View {
     @State private var showShareSheet = false
@@ -40,20 +41,11 @@ struct FileNumber: View {
                 }
             }.background(Image("load"))
                 .foregroundColor(.pprl)
-                .alert(isPresented: $showAlert) {
-                    Alert(
-                        title: Text("File Downloaded"),
-                        message: Text("Choose an option for the downloaded file."),
-                        primaryButton: .default(Text("View")) {
-                            // Trigger the file viewer
-                            self.showViewer = true
-                        },
-                        secondaryButton: .default(Text("Download")) {
-                            if fileURL != nil {
-                                self.showShareSheet = true
-                            }
-                        }
-                    )
+                .alert("File Downloaded", isPresented: $showAlert) {
+                                Button("View", action: { self.showViewer = true })
+                                Button("Download", action: { self.showShareSheet = true })
+                        .disabled(fileURL == nil)
+                            
                 }
             
             
@@ -72,10 +64,10 @@ struct FileNumber: View {
             .background(Image("load"))
             .foregroundColor(.pprl)
             .sheet(isPresented: $isShowingDocumentPicker) {
-                DocumentPicker { url in
-                    viewModel.uploadExpensesFromPDF(url: url)
-                }
-            }
+                            DocumentPicker { url in
+                                viewModel.uploadExpensesFromPDF(url: url)
+                            }
+                        }
 
         }
         .frame(maxWidth: .infinity,maxHeight: .infinity)

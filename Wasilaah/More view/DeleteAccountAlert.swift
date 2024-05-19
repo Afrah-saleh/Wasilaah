@@ -121,19 +121,15 @@ struct DeleteAccountAlert: View {
                 .foregroundColor(.black11)
                 .padding()
 
-            VStack(alignment:.leading){
-                Text("Email:")
                 TextField("Email", text: $email)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .keyboardType(.emailAddress)
                     .autocapitalization(.none)
                     .padding()
                 
-                Text("Password:")
                 SecureField("Password", text: $password)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
-            }
 
                 
             Spacer()

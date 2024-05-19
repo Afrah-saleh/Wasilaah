@@ -6,6 +6,7 @@
 //  Created by sumaiya on 07/05/2567 BE.
 //
 
+
 import SwiftUI
 import Charts
 
@@ -120,42 +121,42 @@ struct CompareExpenses: View {
         let currentMonth = selectedMonthIndex + 1
         let currentYear = self.currentYear
         
-        let startDateComponents = DateComponents(year: currentYear, month: currentMonth, day: 1)
-        guard let startDate = Calendar.current.date(from: startDateComponents) else { return "" }
-        
-        var components = DateComponents()
-        components.month = 1
-        components.day = -1
-        let endDate = Calendar.current.date(byAdding: components, to: startDate)
+        let lastDayOfMonth = getLastDayOfMonth(month: currentMonth, year: currentYear)
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMM d, yyyy"
-        let startDateString = dateFormatter.string(from: startDate)
-        let endDateString = dateFormatter.string(from: endDate ?? startDate)
+        let lastDayString = dateFormatter.string(from: lastDayOfMonth)
         
-        return "\(startDateString) "
+        return " \(lastDayString)"
     }
-    
+
     var previousMonthText: String {
         let previousMonth = selectedPreviousMonthIndex + 1
         let previousYear = self.previousYear
         
-        let startDateComponents = DateComponents(year: previousYear, month: previousMonth, day: 1)
-        guard let startDate = Calendar.current.date(from: startDateComponents) else { return "" }
-        
-        var components = DateComponents()
-        components.month = 1
-        components.day = -1
-        let endDate = Calendar.current.date(byAdding: components, to: startDate)
+        let firstDayOfMonth = getFirstDayOfMonth(month: previousMonth, year: previousYear)
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMM d, yyyy"
-        let startDateString = dateFormatter.string(from: startDate)
-        let endDateString = dateFormatter.string(from: endDate ?? startDate)
+        let firstDayString = dateFormatter.string(from: firstDayOfMonth)
         
-        return "\(endDateString)"
+        return firstDayString
     }
-    
+
+    func getFirstDayOfMonth(month: Int, year: Int) -> Date {
+        let startDateComponents = DateComponents(year: year, month: month, day: 1)
+        guard let firstDayOfMonth = Calendar.current.date(from: startDateComponents) else { return Date() }
+        return firstDayOfMonth
+    }
+
+    func getLastDayOfMonth(month: Int, year: Int) -> Date {
+        let startDateComponents = DateComponents(year: year, month: month, day: 1)
+        guard let startDate = Calendar.current.date(from: startDateComponents) else { return Date() }
+        
+        let lastDayOfMonth = Calendar.current.date(byAdding: DateComponents(month: 1, day: -1), to: startDate)!
+        return lastDayOfMonth
+    }
+
     var body: some View {
         VStack {
             // Display the month text
@@ -223,6 +224,10 @@ struct CompareExpenses: View {
     }
     
     private func fetchData() {
+        // Reset total amounts
+        totalAmountThisMonth = 0
+        totalAmountLastMonth = 0
+        
         currentYear = Calendar.current.component(.year, from: Date())
         previousYear = Calendar.current.component(.year, from: Calendar.current.date(byAdding: .month, value: -1, to: Date())!)
         
@@ -234,8 +239,6 @@ struct CompareExpenses: View {
             print("No cards found with the current user ID: \(userId)")
         } else {
             let cardIDs = cardViewModel.cards.map { $0.cardID }
-            
-        
             
             // Fetch expenses for the current month
             for weekToFetch in ["Week 1", "Week 2", "Week 3", "Week 4"] {
@@ -289,6 +292,7 @@ struct CompareExpenses: View {
             }
         }
     }
+
 
     }
 

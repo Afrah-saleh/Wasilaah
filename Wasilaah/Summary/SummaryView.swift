@@ -18,13 +18,13 @@ struct SummaryView: View {
        
         @EnvironmentObject var authViewModel: sessionStore
       
-        var expense: Expenses
         let expensesViewModel = ExpensesViewModel(cardID: "yourCardID")
         let cardViewModel = CardViewModel()
         ScrollView{
             VStack{
                 Text("Quick view of all expenses")
-                    .fontWeight(.medium)
+                    .font(.title2)
+                    .fontWeight(.semibold)
                    
                 
                     .multilineTextAlignment(.center)

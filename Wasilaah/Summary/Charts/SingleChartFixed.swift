@@ -48,47 +48,56 @@ struct OptionViewFixed: View {
     @EnvironmentObject var authViewModel: sessionStore
 
     let months = Calendar.current.shortMonthSymbols
+    
     var selectedMonthText: String {
         let currentMonth = selectedMonthIndex + 1
         let currentYear = self.currentYear
         
-        let startDateComponents = DateComponents(year: currentYear, month: currentMonth, day: 1)
-        guard let startDate = Calendar.current.date(from: startDateComponents) else { return "" }
+        // Get the date components for the current month
+        let currentDateComponents = DateComponents(year: currentYear, month: currentMonth)
+        guard let currentDate = Calendar.current.date(from: currentDateComponents) else { return "" }
         
-        var components = DateComponents()
-        components.month = 1
-        components.day = -1
-        let endDate = Calendar.current.date(byAdding: components, to: startDate)
+        // Get the first day of the current month
+        let firstDayOfMonth = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: currentDate))!
         
+        // Calculate the last day of the current month
+        let lastDayOfMonth = Calendar.current.date(byAdding: DateComponents(month: 1, day: -1), to: firstDayOfMonth)!
+        
+        // Get the date components for the previous month
+        let previousDateComponents = Calendar.current.date(byAdding: .month, value: -1, to: firstDayOfMonth)
+        guard let previousDate = previousDateComponents else { return "" }
+        
+        // Format the dates
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMM d, yyyy"
-        let startDateString = dateFormatter.string(from: startDate)
-        let endDateString = dateFormatter.string(from: endDate ?? startDate)
+        let previousDateString = dateFormatter.string(from: previousDate)
+        let currentDateString = dateFormatter.string(from: lastDayOfMonth)
         
-        return "\(startDateString) - \(endDateString)"
+        return "\(previousDateString) - \(currentDateString)"
     }
+
     
     var body: some View {
-           HStack {
-               Text(" \(selectedMonthText)").fontWeight(.regular)
-                   .foregroundColor(Color("TextGray"))
-                   .font(.system(size: 14))
+        HStack {
+            Text(" \(selectedMonthText)").fontWeight(.regular)
+                .foregroundColor(Color("TextGray"))
+                .font(.system(size: 14))
                    
-               Spacer()
-               DropDownMenuFixed(selectedOption: $selectedMonthIndex)
-           }
-           .padding()
-           .onAppear {
-               fetchExpenses()
-           }
-           .onChange(of: selectedMonthIndex) { newValue in
-               currentYear = Calendar.current.component(.year, from: Date())
-               print("Selected month index: \(newValue)")
-               print("Current Year:", currentYear)
-               fetchExpenses()
-           }
-       }
-       
+            Spacer()
+            DropDownMenuFixed(selectedOption: $selectedMonthIndex)
+        }
+        .padding()
+        .onAppear {
+            fetchExpenses()
+        }
+        .onChange(of: selectedMonthIndex) { newValue in
+            currentYear = Calendar.current.component(.year, from: Date())
+            print("Selected month index: \(newValue)")
+            print("Current Year:", currentYear)
+            fetchExpenses()
+        }
+    }
+    
     
     private func fetchExpenses() {
         guard let userId = userId else { return }

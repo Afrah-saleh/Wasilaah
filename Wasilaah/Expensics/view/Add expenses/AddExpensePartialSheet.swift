@@ -130,7 +130,7 @@ struct AddExpensePartialSheet: View {
                 .padding(20)
             }
 //            .padding(40)
-            .frame(width: 390, height: 250)
+            .frame(width: 420, height: 250)
 //            .frame(maxWidth: .infinity)
             .background(Color.white11)
             .cornerRadius(20)
@@ -186,7 +186,7 @@ struct AddExpense: View {
 //                            Image("base") // Make sure this image exists in your assets
                             VStack(spacing: 5) {
                                 Image(systemName: "pencil.line")
-                                    .font(.title)
+                                    .font(.title2)
                                     .foregroundColor(.pprl) // Replace with your actual color
                                 Text("Update Expenses")
                                     .foregroundColor(.black11) // Replace with your actual color
@@ -198,7 +198,7 @@ struct AddExpense: View {
                     .background(
                         RoundedRectangle(cornerRadius: 12)
                             .stroke(Color.gray,lineWidth: 1.0)
-                            .frame(width: 140, height: 120)
+                            .frame(width: 130, height: 120)
                     )
                     
                     Spacer()
@@ -214,9 +214,9 @@ struct AddExpense: View {
 //                                        Image("base") // Make sure this image exists in your assets
                                         VStack(spacing: 5) {
                                             Image(systemName: "plus")
-                                                .font(.title)
+                                                .font(.title2)
                                                 .foregroundColor(.pprl) // Replace with your actual color
-                                            Text("Add New Expenses")
+                                            Text("Add New \n Expenses")
                                                 .foregroundColor(.black11) // Replace with your actual color
                                                 .font(.headline)
                                                 
@@ -229,7 +229,7 @@ struct AddExpense: View {
                     .background(
                         RoundedRectangle(cornerRadius: 12)
                             .stroke(Color.gray,lineWidth: 1.0)
-                            .frame(width: 140, height: 120)
+                            .frame(width: 130, height: 120)
                     )
                 }
                 

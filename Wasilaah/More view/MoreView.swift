@@ -167,17 +167,20 @@ struct MoreView: View {
                     authViewModel.signOut()
                     showingSignUp = true
                 }
+                .onTapGesture {
+                    showingSignUp = true
+                }
                 Button("Cancel", role: .cancel) {}
             }
-            .navigationDestination(isPresented: $showingSignUp) {
-                SignUpView(authViewModel: sessionStore())
-
-            }
+//            .navigationDestination(isPresented: $showingSignUp) {
+//                SignUpView(authViewModel: sessionStore())
+//
+//            }
             .navigationTitle("More")
             .navigationBarTitleDisplayMode(.inline)
-            .fullScreenCover(isPresented: $showRootView) {
-                RootView(authViewModel: authViewModel, expenses: ExpensesViewModel(cardID: ""))
-            }
+//            .fullScreenCover(isPresented: $showingSignUp) {
+//                SignUpView(authViewModel: sessionStore())
+//            }
             
         
     }

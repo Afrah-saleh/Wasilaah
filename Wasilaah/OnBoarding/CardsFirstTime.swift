@@ -203,14 +203,16 @@ struct CardsFirstTime: View {
                 .frame(height: 10)
                 
                 Divider()
-                
-                Text("Prepare your Wasilaah Card")
-                    .font(.title3)
-                    .padding(.leading,-165)
-                
+//                
+//                Text("Prepare your Wasilaah Card")
+//                    .font(.title3)
+//                    .padding(.leading,-165)
+//                
                 
                 // if let user = authViewModel.session {
                 VStack(alignment:.leading , spacing: 10) {
+                    Text("Prepare your Wasilaah Card")
+                        .font(.title3)
                     Text("Card Name")
                         .fontWeight(.bold)
                     Text("Assign a Name to Your Card")

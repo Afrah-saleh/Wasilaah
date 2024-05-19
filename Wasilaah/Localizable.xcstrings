@@ -249,7 +249,11 @@
         }
       }
     },
+    "Add New \n Expenses" : {
+
+    },
     "Add New Expenses" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {

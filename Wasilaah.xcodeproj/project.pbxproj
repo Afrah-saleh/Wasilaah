@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		100633612BF92422005B95B5 /* ChartViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100633602BF92422005B95B5 /* ChartViewViewModel.swift */; };
 		945697702BF5F8BB00EB5FA3 /* WasilaahApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9456976F2BF5F8BB00EB5FA3 /* WasilaahApp.swift */; };
 		945697742BF5F8BD00EB5FA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 945697732BF5F8BD00EB5FA3 /* Assets.xcassets */; };
 		945697772BF5F8BD00EB5FA3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 945697762BF5F8BD00EB5FA3 /* Preview Assets.xcassets */; };
@@ -35,7 +36,7 @@
 		945697BD2BF6358E00EB5FA3 /* BarChartFixedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945697B92BF6358D00EB5FA3 /* BarChartFixedView.swift */; };
 		945697BE2BF6358E00EB5FA3 /* SingleChartFixed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945697BA2BF6358E00EB5FA3 /* SingleChartFixed.swift */; };
 		945697BF2BF6358E00EB5FA3 /* CompareExpenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945697BB2BF6358E00EB5FA3 /* CompareExpenses.swift */; };
-		945697C02BF6358E00EB5FA3 /*  ChangeableExpenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945697BC2BF6358E00EB5FA3 /*  ChangeableExpenses.swift */; };
+		945697C02BF6358E00EB5FA3 /* ChangeableExpenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945697BC2BF6358E00EB5FA3 /* ChangeableExpenses.swift */; };
 		945697C42BF635A000EB5FA3 /* DeleteAccountAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945697C22BF635A000EB5FA3 /* DeleteAccountAlert.swift */; };
 		945697C52BF635A000EB5FA3 /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945697C32BF635A000EB5FA3 /* MoreView.swift */; };
 		945697D02BF635E800EB5FA3 /* MatchedTransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945697CF2BF635E800EB5FA3 /* MatchedTransactionsView.swift */; };
@@ -98,6 +99,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		100633602BF92422005B95B5 /* ChartViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewViewModel.swift; sourceTree = "<group>"; };
 		352603742BF640C00009927E /* Subscription.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Subscription.storekit; sourceTree = "<group>"; };
 		9456976C2BF5F8BB00EB5FA3 /* Wasilaah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wasilaah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9456976F2BF5F8BB00EB5FA3 /* WasilaahApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasilaahApp.swift; sourceTree = "<group>"; };
@@ -121,7 +123,7 @@
 		945697B92BF6358D00EB5FA3 /* BarChartFixedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartFixedView.swift; sourceTree = "<group>"; };
 		945697BA2BF6358E00EB5FA3 /* SingleChartFixed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleChartFixed.swift; sourceTree = "<group>"; };
 		945697BB2BF6358E00EB5FA3 /* CompareExpenses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompareExpenses.swift; sourceTree = "<group>"; };
-		945697BC2BF6358E00EB5FA3 /*  ChangeableExpenses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = " ChangeableExpenses.swift"; sourceTree = "<group>"; };
+		945697BC2BF6358E00EB5FA3 /* ChangeableExpenses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeableExpenses.swift; sourceTree = "<group>"; };
 		945697C22BF635A000EB5FA3 /* DeleteAccountAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteAccountAlert.swift; sourceTree = "<group>"; };
 		945697C32BF635A000EB5FA3 /* MoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
 		945697CF2BF635E800EB5FA3 /* MatchedTransactionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchedTransactionsView.swift; sourceTree = "<group>"; };
@@ -343,10 +345,11 @@
 		945697B82BF6358500EB5FA3 /* Charts */ = {
 			isa = PBXGroup;
 			children = (
-				945697BC2BF6358E00EB5FA3 /*  ChangeableExpenses.swift */,
+				945697BC2BF6358E00EB5FA3 /* ChangeableExpenses.swift */,
 				945697B92BF6358D00EB5FA3 /* BarChartFixedView.swift */,
 				945697BB2BF6358E00EB5FA3 /* CompareExpenses.swift */,
 				945697BA2BF6358E00EB5FA3 /* SingleChartFixed.swift */,
+				100633602BF92422005B95B5 /* ChartViewViewModel.swift */,
 			);
 			path = Charts;
 			sourceTree = "<group>";
@@ -768,12 +771,13 @@
 				9456984C2BF638A600EB5FA3 /* ToolBar.swift in Sources */,
 				945697702BF5F8BB00EB5FA3 /* WasilaahApp.swift in Sources */,
 				945697E92BF6361A00EB5FA3 /* BankStatment.swift in Sources */,
+				100633612BF92422005B95B5 /* ChartViewViewModel.swift in Sources */,
 				945697D52BF635F600EB5FA3 /* TransactionViewModel.swift in Sources */,
 				945697A42BF6354800EB5FA3 /* SingleExpenses.swift in Sources */,
 				945697F02BF6364300EB5FA3 /* ExpensesViewModel.swift in Sources */,
 				9456983B2BF637AE00EB5FA3 /* ExpensesFirst.swift in Sources */,
 				945698212BF6374C00EB5FA3 /* LogInView1.swift in Sources */,
-				945697C02BF6358E00EB5FA3 /*  ChangeableExpenses.swift in Sources */,
+				945697C02BF6358E00EB5FA3 /* ChangeableExpenses.swift in Sources */,
 				9456979F2BF6353A00EB5FA3 /* StatusSection.swift in Sources */,
 				945698472BF6381E00EB5FA3 /* SubscriptionView.swift in Sources */,
 				9456983F2BF637AE00EB5FA3 /* UploadBank.swift in Sources */,
@@ -917,7 +921,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Wasilaah/Preview Content\"";
-				DEVELOPMENT_TEAM = DFQ2G36PPT;
+				DEVELOPMENT_TEAM = 76MFBX7JL9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "";
@@ -933,7 +937,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Wasilaah1.Wasilaah;
+				PRODUCT_BUNDLE_IDENTIFIER = Wasilaah1.Wasilaah2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -950,7 +954,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Wasilaah/Preview Content\"";
-				DEVELOPMENT_TEAM = DFQ2G36PPT;
+				DEVELOPMENT_TEAM = 76MFBX7JL9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "";
@@ -966,7 +970,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Wasilaah1.Wasilaah;
+				PRODUCT_BUNDLE_IDENTIFIER = Wasilaah1.Wasilaah2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

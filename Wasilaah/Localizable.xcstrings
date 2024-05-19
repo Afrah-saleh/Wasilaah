@@ -1925,11 +1925,7 @@
         }
       }
     },
-    "Paste from SMS" : {
-
-    },
     "Paste from SMS Message" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {

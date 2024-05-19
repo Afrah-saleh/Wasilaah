@@ -15,13 +15,19 @@ struct DetailSingleExpenses: View {
     @ObservedObject var transactionViewModel: TransactionViewModel
     @ObservedObject var expensesViewModel: ExpensesViewModel
     // Computed property to find all matching transactions
-     var matchingTransactions: [TransactionEntry] {
+//     var matchingTransactions: [TransactionEntry] {
+//           transactionViewModel.transactions.filter {
+//               $0.transactionName.lowercased() == expenses.name.lowercased() &&
+//               $0.cardID == expenses.cardID // Ensure that transaction has a cardID attribute and matches the expense's cardID
+//           }
+//       }
+    // Computed property to find all matching transactions
+       var matchingTransactions: [TransactionEntry] {
            transactionViewModel.transactions.filter {
-               $0.transactionName.lowercased() == expenses.name.lowercased() &&
-               $0.cardID == expenses.cardID // Ensure that transaction has a cardID attribute and matches the expense's cardID
+               ($0.transactionName.lowercased() == expenses.name.lowercased() || $0.expenseID == expenses.id) && $0.cardID == expenses.cardID
            }
        }
-    
+
 
     var body: some View {
         NavigationView{

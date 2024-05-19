@@ -117,27 +117,25 @@ struct StatusSection: View {
         }
     }
     var dueExpenses: [SingleExpensesStatus] {
-        // First, get the sorted expenses from the viewModel
-        let sortedExpenses = viewModel.getSortedExpenses()
-        print("Sorted Expenses: \(sortedExpenses)")
-        
-        // Next, map each sorted expense to a SingleExpensesStatus object
-        let mappedExpenses = sortedExpenses.map { expense -> SingleExpensesStatus in
-            return SingleExpensesStatus(
-                title: expense.name,
-                date: expense.paymentDate?.rawValue ?? "Not set",
-                amount: expense.amount,
-                currency: expense.currency.rawValue,
-                circleColor: .strokYallow,
-                viewIcon: "arrow.up.arrow.down",
-                status: "Days until next payment: \(viewModel.daysUntilNextPayment(for: expense)) days",
-                diff: 0.00
-            )
-        }
-        
-        print("Filtered Transactions: \(mappedExpenses)")
-        return mappedExpenses
-    }
+           let sortedExpenses = viewModel.getSortedExpenses()
+           print("Sorted Expenses: \(sortedExpenses)")
+           
+           let mappedExpenses = sortedExpenses.map { expense -> SingleExpensesStatus in
+               return SingleExpensesStatus(
+                   title: expense.name,
+                   date: expense.paymentDate?.rawValue ?? "Not set",
+                   amount: expense.amount,
+                   currency: expense.currency.rawValue,
+                   circleColor: .strokYallow,
+                   viewIcon: "arrow.up.arrow.down",
+                   status: "Days until next payment: \(viewModel.daysUntilNextPayments(for: expense)) days",
+                   diff: 0.00
+               )
+           }
+           
+           print("Filtered Transactions: \(mappedExpenses)")
+           return mappedExpenses
+       }
 
     
     var body: some View {

@@ -199,17 +199,13 @@ class TViewModel: ObservableObject {
     }
     
     func getSortedExpenses() -> [Expenses] {
-        // Log the original list of all expenses for debugging purposes.
         print("Original Expenses: \(expenses)")
         
-        // Filter out any expenses with the name "Other".
         let filteredExpenses = expenses.filter { $0.name != "Other" }
         print("After Name Filter: \(filteredExpenses)")
         
-        // Further filter the expenses based on the days left until their next payment.
         let dateFilteredExpenses = filteredExpenses.filter { expense in
-            let daysLeft = daysUntilNextPayment(for: expense)
-            // Log each expense and the days left for its next payment.
+            let daysLeft = daysUntilNextPayments(for: expense)
             print("Expense: \(expense.name), Days until next payment: \(daysLeft)")
             switch expense.paymentDate {
             case .weekly where daysLeft <= 3:
@@ -224,16 +220,52 @@ class TViewModel: ObservableObject {
         }
         print("After Date Filter: \(dateFilteredExpenses)")
         
-        // Sort the filtered expenses by the number of days until the next payment, in ascending order.
         let sortedExpenses = dateFilteredExpenses.sorted {
-            daysUntilNextPayment(for: $0) < daysUntilNextPayment(for: $1)
+            daysUntilNextPayments(for: $0) < daysUntilNextPayments(for: $1)
         }
         print("Sorted Expenses: \(sortedExpenses)")
         
-        // Return the sorted and filtered list of expenses.
         return sortedExpenses
     }
-    
+    func daysUntilNextPayments(for expense: Expenses) -> Int {
+        let calendar = Calendar.current
+        let today = Date()
+        
+        // Safely unwrap `dayOfPurchase`
+        guard let dayOfPurchase = expense.dayOfPurchase else {
+            print("Day of Purchase is not set")
+            return 0
+        }
+        
+        // Get the `dateCreated` from expense
+        let dateCreated = expense.dateCreated
+        
+        // Set initial `nextPaymentDate` to `dayOfPurchase` of the month of `dateCreated`
+        var components = calendar.dateComponents([.year, .month], from: dateCreated)
+        components.day = dayOfPurchase
+        var nextPaymentDate = calendar.date(from: components) ?? dateCreated
+        
+        // Check if `nextPaymentDate` is before or the same as `today`, and adjust based on payment frequency
+        while nextPaymentDate <= today {
+            if let paymentDate = expense.paymentDate {
+                switch paymentDate {
+                case .weekly:
+                    nextPaymentDate = calendar.date(byAdding: .weekOfYear, value: 1, to: nextPaymentDate)!
+                case .monthly:
+                    nextPaymentDate = calendar.date(byAdding: .month, value: 1, to: nextPaymentDate)!
+                case .yearly:
+                    nextPaymentDate = calendar.date(byAdding: .year, value: 1, to: nextPaymentDate)!
+                }
+            } else {
+                print("Payment Date type is not set")
+                return 0
+            }
+        }
+        
+        // Calculate days until `nextPaymentDate`
+        let daysLeft = calendar.dateComponents([.day], from: today, to: nextPaymentDate).day ?? 0
+        return daysLeft
+    }
     func getActionableExpenses(from expenses: [Expenses]) -> [Expenses] {
         let today = Date()
         return expenses.filter { expense in

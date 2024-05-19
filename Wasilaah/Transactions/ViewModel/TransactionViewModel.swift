@@ -34,12 +34,20 @@ class TransactionViewModel: ObservableObject {
         fetchTransactions()
     }
     
+//    func loadMatchingTransactions(for expense: Expenses) {
+//           self.matchingTransactions = self.transactions.filter {
+//               $0.transactionName.lowercased() == expense.name.lowercased() &&
+//               $0.cardID == expense.cardID
+//           }
+//       }
+    
+    // Computed property to find all matching transactions
     func loadMatchingTransactions(for expense: Expenses) {
-           self.matchingTransactions = self.transactions.filter {
-               $0.transactionName.lowercased() == expense.name.lowercased() &&
-               $0.cardID == expense.cardID
+        self.matchingTransactions = self.transactions.filter {
+               ($0.transactionName.lowercased() == expense.name.lowercased() || $0.expenseID == expense.id) && $0.cardID == expense.cardID
            }
        }
+
     func fetchTransactions() {
         db.collection("newTransactions").getDocuments { [weak self] (querySnapshot, error) in
             guard let self = self else { return }

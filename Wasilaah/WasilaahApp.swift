@@ -149,6 +149,10 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import FirebaseCore
+import FirebaseAuth
+import GoogleSignIn
+import UserNotifications
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
@@ -172,7 +176,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                 print("Error signing out: \(error)")
             }
         }
-
+        requestNotificationPermission()
         return true
     }
     
@@ -188,6 +192,16 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             SecItemDelete(dictionary as CFDictionary)
         }
     }
+            func requestNotificationPermission() {
+                let notificationCenter = UNUserNotificationCenter.current()
+                notificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+                    if granted {
+                        print("Notification permission granted.")
+                    } else if let error = error {
+                        print("Notification permission error: \(error)")
+                    }
+                }
+            }
 }
 import SwiftUI
 

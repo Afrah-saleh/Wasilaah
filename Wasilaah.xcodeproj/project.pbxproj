@@ -184,6 +184,7 @@
 		9456984E2BF783D700EB5FA3 /* NotificationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsListView.swift; sourceTree = "<group>"; };
 		945698502BF784D300EB5FA3 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		948903542BF8E15B0076DD41 /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		94CECA8C2BF9CFDD0092E826 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +226,7 @@
 		9456976E2BF5F8BB00EB5FA3 /* Wasilaah */ = {
 			isa = PBXGroup;
 			children = (
+				94CECA8C2BF9CFDD0092E826 /* Info.plist */,
 				9456984D2BF6395E00EB5FA3 /* Wasilaah.entitlements */,
 				945698432BF6381700EB5FA3 /* RootView.swift */,
 				945698462BF6381E00EB5FA3 /* SubscriptionManager.swift */,
@@ -921,9 +923,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Wasilaah/Preview Content\"";
-				DEVELOPMENT_TEAM = DFQ2G36PPT;
+				DEVELOPMENT_TEAM = Y64UFA9C5L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Wasilaah/Info.plist;
 				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "";
 				INFOPLIST_KEY_NSDownloadsFolderUsageDescription = "";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
@@ -937,7 +940,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Wasilaah1.Wasilaah;
+				PRODUCT_BUNDLE_IDENTIFIER = Wasilaah.Wasilaah;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -954,9 +957,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Wasilaah/Preview Content\"";
-				DEVELOPMENT_TEAM = DFQ2G36PPT;
+				DEVELOPMENT_TEAM = Y64UFA9C5L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Wasilaah/Info.plist;
 				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "";
 				INFOPLIST_KEY_NSDownloadsFolderUsageDescription = "";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
@@ -970,7 +974,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Wasilaah1.Wasilaah;
+				PRODUCT_BUNDLE_IDENTIFIER = Wasilaah.Wasilaah;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

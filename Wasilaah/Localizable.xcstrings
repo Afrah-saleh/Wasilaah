@@ -760,7 +760,11 @@
         }
       }
     },
+    "Create Title for you Wasilaah card" : {
+
+    },
     "Create Title for you Wassila card" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2002,7 +2006,11 @@
         }
       }
     },
+    "Please provide your bank statement so we can read your expenses and confirm your Wasilaah Expense Records card" : {
+
+    },
     "Please provide your bank statement so we can read your expenses and confirm your Wassila Expense Records card" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2053,6 +2061,7 @@
       }
     },
     "Prepare your Wassila Card" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2636,6 +2645,7 @@
       }
     },
     "Wasilah" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2688,7 +2698,11 @@
         }
       }
     },
+    "You have created your first Wasilaah card!" : {
+
+    },
     "You have created your first Wassila card!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {

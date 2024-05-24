@@ -73,9 +73,9 @@ struct Home: View {
             .sheet(isPresented: $showSheet) {
                 CreateCardView(authViewModel: authViewModel, cardViewModel: CardViewModel())
             }
-            .sheet(isPresented: $showingSubscriptionView) {
-                SubscriptionView() // Pass the binding here
-            }
+//            .sheet(isPresented: $showingSubscriptionView) {
+//                SubscriptionView() // Pass the binding here
+//            }
             
             
             .tabItem {
@@ -166,13 +166,13 @@ struct Home: View {
                         HStack(spacing: -10){
                             Button(action: {
                                 // Check if the card count is 3 or more
-                                if cardViewModel.cards.count >= 3 {
-                                    // Show the SubscriptionView
-                                    showingSubscriptionView = true
-                                } else {
+//                                if cardViewModel.cards.count >= 3 {
+//                                    // Show the SubscriptionView
+//                                    showingSubscriptionView = true
+//                                } else {
                                     // Allow adding a card
                                     showSheet.toggle()
-                                }
+                                //}
                             }) {
                                 Image(localizedImageName) // Replace "buttonImage" with the name of your image asset
                                     .onAppear {

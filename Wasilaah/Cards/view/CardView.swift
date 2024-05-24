@@ -46,9 +46,9 @@ struct CardView: View {
                        .sheet(isPresented: $showSheet) {
                            CreateCardView(authViewModel: authViewModel, cardViewModel: CardViewModel())
                        }
-                       .sheet(isPresented: $showingSubscriptionView) {
-                           SubscriptionView() // Pass the binding here
-                               }
+//                       .sheet(isPresented: $showingSubscriptionView) {
+//                           SubscriptionView() // Pass the binding here
+//                               }
             
             
             if isExpanded {

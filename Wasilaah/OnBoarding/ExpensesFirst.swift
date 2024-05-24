@@ -296,9 +296,9 @@ struct ExpensesFirst: View {
                 
             }
             
-            .sheet(isPresented: $isShowingSubscriptionView) {
-                SubscriptionView()
-            }
+//            .sheet(isPresented: $isShowingSubscriptionView) {
+//                SubscriptionView()
+//            }
             .navigationBarItems(leading: Button(action: {
                 self.presentationMode.wrappedValue.dismiss()
             }) {

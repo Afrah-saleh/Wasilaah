@@ -114,29 +114,29 @@ struct SignUpView: View {
 
                     
                     
-                    Button(action:{
-                        print("Tapped apple sign in")
-                        authViewModel.startSignInWithAppleFlow()
-                        if authViewModel.needsCompanyInfo{
-                            self.shouldNavigate = true  // Navigate on success
-                        }
-                        else if authViewModel.signedIn{
-                            self.shouldNavigateHome = true
-                        }
-
-                    }){
-                        Image("apple")
-
-                        Text("Continue with Apple")
-                            .foregroundColor(.white11)
-                    }
-                    .background(
-                        RoundedRectangle(cornerRadius: 12)
-                            .foregroundColor(.black11)
-                            .frame(width: 300,height: 48)
-                    )
-                    
-                    }
+//                    Button(action:{
+//                        print("Tapped apple sign in")
+//                        authViewModel.startSignInWithAppleFlow()
+//                        if authViewModel.needsCompanyInfo{
+//                            self.shouldNavigate = true  // Navigate on success
+//                        }
+//                        else if authViewModel.signedIn{
+//                            self.shouldNavigateHome = true
+//                        }
+//
+//                    }){
+//                        Image("apple")
+//
+//                        Text("Continue with Apple")
+//                            .foregroundColor(.white11)
+//                    }
+//                    .background(
+//                        RoundedRectangle(cornerRadius: 12)
+//                            .foregroundColor(.black11)
+//                            .frame(width: 300,height: 48)
+//                    )
+//                    
+                   }
                 .padding(50)
 
    

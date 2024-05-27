@@ -81,36 +81,36 @@ struct SignUpView: View {
                         }
                 
                         .padding(-20)
-                
-                VStack(spacing:50){
-                    
-                    Button(action:{
-                        print("Tapped google sign in")
-                        
-                        authViewModel.signinWithGoogle(presenting: getRootViewController()) { error in
-                            if let error = error {
-                                print("Error signing in with Google: \(error.localizedDescription)")
-                            } else if authViewModel.needsCompanyInfo{
-                                self.shouldNavigate = true  // Navigate on success
-                            }
-                            else if authViewModel.signedIn{
-                                self.shouldNavigateHome = true
-                            }
-                        }
-               
-                    }){
-                        HStack{
-                            Image("Google")
-
-                            Text("Continue with Google")
-                                .foregroundColor(.white11)
-                        }
-                        .background(
-                            RoundedRectangle(cornerRadius: 12)
-                                .foregroundColor(.black11)
-                                .frame(width: 300,height: 48)
-                        )
-                    }
+//                
+//                VStack(spacing:50){
+//                    
+//                    Button(action:{
+//                        print("Tapped google sign in")
+//                        
+//                        authViewModel.signinWithGoogle(presenting: getRootViewController()) { error in
+//                            if let error = error {
+//                                print("Error signing in with Google: \(error.localizedDescription)")
+//                            } else if authViewModel.needsCompanyInfo{
+//                                self.shouldNavigate = true  // Navigate on success
+//                            }
+//                            else if authViewModel.signedIn{
+//                                self.shouldNavigateHome = true
+//                            }
+//                        }
+//               
+//                    }){
+//                        HStack{
+//                            Image("Google")
+//
+//                            Text("Continue with Google")
+//                                .foregroundColor(.white11)
+//                        }
+//                        .background(
+//                            RoundedRectangle(cornerRadius: 12)
+//                                .foregroundColor(.black11)
+//                                .frame(width: 300,height: 48)
+//                        )
+//                    }
 
                     
                     
@@ -136,8 +136,8 @@ struct SignUpView: View {
 //                            .frame(width: 300,height: 48)
 //                    )
 //                    
-                   }
-                .padding(50)
+//                   }
+//                .padding(50)
 
    
                 

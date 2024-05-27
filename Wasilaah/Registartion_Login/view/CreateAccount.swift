@@ -58,45 +58,45 @@ struct CreateAccount: View {
                 
                 
                 
-                HStack{
-                    Rectangle()
-                    Text("OR Continue With")
-                        .foregroundColor(.gray)
-                        .frame(width: 140)
-                    Rectangle()
-                    
-                }
-                .frame(height: 0.33)
-                
-                .padding()
-                
-                VStack(spacing:50){
-                    
-                    Button(action:{
-                        print("Tapped google sign in")
-                        
-                        authViewModel.signinWithGoogle(presenting: getRootViewController()) { error in
-                            if let error = error {
-                                print("Error signing in with Google: \(error.localizedDescription)")
-                            } else {
-                                self.shouldNavigate = true  // Navigate on success
-                            }
-                        }
-                    }){
-                        HStack{
-                            Image("Google")
-                            
-                            Text("Continue with Google")
-                                .foregroundColor(.white11)
-                        }
-                        .background(
-                            RoundedRectangle(cornerRadius: 12)
-                                .foregroundColor(.black11)
-                                .frame(width: 300,height: 48)
-                        )
-                    }
-                    
-                    
+//                HStack{
+//                    Rectangle()
+//                    Text("OR Continue With")
+//                        .foregroundColor(.gray)
+//                        .frame(width: 140)
+//                    Rectangle()
+//                    
+//                }
+//                .frame(height: 0.33)
+//                
+//                .padding()
+//                
+//                VStack(spacing:50){
+//                    
+//                    Button(action:{
+//                        print("Tapped google sign in")
+//                        
+//                        authViewModel.signinWithGoogle(presenting: getRootViewController()) { error in
+//                            if let error = error {
+//                                print("Error signing in with Google: \(error.localizedDescription)")
+//                            } else {
+//                                self.shouldNavigate = true  // Navigate on success
+//                            }
+//                        }
+//                    }){
+//                        HStack{
+//                            Image("Google")
+//                            
+//                            Text("Continue with Google")
+//                                .foregroundColor(.white11)
+//                        }
+//                        .background(
+//                            RoundedRectangle(cornerRadius: 12)
+//                                .foregroundColor(.black11)
+//                                .frame(width: 300,height: 48)
+//                        )
+//                    }
+//                    
+//                    
                     
                     
                     //                    Button(action:{
@@ -133,7 +133,7 @@ struct CreateAccount: View {
             }
             .padding(.bottom, 170)
         }
-        }
+        
         
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)

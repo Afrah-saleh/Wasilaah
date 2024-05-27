@@ -98,7 +98,6 @@
 
 /* Begin PBXFileReference section */
 		100633602BF92422005B95B5 /* ChartViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewViewModel.swift; sourceTree = "<group>"; };
-		352603742BF640C00009927E /* Subscription.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Subscription.storekit; sourceTree = "<group>"; };
 		9456976C2BF5F8BB00EB5FA3 /* Wasilaah.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wasilaah.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9456976F2BF5F8BB00EB5FA3 /* WasilaahApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasilaahApp.swift; sourceTree = "<group>"; };
 		945697732BF5F8BD00EB5FA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -204,7 +203,6 @@
 		945697632BF5F8BB00EB5FA3 = {
 			isa = PBXGroup;
 			children = (
-				352603742BF640C00009927E /* Subscription.storekit */,
 				9456976E2BF5F8BB00EB5FA3 /* Wasilaah */,
 				9456976D2BF5F8BB00EB5FA3 /* Products */,
 				945697852BF6325500EB5FA3 /* Frameworks */,

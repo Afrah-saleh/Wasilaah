@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct FreeBudgent: View {
+    @StateObject var expenses: ExpensesViewModel
     @ObservedObject var viewModel: ExpensesViewModel
      @Environment(\.presentationMode) var presentationMode
      @State private var isShowingNavigate = false
@@ -128,7 +129,9 @@ struct FreeBudgent: View {
             }
             .padding()
             .navigationDestination(isPresented: $navigateToHome) {
-                SetPasscodeView()
+//                SetPasscodeView()
+                Home(expensesViewModel: expenses, cardViewModel: CardViewModel())
+
             }
             .navigationBarItems(leading: Button(action: {
                             self.presentationMode.wrappedValue.dismiss()
@@ -145,6 +148,6 @@ struct FreeBudgent: View {
 struct FreeBudgent_Previews: PreviewProvider {
     static var previews: some View {
         // Assuming Card is a structure and has a static 'sample' instance for preview purposes
-        FreeBudgent(viewModel: ExpensesViewModel(cardID: "12345"), cardID: Card.sample.cardID)
+        FreeBudgent(expenses: ExpensesViewModel(cardID: ""), viewModel: ExpensesViewModel(cardID: "12345"), cardID: Card.sample.cardID)
     }
 }

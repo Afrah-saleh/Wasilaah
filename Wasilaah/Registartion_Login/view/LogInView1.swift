@@ -20,6 +20,7 @@ struct LogInView1: View {
     @State private var navigateToResetPassword = false
     @State private var errorMessage: String?
     @State private var shouldNavigateHome = false
+    @State private var isLoading = false
     
     var body: some View {
         NavigationStack{
@@ -32,13 +33,19 @@ struct LogInView1: View {
                         .bold()
                         .padding(.leading, -160)
                     VStack{
-                        TextField("Email", text: $email)
-                        SecureField("Password", text: $password)
-                        
-                        if let errorMessage = errorMessage {
-                            Text(errorMessage)
-                                .foregroundColor(.red)
-                                .frame(width: 340)
+                        if isLoading {
+                            ProgressView()
+                                .progressViewStyle(CircularProgressViewStyle())
+                                .scaleEffect(1.5)
+                        } else {
+                            TextField("Email", text: $email)
+                            SecureField("Password", text: $password)
+                            
+                            if let errorMessage = errorMessage {
+                                Text(errorMessage)
+                                    .foregroundColor(.red)
+                                    .frame(width: 340)
+                            }
                         }
                     }
                     .frame(width: 340, height: 94)
@@ -53,6 +60,7 @@ struct LogInView1: View {
                     
                     
                     Button("Login") {
+                        isLoading = true  // Start loading
                         authViewModel.signIn(email: email, password: password) { profile, error in
                             if let e = error {
                                 self.errorMessage = e.localizedDescription
@@ -66,6 +74,7 @@ struct LogInView1: View {
                     .background(Color.pprl)
                     .foregroundColor(.white)
                     .cornerRadius(12)
+                    
                     
                     
 //                    HStack{

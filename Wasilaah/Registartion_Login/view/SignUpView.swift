@@ -140,15 +140,15 @@ struct SignUpView: View {
 //                .padding(50)
 
    
-                
-                HStack{
-                    Rectangle()
-                    Text("OR")
-                    Rectangle()
-                    
-                }
-                .frame(height: 0.1)
-                .padding(.bottom,20)
+//                
+//                HStack{
+//                    Rectangle()
+//                    Text("OR")
+//                    Rectangle()
+//                    
+//                }
+//                .frame(height: 0.1)
+//                .padding(.bottom,20)
                 
                 NavigationLink(destination: CreateAccount()){
                     

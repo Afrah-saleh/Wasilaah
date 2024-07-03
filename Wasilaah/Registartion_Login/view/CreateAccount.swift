@@ -18,7 +18,7 @@ struct CreateAccount: View {
     @State private var shouldNavigate = false // State to control navigation
     @State private var shouldNavigateHome = false
     @State private var currentCard: Card? = nil  // Initialize card as nil
-
+    @State private var isLoading = false
     @ObservedObject var authViewModel = sessionStore()
     var body: some View {
         NavigationStack{
@@ -31,9 +31,16 @@ struct CreateAccount: View {
                     .bold()
                     .padding(.leading, -120)
                 VStack{
-                    TextField("Full Name", text: $fullName)
-                    TextField("Email", text: $email)
-                    SecureField("Password", text: $password)
+                    if isLoading {
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle())
+                            .scaleEffect(1.5)
+                    } else {
+                        
+                        TextField("Full Name", text: $fullName)
+                        TextField("Email", text: $email)
+                        SecureField("Password", text: $password)
+                    }
                 }
                 .frame(width: 340, height: 94)
                 .textFieldStyle(.roundedBorder)
@@ -41,6 +48,7 @@ struct CreateAccount: View {
                 
                 
                 Button("Create an Account") {
+                    isLoading = true  // Start loading
                     authViewModel.signUp(email: email, password: password, fullName: fullName) { profile, error in
                         
                         if let error = error {

@@ -97,7 +97,8 @@ struct RootView: View {
                 // Your existing conditions and views
                 if authViewModel.signedIn {
                     if authViewModel.showPasscode {
-                        PasscodeEntryView()
+//                        PasscodeEntryView()
+                        Home(expensesViewModel: ExpensesViewModel(cardID: ""), cardViewModel: CardViewModel())
                             .environmentObject(authViewModel)
                     } else if authViewModel.needsCompanyInfo {
                         CardsFirstTime(authViewModel: authViewModel, cardViewModel: CardViewModel(), card: $currentCard)

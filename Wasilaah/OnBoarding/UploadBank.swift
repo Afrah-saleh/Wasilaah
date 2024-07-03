@@ -184,9 +184,9 @@ struct UploadBank: View {
                     }
                 }
             }
-            .navigationDestination(isPresented: $navigateToHome) {
-                SetPasscodeView()
-    }
+//            .navigationDestination(isPresented: $navigateToHome) {
+//                SetPasscodeView()
+//    }
             .navigationBarItems(leading: Button(action: {
                             self.presentationMode.wrappedValue.dismiss()
                         }) {

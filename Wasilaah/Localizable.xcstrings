@@ -32,6 +32,7 @@
 
     },
     "." : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -117,16 +118,6 @@
         }
       }
     },
-    "%@ %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@ %2$@"
-          }
-        }
-      }
-    },
     "%@!" : {
 
     },
@@ -174,6 +165,7 @@
       }
     },
     "0" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -368,6 +360,7 @@
       }
     },
     "Annual" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -450,6 +443,7 @@
       }
     },
     "Automate expense categorization" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -460,6 +454,7 @@
       }
     },
     "Best value" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -688,6 +683,7 @@
       }
     },
     "Continue with Google" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -931,6 +927,7 @@
       }
     },
     "Document 3 analysis free" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1076,6 +1073,7 @@
       }
     },
     "Enter Passcode" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1128,6 +1126,7 @@
       }
     },
     "Error" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1241,6 +1240,7 @@
       }
     },
     "Face ID could not authenticate you." : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1251,6 +1251,7 @@
       }
     },
     "Face ID Error" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1511,6 +1512,7 @@
       }
     },
     "Incorrect passcode. Please try again." : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1727,6 +1729,7 @@
       }
     },
     "Monthly" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1875,6 +1878,7 @@
       }
     },
     "OR Continue With" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2131,6 +2135,7 @@
       }
     },
     "Restore Purchase" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2171,6 +2176,7 @@
       }
     },
     "Save time!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2211,6 +2217,7 @@
       }
     },
     "Set custom spending limits & track \nprogress" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2318,6 +2325,7 @@
       }
     },
     "Stay accountable!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2328,6 +2336,7 @@
       }
     },
     "Stop Guessing, Start Knowing!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2365,6 +2374,7 @@
       }
     },
     "Terms & Conditions" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {

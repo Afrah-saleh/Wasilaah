@@ -277,7 +277,8 @@ struct CardsFirstTime: View {
                 ExpensesFirst(cardID: card?.cardID ?? "")
             }
             .navigationDestination(isPresented: $navigateToHome) {
-                SetPasscodeView()
+//                SetPasscodeView()
+                Home(expensesViewModel: ExpensesViewModel(cardID: ""), cardViewModel: CardViewModel())
     }
             .navigationBarItems(leading: Button(action: {
                 self.presentationMode.wrappedValue.dismiss()

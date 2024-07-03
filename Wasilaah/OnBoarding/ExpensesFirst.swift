@@ -284,14 +284,15 @@ struct ExpensesFirst: View {
             }
             .frame(maxWidth: .infinity,maxHeight: .infinity)
             .navigationDestination(isPresented: $isShowingNavigate) {
-                FreeBudgent(viewModel: ExpensesViewModel(cardID: cardID), cardID: cardID)
+                FreeBudgent(expenses: ExpensesViewModel(cardID: ""), viewModel: ExpensesViewModel(cardID: cardID), cardID: cardID)
             }
             .onAppear {
                 viewModel.NewExpense()
                 
             }
             .navigationDestination(isPresented: $navigateToHome) {
-                SetPasscodeView()
+//                SetPasscodeView()
+                Home(expensesViewModel: ExpensesViewModel(cardID: ""), cardViewModel: CardViewModel())
                 //                    Home(expensesViewModel: ExpensesViewModel(cardID: cardID), cardViewModel: CardViewModel())
                 
             }

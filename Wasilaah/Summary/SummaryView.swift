@@ -15,6 +15,7 @@ struct SummaryView: View {
     @EnvironmentObject var authViewModel: sessionStore
     @StateObject var expensesViewModel = ExpensesViewModel(cardID: "yourCardID")
     @StateObject var cardViewModel = CardViewModel()
+    @Environment(\.presentationMode) var presentationMode
 
     var body: some View {
         ScrollView {

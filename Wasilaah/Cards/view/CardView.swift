@@ -14,6 +14,7 @@ struct CardView: View {
     @State private var showActionSheet = false
     @State private var showingSubscriptionView = false
     @State private var showingSignUp = false  // State to show SignUp View
+    @Environment(\.presentationMode) var presentationMode
 
     
     var body: some View {
@@ -94,14 +95,21 @@ struct CardView: View {
             
             } else {
                 CardViewBlocked()
-                    .onTapGesture {
-                        showingSignUp = true
-                    }
-                
-                    .navigationDestination(isPresented: $showingSignUp) {
-                        SignUpView(authViewModel: sessionStore())
-                        
-                    }
+               .onTapGesture {
+                   showingSignUp = true
+                   presentationMode.wrappedValue.dismiss()
+               }
+               .navigationDestination(isPresented: $showingSignUp) {
+                   SignUpView(authViewModel: sessionStore())
+            }
+//                    .onTapGesture {
+//                        showingSignUp = true
+//                    }
+//                
+//                    .navigationDestination(isPresented: $showingSignUp) {
+//                        SignUpView(authViewModel: sessionStore())
+//                        
+//                    }
             }
             
           //first vstack

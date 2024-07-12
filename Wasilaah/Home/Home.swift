@@ -38,6 +38,7 @@ struct Home: View {
     @State private var expenses: [Expenses] = []
     // Accessing the current locale from the environment
     @Environment(\.locale) var locale: Locale
+    @Environment(\.presentationMode) var presentationMode
     var filteredExpenses: [Expenses] {
            guard let selectedCard = selectedCard else { return [] }
            return expenses.filter { $0.cardID == selectedCard.cardID }
@@ -50,18 +51,29 @@ struct Home: View {
                         //                        // User is signed in, show normal content
                         normalContentView()
                     } else {
-                        // User is not signed in, show content but block interactions
                         blockedContentView()
-                            .onTapGesture {
-                                showingSignUp = true
-                            }
-                        
-                            .navigationDestination(isPresented: $showingSignUp) {
-                                SignUpView(authViewModel: sessionStore())
-                                
-                            }
-                        
+                       .onTapGesture {
+                           showingSignUp = true
+                           presentationMode.wrappedValue.dismiss()
+                       }
+                       .navigationDestination(isPresented: $showingSignUp) {
+                           SignUpView(authViewModel: sessionStore())
                     }
+                    }
+                
+//                    } else {
+//                        // User is not signed in, show content but block interactions
+//                        blockedContentView()
+//                            .onTapGesture {
+//                                showingSignUp = true
+//                            }
+//                        
+//                            .navigationDestination(isPresented: $showingSignUp) {
+//                                SignUpView(authViewModel: sessionStore())
+//                                
+//                            }
+//                        
+//                    }
                     
                 }
             }
